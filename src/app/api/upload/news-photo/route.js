@@ -1,5 +1,6 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
+import { NEWS_PHOTOS_BUCKET } from "@/lib/config";
 import { supabaseAdmin } from "@/lib/supabase/server";
 
 export async function POST(request) {
@@ -13,7 +14,7 @@ export async function POST(request) {
   const path = `${Date.now()}-${filename.replace(/[^a-zA-Z0-9._-]/g, "_")}`;
 
   const { data, error } = await supabaseAdmin.storage
-    .from("news-photos")
+    .from(NEWS_PHOTOS_BUCKET)
     .createSignedUploadUrl(path);
 
   if (error) {

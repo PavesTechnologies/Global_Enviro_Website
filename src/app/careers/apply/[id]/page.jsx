@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import ModalAlert from "@/components/common/ModalAlert";
+import { RESUMES_BUCKET } from "@/lib/config";
 import { supabase } from "@/lib/supabase/client";
 
 const steps = [
@@ -214,7 +215,7 @@ export default function ApplyJobPage() {
 
     if (uploadData.token) {
       const { error } = await supabase.storage
-        .from("resumes")
+        .from(RESUMES_BUCKET)
         .uploadToSignedUrl(uploadData.path, uploadData.token, resumeFile);
 
       if (error) {

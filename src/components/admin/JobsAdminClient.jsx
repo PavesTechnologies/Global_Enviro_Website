@@ -2,13 +2,14 @@
 
 import { useMemo, useState } from "react";
 import ModalAlert from "@/components/common/ModalAlert";
+import { DEFAULT_JOB_LOCATION, DEFAULT_JOB_TYPE } from "@/lib/config";
 
 const PAGE_SIZE = 6;
 const emptyForm = {
   title: "",
   department: "",
-  location: "Hyderabad, Telangana",
-  type: "Full-time",
+  location: DEFAULT_JOB_LOCATION,
+  type: DEFAULT_JOB_TYPE,
   description: "",
   requirements: "",
   is_active: true,
@@ -125,8 +126,8 @@ export default function JobsAdminClient({ initialJobs }) {
     setFormData({
       title: job.title || "",
       department: job.department || "",
-      location: job.location || "Hyderabad, Telangana",
-      type: job.type || "Full-time",
+      location: job.location || DEFAULT_JOB_LOCATION,
+      type: job.type || DEFAULT_JOB_TYPE,
       description: job.description || "",
       requirements: job.requirements || "",
       is_active: job.is_active ?? true,

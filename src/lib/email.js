@@ -1,4 +1,8 @@
 import { Resend } from "resend";
+import {
+  DEFAULT_ADMIN_NOTIFICATION_EMAIL,
+  RESEND_FROM_EMAIL,
+} from "@/lib/config";
 
 const STATUS_LABELS = {
   new: "New",
@@ -16,7 +20,7 @@ function getResendClient() {
 }
 
 function getAdminRecipient() {
-  return process.env.HR_NOTIFICATION_EMAIL || "admin@globalenviro.in";
+  return process.env.HR_NOTIFICATION_EMAIL || DEFAULT_ADMIN_NOTIFICATION_EMAIL;
 }
 
 export async function sendApplicationAlert({
@@ -32,7 +36,7 @@ export async function sendApplicationAlert({
   }
 
   await resend.emails.send({
-    from: "no-reply@globalenviro.in",
+    from: RESEND_FROM_EMAIL,
     to: adminRecipient,
     subject: `New application: ${jobTitle}`,
     html: `
@@ -56,7 +60,7 @@ export async function sendApplicationStatusUpdate({
   }
 
   await resend.emails.send({
-    from: "no-reply@globalenviro.in",
+    from: RESEND_FROM_EMAIL,
     to: applicantEmail,
     subject: `Your application status for ${jobTitle} has been updated`,
     html: `

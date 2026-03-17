@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import ImageManager from "@/components/admin/ImageManager";
+import { NEWS_PHOTOS_BUCKET } from "@/lib/config";
 import { supabase } from "@/lib/supabase/client";
 
 const emptyForm = {
@@ -51,7 +52,7 @@ export default function NewsAdminClient({ initialNews }) {
 
       if (uploadData.token) {
         const { error: uploadError } = await supabase.storage
-          .from("news-photos")
+          .from(NEWS_PHOTOS_BUCKET)
           .uploadToSignedUrl(uploadData.path, uploadData.token, file);
 
         if (uploadError) {

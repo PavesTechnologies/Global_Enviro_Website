@@ -1,5 +1,9 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
+import {
+  APPLICATION_RESUME_URL_TTL_SECONDS,
+  RESUMES_BUCKET,
+} from "@/lib/config";
 import { supabaseAdmin } from "@/lib/supabase/server";
 
 export async function GET(_request, { params }) {
@@ -21,8 +25,8 @@ export async function GET(_request, { params }) {
 
   const path = application.resume_url;
   const { data, error } = await supabaseAdmin.storage
-    .from("resumes")
-    .createSignedUrl(path, 900);
+    .from(RESUMES_BUCKET)
+    .createSignedUrl(path, APPLICATION_RESUME_URL_TTL_SECONDS);
 
   if (error) {
     return Response.json({ error: error.message }, { status: 500 });
