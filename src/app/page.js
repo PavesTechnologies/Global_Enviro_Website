@@ -1,9 +1,5 @@
-import AboutUs from "@/components/AboutUs";
 import HeroCarousel from "@/components/HeroCarousel/HeroCarousel";
-// Updated import path:
-
-import ServicesSection from "@/components/ServiceSection";
-import Project from "@/components/Project";
+import ServicesSection from "@/components/ProjectsAndProducts";
 import About from "@/components/About";
 import ClientsPage from "@/components/ClientsPage";
 
@@ -26,7 +22,7 @@ We deliver innovative, client-focused services backed by deep technical expertis
       subtitle: `Innovative systems designed to reduce emissions and safeguard air quality.
 Empowering industries to meet environmental standards with efficiency and reliability.`,
       buttonText: "Know More",
-      buttonLink: "/service/AirPollutionControl",
+      buttonLink: "/projects-and-products/AirPollutionControl",
     },
     {
       image:
@@ -35,7 +31,7 @@ Empowering industries to meet environmental standards with efficiency and reliab
       subtitle: `High-performance cleanroom and HVAC solutions built for precision and energy savings.
 Creating controlled environments that improve comfort, safety, and efficiency.`,
       buttonText: "Know More",
-      buttonLink: "/service/HVAC",
+      buttonLink: "/projects-and-products/HVAC",
     },
     {
       image:
@@ -44,7 +40,7 @@ Creating controlled environments that improve comfort, safety, and efficiency.`,
       subtitle: `Comprehensive solutions for smooth, safe, and efficient bulk material movement.
 Optimized designs that enhance productivity and reduce operational downtime.`,
       buttonText: "Know More",
-      buttonLink: "/service/MaterialHandling",
+      buttonLink: "/projects-and-products/MaterialHandling",
     },
 
     {
@@ -54,7 +50,7 @@ Optimized designs that enhance productivity and reduce operational downtime.`,
       subtitle: `Complete EPC expertise from concept to commissioning of industrial power plants.
 Delivering reliable, scalable infrastructure that drives sustainable growth and performance.`,
       buttonText: "Know More",
-      buttonLink: "/service/EPCPower",
+      buttonLink: "/projects-and-products/EPCPower",
     },
   ];
 

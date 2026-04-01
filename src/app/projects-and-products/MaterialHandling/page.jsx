@@ -98,7 +98,7 @@ export default function MaterialHandlingPage() {
         By emphasizing safety, performance, and long-term value, 
         we enable industries to achieve smoother and more sustainable operations."
 
-        imgSrc="/assets/images/servicebg.jpg"
+        imgSrc="/assets/images/projects-and-productsbg.jpg"
       />
 
       {/* Product Carousel */}

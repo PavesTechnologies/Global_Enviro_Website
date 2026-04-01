@@ -25,7 +25,7 @@ export default function ProductCard({ id, title, image, specs = {} }) {
 
       {/* Text Section */}
       <div className="md:w-1/2 mt-6 md:mt-0 md:pl-10">
-        <Link href={`/service/AirPollutionControl/${id}`}>
+        <Link href={`/projects-and-products/AirPollutionControl/${id}`}>
           <h1 className="text-2xl font-semibold text-blue-700 mb-3 hover:underline">
             {title}
           </h1>

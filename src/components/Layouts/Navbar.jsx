@@ -7,63 +7,79 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const navItems = [
-  { title: "Home", url: "/" },
   {
     title: "About Us",
-    url: "/about",
-    dropdown: [
-      { title: "Overview", url: "/about#overview" },
-      { title: "Mission & Vision", url: "/about#mission" },
-      { title: "Management", url: "/about#management" },
-      { title: "Our Infrastructure", url: "/about#infrastructure" },
-      { title: "Certifications", url: "/about#certifications" },
-      { title: "Our Journey", url: "/about#journey" },
-    ],
+    url: "/",
+    // dropdown: [
+    //   { title: "About Us", url: "/#about" },
+    //   { title: "Management", url: "/about#management" },
+    //   //{ title: "Key Persons", url: "/#key-persons" },         // NEW
+    //   { title: "Mission & Vision", url: "/about#mission" },
+    //   { title: "Our Infrastructure", url: "/about#infrastructure" },
+    //   { title: "Certifications", url: "/about#certifications" },
+    //   { title: "Our Journey", url: "/about#journey" },
+    // ],
   },
+  // {
+  //   title: "About Us",
+  //   url: "/about",
+  //   dropdown: [
+  //     { title: "Overview", url: "/about#overview" },
+  //     { title: "Mission & Vision", url: "/about#mission" },
+  //     { title: "Management", url: "/about#management" },
+  //     { title: "Our Infrastructure", url: "/about#infrastructure" },
+  //     { title: "Certifications", url: "/about#certifications" },
+  //     { title: "Our Journey", url: "/about#journey" },
+  //   ],
+  // },
   { title: "Group", url: "/Ourgroup" },
   {
-    title: "Services",
-    url: "/service",
+    title: "Projects & Products",                              // RENAMED from Services
+    url: "/projects-and-products",
     dropdown: [
       {
-        title: "Air Pollution Control",
-        url: "/service/AirPollutionControl",
+        title: "Air Pollution Control Systems",
+        url: "/projects-and-products/air-pollution-control",
         subDropdown: [
-          { title: "Pulse Jet Bag", url: "/service/AirPollutionControl/1" },
-          { title: "Dust Extraction", url: "/service/AirPollutionControl/2" },
-          { title: "Ash Handling", url: "/service/AirPollutionControl/ash-handling" },
-          { title: "Centrifugal Fans", url: "/service/AirPollutionControl/4" },
-          { title: "HVAC Clean Room", url: "/service/AirPollutionControl/5" },
-          { title: "Clean Room Panel", url: "/service/AirPollutionControl/clean-room-panel" },
+          { title: "Dust Extraction Systems", url: "/projects-and-products/air-pollution-control/dust-extraction" },
+          { title: "Fuel Extraction Systems", url: "/projects-and-products/air-pollution-control/fuel-extraction" },
+          { title: "Silo / Bin Aeration", url: "/projects-and-products/air-pollution-control/silo-bin" },
+          { title: "Bulk Loading Systems", url: "/projects-and-products/air-pollution-control/bulk-loading" },
+          { title: "Wagon Loading/Unloading", url: "/projects-and-products/air-pollution-control/wagon" },
         ],
       },
       {
-        title: "Material Handling",
-        url: "/service/MaterialHandling",
+        title: "HVAC Clean Room Systems",
+        url: "/projects-and-products/hvac-clean-room",
         subDropdown: [
-          { title: "Conveyors", url: "/service/MaterialHandling/conveyors" },
-          { title: "Bucket Elevators", url: "/service/MaterialHandling/bucket-elevators" },
+          { title: "HVAC", url: "/projects-and-products/hvac-clean-room/hvac" },
+          { title: "Paneling", url: "/projects-and-products/hvac-clean-room/paneling" },
         ],
       },
       {
-        title: "HVAC",
-        url: "/service/HVAC",
+        title: "Material Handling Systems",
+        url: "/projects-and-products/material-handling",
         subDropdown: [
-          { title: "HVAC System Components", url: "/service/HVAC/HVACComponents" },
-          { title: "Clean Room Equipments", url: "/service/HVAC/CleanRoomEquipments" },
+          { title: "Fuel Handling Systems", url: "/projects-and-products/material-handling/fuel-handling" },
+          { title: "Ash Handling Systems", url: "/projects-and-products/material-handling/ash-handling" },
+          { title: "Warehouse Handling Systems", url: "/projects-and-products/material-handling/warehouse" },
         ],
       },
       {
-        title: "EPC Power",
-        url: "/service/EPCPower",
+        title: "EPC Power Projects",
+        url: "https://jettech-website-url.com",              // External link per client
+        subDropdown: null,
+      },
+      {
+        title: "Metallurgicals & Briquettes",                // NEW category
+        url: "/projects-and-products/metallurgicals",
         subDropdown: [
-          { title: "Bag Filters", url: "/service/EPCPower/bag-filters" },
-          { title: "Electrostatic Precipitators", url: "/service/EPCPower/electrostatic-precipitators" },
+          { title: "Casting Division", url: "/projects-and-products/metallurgicals/casting" },
+          { title: "Biomass Briquettes Division", url: "/projects-and-products/metallurgicals/briquettes" },
         ],
       },
     ],
   },
-  { title: "Projects", url: "/Project" },
   { title: "Our Clients", url: "/OurClients" },
   { title: "News & Events", url: "/news-and-events" },
   { title: "Careers", url: "/careers" },

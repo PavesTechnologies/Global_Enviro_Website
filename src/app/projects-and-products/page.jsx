@@ -10,28 +10,28 @@ export default function ServicePage() {
       description:
         "We provide advanced air purification and dust collection systems to reduce emissions and maintain cleaner industrial environments. Our technologies ensure regulatory compliance and low maintenance costs.",
       icon: <Wind className="w-14 h-14 text-primary" strokeWidth={1.5} />,
-      link: "/service/AirPollutionControl",
+      link: "/projects-and-products/AirPollutionControl",
     },
     {
       title: "Material Handling",
       description:
         "Our material handling systems streamline bulk transport and storage operations with efficiency and reliability. From conveyors to pneumatic systems, each solution is customized for performance. Designs focus on safety, durability, and ease of integration.",
       icon: <Factory className="w-14 h-14 text-primary" strokeWidth={1.5} />,
-      link: "/service/MaterialHandling",
+      link: "/projects-and-products/MaterialHandling",
     },
     {
       title: "HVAC Systems",
       description:
         "Our HVAC solutions deliver superior climate control and air quality for industrial and commercial facilities. We focus on energy-efficient designs, precision installation, and performance optimization.",
       icon: <Cog className="w-14 h-14 text-primary" strokeWidth={1.5} />,
-      link: "/service/HVAC",
+      link: "/projects-and-products/HVAC",
     },
     {
       title: "EPC Power Projects",
       description:
         "We offer turnkey EPC services covering engineering, procurement, and construction for power plants and infrastructure. From concept to commissioning, we ensure timely execution with high safety and quality standards.",
       icon: <Zap className="w-14 h-14 text-primary" strokeWidth={1.5} />,
-      link: "/service/EPCPower",
+      link: "/projects-and-products/EPCPower",
     },
   ];
 

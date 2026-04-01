@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Factory, Wind, Cog, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function ServicesSection() {
+export default function ProjectsAndProducts() {
   const services = [
     {
       title: "Air Pollution Control",
