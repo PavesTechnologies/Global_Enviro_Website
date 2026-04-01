@@ -6,9 +6,9 @@ import { motion } from "framer-motion";
 const companies = [
   {
     id: 1,
-    name: "Global Enviro Air Systems (P) Ltd",
+    name: "Global Technologies (P) Ltd",
     description:
-      "Global Enviro Air Systems Private Limited is a distinguished designer and manufacturer specializing in a diverse range of air pollution control systems. Our systems are meticulously crafted to reduce or eliminate the emission of pollutants into the atmosphere. Additionally, we serve as turnkey solution providers for HVAC Cleanrooms projects, offering a comprehensive range of solutions such as air handling units, Puff Panels, Doors, and Dust collectors tailored for manufacturing areas. We extend our expertise to provide solutions for cement/fly ash unloading systems from silos and racks. Our systems cater to various industries, including cement, power, steel, pharmaceuticals, paper, distilleries, food, and scientific industries.",
+      "Global Technologies Private Limited is a distinguished designer and manufacturer specializing in a diverse range of air pollution control systems. Our systems are meticulously crafted to reduce or eliminate the emission of pollutants into the atmosphere. Additionally, we serve as turnkey solution providers for HVAC Cleanrooms projects, offering a comprehensive range of solutions such as air handling units, Puff Panels, Doors, and Dust collectors tailored for manufacturing areas. We extend our expertise to provide solutions for cement/fly ash unloading systems from silos and racks. Our systems cater to various industries, including cement, power, steel, pharmaceuticals, paper, distilleries, food, and scientific industries.",
     image: "/assets/images/global image.jpg",
     shape: "rounded-full",
     link: "/about",
@@ -19,6 +19,7 @@ const companies = [
     description:
       "Indophil Jettech Energy Pvt. Ltd. is a leading player in Engineering, Procurement, and Construction (EPC) services for Biomass Power Plants, Solar Power Plants, Edible Oil Refineries, and Process Boilers. As a rapidly growing entity in the Philippines Energy Sector, our portfolio boasts over 55 MW (Biomass Power Plants) capacity and 15 MW (Solar Power Plants).",
     image: "/assets/images/jettech.jpg",
+    shape: "rounded-full",
     link: "https://www.jettechenergy.com/",
   },
   {
@@ -30,6 +31,15 @@ const companies = [
     shape: "rounded-full",
     link: "/Ourgroup/GlobalMetallurgy",
   },
+  {
+    id: 4,
+    name: "SV Bio Fuels",
+    description:
+      "SV Bio Fuels focuses on sustainable and eco-friendly fuel solutions, specializing in biomass briquettes and renewable energy alternatives. The company aims to provide efficient fuel systems that reduce environmental impact while supporting industrial energy needs.",
+    image: "/assets/images/ash handling.png", 
+    shape: "rounded-full",
+    link: "/Ourgroup/SVBioFuels", 
+  }, 
 ];
 
 export default function GroupPage() {
