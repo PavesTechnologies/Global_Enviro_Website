@@ -11,23 +11,23 @@ export default function Management() {
       title: "Managing Director",
       img: "/assets/images/founder.jpeg",
       desc: `As the Founder and Managing Director of Global Enviro Air Systems,
-      Mr. Srirami Reddy’s remarkable engineering experience, business acumen,
+      Mr. Srirami Reddy's remarkable engineering experience, business acumen,
       and relentless dedication helped lay a strong foundation for all group
       companies. His research in pollution control technology and innovative
-      approach have been instrumental in the company’s success and growth.`,
+      approach have been instrumental in the company's success and growth.`,
     },
     {
       name: "V. Ramana Murthy",
-      title: "Director, Global Enviro Air Systems Pvt. Ltd",
+      title: "Director",                     // ← simplified per client doc
       img: "/assets/images/Director.png",
       desc: `A phenomenal management force of Global Enviro Systems,
       Mr. Ramana Murthy has led over 100 Clean Room and HVAC projects across
       Pharma and Chemical sectors. His deep expertise in failure analysis and
-      system design continues to strengthen Global Group’s project performance.`,
+      system design continues to strengthen Global Group's project performance.`,
     },
     {
       name: "A. Sambasiva Rao",
-      title: "Partner, M/s Global Technologies",
+      title: "Business Head",                // ← updated per client doc
       img: "/assets/images/Partner.png",
       desc: `With over 15 years of experience in Fuels and Ash Handling Systems,
       Mr. Sambasiva Rao brings extensive project management and vendor
@@ -40,7 +40,7 @@ export default function Management() {
 
   return (
     <section className="relative bg-[#081736] text-white py-24 px-6 md:px-16 overflow-hidden">
-      {/* ===== Background Wave ===== */}
+      {/* Background Wave */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <svg
           viewBox="0 0 1440 320"
@@ -50,7 +50,7 @@ export default function Management() {
           <path
             fill="url(#waveGradient)"
             d="M0,128L40,149.3C80,171,160,213,240,208C320,203,400,149,480,133.3C560,117,640,139,720,165.3C800,192,880,224,960,208C1040,192,1120,128,1200,117.3C1280,107,1360,149,1400,170.7L1440,192V320H0Z"
-          ></path>
+          />
           <defs>
             <linearGradient id="waveGradient" x1="0" y1="0" x2="0" y2="1">
               <stop offset="0%" stopColor="#5ea2ef" stopOpacity="0.6" />
@@ -60,9 +60,10 @@ export default function Management() {
         </svg>
       </div>
 
-      {/* ===== Main Content ===== */}
+      {/* Main Content */}
       <div className="container relative z-10 mx-auto grid md:grid-cols-2 gap-16 items-center">
-        {/* ===== Left: Active Member Description ===== */}
+
+        {/* Left: Active Member Description */}
         <div className="space-y-6">
           <AnimatePresence mode="wait">
             <motion.div
@@ -84,19 +85,14 @@ export default function Management() {
               <p className="text-base leading-relaxed text-gray-200">
                 {active.desc}
               </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                className="mt-6 border border-blue-300 px-6 py-2 rounded-md hover:bg-blue-200 hover:text-[#081736] transition-all"
-              >
-                Contact Us
-              </motion.button>
+              {/* ❌ "Contact Us" button removed here */}
             </motion.div>
           </AnimatePresence>
         </div>
 
-        {/* ===== Right: Team Cards ===== */}
+        {/* Right: Team Cards */}
         <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
-          <div className="absolute -top-16 right-0 w-80 h-80 bg-blue-400/20 blur-3xl rounded-full animate-pulse"></div>
+          <div className="absolute -top-16 right-0 w-80 h-80 bg-blue-400/20 blur-3xl rounded-full animate-pulse" />
 
           {team.map((member, index) => (
             <motion.div
@@ -115,9 +111,7 @@ export default function Management() {
                   className="object-cover rounded-full border-2 border-blue-800"
                 />
               </div>
-              <h4 className="text-lg font-semibold text-gray-800">
-                {member.name}
-              </h4>
+              <h4 className="text-lg font-semibold text-gray-800">{member.name}</h4>
               <p className="text-sm text-gray-600">{member.title}</p>
             </motion.div>
           ))}
