@@ -6,6 +6,7 @@ import { ChevronDown, ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
+/* ===================== NAV ITEMS ===================== */
 const navItems = [
   { title: "About Us", url: "/" },
   { title: "Group", url: "/Ourgroup" },
@@ -17,29 +18,17 @@ const navItems = [
         title: "Air Pollution Control",
         url: "/service/AirPollutionControl",
         subDropdown: [
-          { title: "Dust Extraction Systems", url: "/service/AirPollutionControl#dust-extraction" },
-          { title: "Fuel Extraction Systems", url: "/service/AirPollutionControl#fuel-extraction" },
-          { title: "Silo / Bin Aeration", url: "/service/AirPollutionControl#silo-bin" },
-          { title: "Bulk Loading Systems", url: "/service/AirPollutionControl#bulk-loading" },
-          { title: "Wagon Loading/Unloading", url: "/service/AirPollutionControl#wagon" },
+          { title: "Dust Extraction Systems", url: "#" },
+          { title: "Fuel Extraction Systems", url: "#" },
         ],
       },
       {
         title: "HVAC Clean Room",
         url: "/service/HVAC",
-        subDropdown: [
-          { title: "HVAC Systems", url: "/service/HVAC#hvac" },
-          { title: "Paneling", url: "/service/HVAC#paneling" },
-        ],
       },
       {
         title: "Material Handling",
         url: "/service/MaterialHandling",
-        subDropdown: [
-          { title: "Fuel Handling Systems", url: "/service/MaterialHandling#fuel-handling" },
-          { title: "Ash Handling Systems", url: "/service/MaterialHandling#ash-handling" },
-          { title: "Warehouse Handling Systems", url: "/service/MaterialHandling#warehouse" },
-        ],
       },
       {
         title: "EPC Power Projects",
@@ -49,10 +38,6 @@ const navItems = [
       {
         title: "Metallurgicals & Briquettes",
         url: "/service/Metallurgicals",
-        subDropdown: [
-          { title: "Casting Division", url: "/service/Metallurgicals#casting" },
-          { title: "Biomass Briquettes Division", url: "/service/Metallurgicals#briquettes" },
-        ],
       },
     ],
   },
@@ -62,122 +47,153 @@ const navItems = [
   { title: "Contact Us", url: "/contactUs" },
 ];
 
+/* ===================== COMPONENT ===================== */
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
+  const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const pathname = usePathname();
 
-  const isActivePath = (url) => {
-    if (url.startsWith("http")) return false;
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 40);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const isActive = (url) => {
+    if (!url || url.startsWith("http")) return false;
     if (url === "/") return pathname === "/";
     return pathname.startsWith(url);
   };
 
   return (
-    <header className="bg-[#3877d4] text-white fixed w-full z-50">
-      <nav className="flex items-center justify-between px-6 h-14">
+    <>
+      {/* Spacer */}
+      <div style={{ height: isScrolled ? "50px" : "110px" }} />
 
-        {/* LOGO */}
-        <Link href="/">
-          <img src="/assets/images/group-logo.png" className="h-8" />
-        </Link>
+      <header className="fixed top-0 left-0 w-full z-50 bg-white shadow">
 
-        {/* DESKTOP MENU */}
-        <ul className="hidden lg:flex gap-6 text-sm font-semibold uppercase">
+        {/* 🔥 TOP BAR (RESTORED ORIGINAL SIZE) */}
+        {!isScrolled && (
+          <div className="flex justify-between items-center px-6 py-2 border-b">
+            <img src="/assets/images/group-logo.png" className="h-12" />
 
-          {navItems.map((item) => (
-            <li
-              key={item.title}
-              className="relative group"
-              onMouseEnter={() => item.dropdown && setActiveDropdown(item.title)}
-              onMouseLeave={() => setActiveDropdown(null)}
-            >
-              {/* MAIN LINK */}
-              {item.external ? (
-                <a href={item.url} target="_blank" rel="noopener noreferrer">
-                  {item.title}
-                </a>
-              ) : (
-                <Link href={item.url} className="flex items-center gap-1">
-                  {item.title}
-                  {item.dropdown && <ChevronDown size={14} />}
-                </Link>
-              )}
+            <div className="hidden md:flex items-center gap-6 text-sm">
+              <div className="flex items-center gap-2">
+                <FaPhone className="text-blue-600" />
+                <span>+91 98480 31866</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaEnvelope className="text-blue-600" />
+                <span>ksr@globalenviro.in</span>
+              </div>
+              <Link
+                href="/RequestQuote"
+                className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition"
+              >
+                REQUEST A QUOTE
+              </Link>
+            </div>
+          </div>
+        )}
 
-              {/* LEVEL 2 DROPDOWN */}
-              {item.dropdown && (
-                <ul className="absolute left-0 top-full hidden group-hover:block bg-white text-black min-w-[250px] shadow-lg">
+        {/* 🔵 MAIN NAVBAR (COMPACT) */}
+        <nav className="bg-[#3877d4]">
+          <ul className="hidden lg:flex justify-center gap-6 xl:gap-10 text-[13px] font-semibold uppercase text-white py-1.5">
 
-                  {item.dropdown.map((sub) => (
-                    <li key={sub.title} className="relative group/sub">
+            {navItems.map((item) => (
+              <li
+                key={item.title}
+                className="relative"
+                onMouseEnter={() => item.dropdown && setActiveDropdown(item.title)}
+                onMouseLeave={() => {
+                  setActiveDropdown(null);
+                  setActiveSubDropdown(null);
+                }}
+              >
+                {/* MAIN LINK */}
+                {item.external ? (
+                  <a href={item.url} target="_blank" rel="noopener noreferrer" className="px-3 py-1">
+                    {item.title}
+                  </a>
+                ) : (
+                  <Link
+                    href={item.url}
+                    className={`px-3 py-1 flex items-center gap-1 ${
+                      isActive(item.url) ? "bg-white/20" : "hover:bg-white/15"
+                    }`}
+                  >
+                    {item.title}
+                    {item.dropdown && <ChevronDown size={12} />}
+                  </Link>
+                )}
 
-                      {/* LEVEL 2 ITEM */}
-                      {sub.external ? (
-                        <a
-                          href={sub.url}
-                          target="_blank"
-                          className="flex justify-between px-4 py-2 hover:bg-gray-100"
-                        >
-                          {sub.title}
-                        </a>
-                      ) : (
+                {/* DROPDOWN */}
+                {item.dropdown && activeDropdown === item.title && (
+                  <ul className="absolute left-0 top-full bg-white text-black shadow-lg min-w-[220px]">
+
+                    {item.dropdown.map((sub) => (
+                      <li
+                        key={sub.title}
+                        className="relative"
+                        onMouseEnter={() => sub.subDropdown && setActiveSubDropdown(sub.title)}
+                        onMouseLeave={() => setActiveSubDropdown(null)}
+                      >
                         <Link
                           href={sub.url}
-                          className="flex justify-between px-4 py-2 hover:bg-gray-100"
+                          className="flex justify-between px-3 py-2 text-sm hover:bg-gray-100"
                         >
                           {sub.title}
-                          {sub.subDropdown && <ChevronRight size={14} />}
+                          {sub.subDropdown && <ChevronRight size={12} />}
                         </Link>
-                      )}
 
-                      {/* LEVEL 3 SUBDROPDOWN */}
-                      {sub.subDropdown && (
-                        <ul className="absolute left-full top-0 hidden group-hover/sub:block bg-white min-w-[220px] shadow-lg">
+                        {/* SUBDROPDOWN */}
+                        {sub.subDropdown && activeSubDropdown === sub.title && (
+                          <ul className="absolute left-full top-0 bg-white shadow-lg min-w-[180px]">
+                            {sub.subDropdown.map((child) => (
+                              <li key={child.title}>
+                                <Link
+                                  href={child.url}
+                                  className="block px-3 py-2 text-sm hover:bg-gray-100"
+                                >
+                                  {child.title}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
 
-                          {sub.subDropdown.map((child) => (
-                            <li key={child.title}>
-                              <Link
-                                href={child.url}
-                                className="block px-4 py-2 hover:bg-gray-100"
-                              >
-                                {child.title}
-                              </Link>
-                            </li>
-                          ))}
-
-                        </ul>
-                      )}
-                    </li>
-                  ))}
-
-                </ul>
-              )}
-            </li>
-          ))}
-
-        </ul>
-
-        {/* MOBILE BUTTON */}
-        <button className="lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-        </button>
-      </nav>
-
-      {/* MOBILE MENU */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-white text-black">
-          <ul>
-            {navItems.map((item) => (
-              <li key={item.title} className="border-b">
-                <Link href={item.url} className="block px-4 py-3">
-                  {item.title}
-                </Link>
+                  </ul>
+                )}
               </li>
             ))}
+
           </ul>
-        </div>
-      )}
-    </header>
+
+          {/* MOBILE BUTTON */}
+          <button
+            className="lg:hidden text-white p-3"
+            onClick={() => setMobileOpen(!mobileOpen)}
+          >
+            {mobileOpen ? <FaTimes /> : <FaBars />}
+          </button>
+        </nav>
+
+        {/* MOBILE MENU */}
+        {mobileOpen && (
+          <div className="bg-white lg:hidden">
+            {navItems.map((item) => (
+              <Link key={item.title} href={item.url} className="block px-4 py-2 border-b text-sm">
+                {item.title}
+              </Link>
+            ))}
+          </div>
+        )}
+      </header>
+    </>
   );
 };
 
