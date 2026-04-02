@@ -2,7 +2,7 @@
 import { useParams } from 'next/navigation';
 import PulseJetBagFilter from "@/components/PulseJetBagFilter";
 import DustExtraction from "@/components/DustExtraction";
-import HVAC from "@/app/projects-and-products/HVAC/page.jsx";
+import HVAC from "@/app/service/HVAC/page.jsx";
 import CentrifugalFans from '@/components/CentrifugalFans';
 
 

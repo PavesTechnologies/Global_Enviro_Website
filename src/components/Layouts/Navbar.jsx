@@ -7,75 +7,51 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const navItems = [
-  {
-    title: "About Us",
-    url: "/",
-    // dropdown: [
-    //   { title: "About Us", url: "/#about" },
-    //   { title: "Management", url: "/about#management" },
-    //   //{ title: "Key Persons", url: "/#key-persons" },         // NEW
-    //   { title: "Mission & Vision", url: "/about#mission" },
-    //   { title: "Our Infrastructure", url: "/about#infrastructure" },
-    //   { title: "Certifications", url: "/about#certifications" },
-    //   { title: "Our Journey", url: "/about#journey" },
-    // ],
-  },
-  // {
-  //   title: "About Us",
-  //   url: "/about",
-  //   dropdown: [
-  //     { title: "Overview", url: "/about#overview" },
-  //     { title: "Mission & Vision", url: "/about#mission" },
-  //     { title: "Management", url: "/about#management" },
-  //     { title: "Our Infrastructure", url: "/about#infrastructure" },
-  //     { title: "Certifications", url: "/about#certifications" },
-  //     { title: "Our Journey", url: "/about#journey" },
-  //   ],
-  // },
+  { title: "About Us", url: "/" },
   { title: "Group", url: "/Ourgroup" },
   {
-    title: "Projects & Products",                              // RENAMED from Services
-    url: "/projects-and-products",
+    title: "Projects & Products",
+    url: "/service",
     dropdown: [
       {
-        title: "Air Pollution Control Systems",
-        url: "/projects-and-products/air-pollution-control",
+        title: "Air Pollution Control",
+        url: "/service/AirPollutionControl",
         subDropdown: [
-          { title: "Dust Extraction Systems", url: "/projects-and-products/air-pollution-control/dust-extraction" },
-          { title: "Fuel Extraction Systems", url: "/projects-and-products/air-pollution-control/fuel-extraction" },
-          { title: "Silo / Bin Aeration", url: "/projects-and-products/air-pollution-control/silo-bin" },
-          { title: "Bulk Loading Systems", url: "/projects-and-products/air-pollution-control/bulk-loading" },
-          { title: "Wagon Loading/Unloading", url: "/projects-and-products/air-pollution-control/wagon" },
+          { title: "Dust Extraction Systems", url: "/service/AirPollutionControl#dust-extraction" },
+          { title: "Fuel Extraction Systems", url: "/service/AirPollutionControl#fuel-extraction" },
+          { title: "Silo / Bin Aeration", url: "/service/AirPollutionControl#silo-bin" },
+          { title: "Bulk Loading Systems", url: "/service/AirPollutionControl#bulk-loading" },
+          { title: "Wagon Loading/Unloading", url: "/service/AirPollutionControl#wagon" },
         ],
       },
       {
-        title: "HVAC Clean Room Systems",
-        url: "/projects-and-products/hvac-clean-room",
+        title: "HVAC Clean Room",
+        url: "/service/HVAC",
         subDropdown: [
-          { title: "HVAC", url: "/projects-and-products/hvac-clean-room/hvac" },
-          { title: "Paneling", url: "/projects-and-products/hvac-clean-room/paneling" },
+          { title: "HVAC Systems", url: "/service/HVAC#hvac" },
+          { title: "Paneling", url: "/service/HVAC#paneling" },
         ],
       },
       {
-        title: "Material Handling Systems",
-        url: "/projects-and-products/material-handling",
+        title: "Material Handling",
+        url: "/service/MaterialHandling",
         subDropdown: [
-          { title: "Fuel Handling Systems", url: "/projects-and-products/material-handling/fuel-handling" },
-          { title: "Ash Handling Systems", url: "/projects-and-products/material-handling/ash-handling" },
-          { title: "Warehouse Handling Systems", url: "/projects-and-products/material-handling/warehouse" },
+          { title: "Fuel Handling Systems", url: "/service/MaterialHandling#fuel-handling" },
+          { title: "Ash Handling Systems", url: "/service/MaterialHandling#ash-handling" },
+          { title: "Warehouse Handling Systems", url: "/service/MaterialHandling#warehouse" },
         ],
       },
       {
         title: "EPC Power Projects",
-        url: "https://jettech-website-url.com",              // External link per client
-        subDropdown: null,
+        url: "https://www.jettechenergy.com/",
+        external: true,
       },
       {
-        title: "Metallurgicals & Briquettes",                // NEW category
-        url: "/projects-and-products/metallurgicals",
+        title: "Metallurgicals & Briquettes",
+        url: "/service/Metallurgicals",
         subDropdown: [
-          { title: "Casting Division", url: "/projects-and-products/metallurgicals/casting" },
-          { title: "Biomass Briquettes Division", url: "/projects-and-products/metallurgicals/briquettes" },
+          { title: "Casting Division", url: "/service/Metallurgicals#casting" },
+          { title: "Biomass Briquettes Division", url: "/service/Metallurgicals#briquettes" },
         ],
       },
     ],
@@ -83,272 +59,125 @@ const navItems = [
   { title: "Our Clients", url: "/OurClients" },
   { title: "News & Events", url: "/news-and-events" },
   { title: "Careers", url: "/careers" },
-  {title : "Contact Us", url: "/contactUs" },
+  { title: "Contact Us", url: "/contactUs" },
 ];
 
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
-  const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const pathname = usePathname();
 
-  useEffect(() => {
-    let lastScrollTop = 0;
-    const handleScroll = () => {
-      const currentScroll = window.scrollY;
-      if (currentScroll > 60 && currentScroll > lastScrollTop)
-        setIsScrolled(true);
-      else if (currentScroll < 50) setIsScrolled(false);
-      lastScrollTop = currentScroll;
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  const primaryBlue = "#3877d4";
+  const isActivePath = (url) => {
+    if (url.startsWith("http")) return false;
+    if (url === "/") return pathname === "/";
+    return pathname.startsWith(url);
+  };
 
   return (
-    <>
-      <div
-        style={{
-          height: isScrolled ? "50px" : "110px",
-          transition: "height 0.4s ease-in-out",
-        }}
-      />
-      <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          isScrolled
-            ? "bg-white/80 backdrop-blur-lg shadow-md"
-            : "bg-white shadow-none"
-        }`}
-      >
-        {/* --- Top Bar --- */}
-        <div
-          className={`flex justify-between items-center px-4 md:px-8 xl:px-20 border-b border-gray-200 bg-white transition-all duration-500 ease-in-out overflow-hidden ${
-            isScrolled
-              ? "max-h-0 opacity-0 py-0 border-none"
-              : "max-h-[60px] opacity-100 py-1"
-          }`}
-        >
-          <Link href="/" className="leading-none">
-            <img
-              src="/assets/images/group-logo.png"
-              alt="Global Enviro Logo"
-              className="h-[50px] w-auto"
-            />
-          </Link>
+    <header className="bg-[#3877d4] text-white fixed w-full z-50">
+      <nav className="flex items-center justify-between px-6 h-14">
 
-          <div className="hidden md:flex items-center gap-4 xl:gap-6 flex-wrap">
-            <div className="flex items-center gap-2 text-gray-700">
-              <FaPhone className="text-[#3877d4]" />
-              <span className="text-sm">+91 98480 31866</span>
-            </div>
-            <div className="flex items-center gap-2 text-gray-700">
-              <FaEnvelope className="text-[#3877d4]" />
-              <span className="text-sm">ksr@globalenviro.in</span>
-            </div>
-            <Link
-              href="/RequestQuote"
-              className="bg-[#3877d4] text-white font-semibold px-4 py-2 rounded-md hover:bg-[#2f5fb8] transition-all"
+        {/* LOGO */}
+        <Link href="/">
+          <img src="/assets/images/group-logo.png" className="h-8" />
+        </Link>
+
+        {/* DESKTOP MENU */}
+        <ul className="hidden lg:flex gap-6 text-sm font-semibold uppercase">
+
+          {navItems.map((item) => (
+            <li
+              key={item.title}
+              className="relative group"
+              onMouseEnter={() => item.dropdown && setActiveDropdown(item.title)}
+              onMouseLeave={() => setActiveDropdown(null)}
             >
-              REQUEST A QUOTE
-            </Link>
-          </div>
-        </div>
+              {/* MAIN LINK */}
+              {item.external ? (
+                <a href={item.url} target="_blank" rel="noopener noreferrer">
+                  {item.title}
+                </a>
+              ) : (
+                <Link href={item.url} className="flex items-center gap-1">
+                  {item.title}
+                  {item.dropdown && <ChevronDown size={14} />}
+                </Link>
+              )}
 
-        {/* --- Main Nav --- */}
-        <nav
-          className="flex items-center justify-center px-3 sm:px-6 lg:px-12 xl:px-20 transition-all duration-300"
-          style={{
-            backgroundColor: primaryBlue,
-            height: isScrolled ? "44px" : "52px",
-          }}
-        >
-          {/* Mobile Logo */}
-          <Link href="/" className="block lg:hidden">
-            <img
-              src="/assets/images/group-logo.png"
-              alt="Global Enviro"
-              className={`transition-all duration-300 ${isScrolled ? "h-6" : "h-8"}`}
-            />
-          </Link>
+              {/* LEVEL 2 DROPDOWN */}
+              {item.dropdown && (
+                <ul className="absolute left-0 top-full hidden group-hover:block bg-white text-black min-w-[250px] shadow-lg">
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center justify-center w-full">
-            <ul className="flex flex-wrap justify-center items-center gap-6 xl:gap-10 text-[14px] font-semibold uppercase">
-              {navItems.map((item) => {
-                const isActive = pathname.startsWith(item.url);
-                return (
-                  <li
-                    key={item.title}
-                    className="relative group"
-                    onMouseEnter={() => setActiveDropdown(item.title)}
-                    onMouseLeave={() => {
-                      setActiveDropdown(null);
-                      setActiveSubDropdown(null);
-                    }}
-                  >
-                    <Link
-                      href={item.url}
-                      className={`px-3 py-1.5 rounded-md flex items-center gap-1 ${
-                        isActive
-                          ? "bg-[#386FC1] text-white"
-                          : "hover:bg-[#386FC1] text-white"
-                      }`}
-                    >
-                      {item.title}
-                      {item.dropdown && (
-                        <ChevronDown
-                          size={14}
-                          strokeWidth={2}
-                          className={`ml-1 transition-transform duration-300 ${
-                            activeDropdown === item.title ? "rotate-180" : "rotate-0"
-                          }`}
-                        />
+                  {item.dropdown.map((sub) => (
+                    <li key={sub.title} className="relative group/sub">
+
+                      {/* LEVEL 2 ITEM */}
+                      {sub.external ? (
+                        <a
+                          href={sub.url}
+                          target="_blank"
+                          className="flex justify-between px-4 py-2 hover:bg-gray-100"
+                        >
+                          {sub.title}
+                        </a>
+                      ) : (
+                        <Link
+                          href={sub.url}
+                          className="flex justify-between px-4 py-2 hover:bg-gray-100"
+                        >
+                          {sub.title}
+                          {sub.subDropdown && <ChevronRight size={14} />}
+                        </Link>
                       )}
-                    </Link>
 
-                    {/* Dropdown */}
-                    {item.dropdown && (
-                      <ul
-                        className={`absolute left-0 mt-2 bg-white text-gray-800 shadow-lg rounded-md min-w-[220px] border border-gray-100 transform transition-all duration-300 ease-in-out ${
-                          activeDropdown === item.title
-                            ? "opacity-100 visible translate-y-0"
-                            : "opacity-0 invisible -translate-y-3"
-                        }`}
-                      >
-                        {item.dropdown.map((subItem) => (
-                          <li
-                            key={subItem.title}
-                            className="relative"
-                            onMouseEnter={() =>
-                              subItem.subDropdown && setActiveSubDropdown(subItem.title)
-                            }
-                            onMouseLeave={() =>
-                              subItem.subDropdown && setActiveSubDropdown(null)
-                            }
-                          >
-                            <Link
-                              href={subItem.url}
-                              className="block px-4 py-2 text-sm hover:bg-gray-100 whitespace-nowrap flex items-center justify-between"
-                            >
-                              <span>{subItem.title}</span>
-                              {subItem.subDropdown && (
-                                <ChevronRight size={14} strokeWidth={2} />
-                              )}
-                            </Link>
+                      {/* LEVEL 3 SUBDROPDOWN */}
+                      {sub.subDropdown && (
+                        <ul className="absolute left-full top-0 hidden group-hover/sub:block bg-white min-w-[220px] shadow-lg">
 
-                            {subItem.subDropdown && (
-                              <ul
-                                className={`absolute top-0 left-full bg-white shadow-md rounded-md min-w-[200px] transition-all duration-300 ${
-                                  activeSubDropdown === subItem.title
-                                    ? "opacity-100 visible translate-x-0"
-                                    : "opacity-0 invisible -translate-x-2"
-                                }`}
+                          {sub.subDropdown.map((child) => (
+                            <li key={child.title}>
+                              <Link
+                                href={child.url}
+                                className="block px-4 py-2 hover:bg-gray-100"
                               >
-                                {subItem.subDropdown.map((deepItem) => (
-                                  <li key={deepItem.title}>
-                                    <Link
-                                      href={deepItem.url}
-                                      className="block px-4 py-2 text-sm hover:bg-gray-100 whitespace-nowrap"
-                                    >
-                                      {deepItem.title}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </li>
-                );
-              })}
-            </ul>
+                                {child.title}
+                              </Link>
+                            </li>
+                          ))}
 
-          </div>
+                        </ul>
+                      )}
+                    </li>
+                  ))}
 
-          {/* Mobile Toggle */}
-          <button
-            className="lg:hidden text-white text-xl"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-          </button>
-        </nav>
+                </ul>
+              )}
+            </li>
+          ))}
 
-        {/* --- Mobile Menu --- */}
-        {isMobileMenuOpen && (
-          <div className="lg:hidden bg-white/95 backdrop-blur-md text-gray-800 shadow-md animate-fadeInDown">
-            <ul className="flex flex-col">
-              {navItems.map((item) => (
-                <li key={item.title} className="border-b border-gray-200">
-                  <button
-                    onClick={() =>
-                      setActiveDropdown(
-                        activeDropdown === item.title ? null : item.title
-                      )
-                    }
-                    className="w-full text-left px-5 py-3 font-semibold flex justify-center items-center"
-                  >
-                    <span>{item.title}</span>
-                    {item.dropdown && (
-                      <ChevronDown
-                        size={16}
-                        className={`transition-transform duration-300 ${
-                          activeDropdown === item.title ? "rotate-180" : ""
-                        }`}
-                      />
-                    )}
-                  </button>
+        </ul>
 
-                  {item.dropdown && activeDropdown === item.title && (
-                    <ul className="bg-gray-50 transition-all duration-300">
-                      {item.dropdown.map((subItem) => (
-                        <li key={subItem.title}>
-                          <button
-                            onClick={() =>
-                              setActiveSubDropdown(
-                                activeSubDropdown === subItem.title
-                                  ? null
-                                  : subItem.title
-                              )
-                            }
-                            className="w-full text-left px-7 py-2 text-sm flex justify-between items-center"
-                          >
-                            {subItem.title}
-                            {subItem.subDropdown && <ChevronRight size={14} />}
-                          </button>
+        {/* MOBILE BUTTON */}
+        <button className="lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+          {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+      </nav>
 
-                          {subItem.subDropdown &&
-                            activeSubDropdown === subItem.title && (
-                              <ul className="bg-gray-100 transition-all duration-300">
-                                {subItem.subDropdown.map((deepItem) => (
-                                  <li key={deepItem.title}>
-                                    <Link
-                                      href={deepItem.url}
-                                      className="block px-10 py-2 text-sm hover:bg-gray-200"
-                                      onClick={() => setIsMobileMenuOpen(false)}
-                                    >
-                                      {deepItem.title}
-                                    </Link>
-                                  </li>
-                                ))}
-                              </ul>
-                            )}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
-      </header>
-    </>
+      {/* MOBILE MENU */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden bg-white text-black">
+          <ul>
+            {navItems.map((item) => (
+              <li key={item.title} className="border-b">
+                <Link href={item.url} className="block px-4 py-3">
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </header>
   );
 };
 

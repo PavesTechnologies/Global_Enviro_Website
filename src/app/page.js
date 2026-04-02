@@ -7,6 +7,7 @@ import OurInfrastructure from "@/components/About/OurInfrastructure";
 import Certifications from "@/components/About/Certifications";
 import OurJourney from "@/components/About/OurJourney";
 
+
 export default function Home() {
   const slides = [
     {
