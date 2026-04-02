@@ -22,11 +22,12 @@ export async function PUT(request, { params }) {
   if (!Object.hasOwn(ALLOWED_STATUS_UPDATES, status)) {
     return Response.json({ error: "Invalid status." }, { status: 400 });
   }
+  const { id } = await params;
 
   const { data: existing, error: fetchError } = await supabaseAdmin
     .from("applications")
     .select("id, status, name, email, jobs(title)")
-    .eq("id", params.id)
+    .eq("id", id)
     .single();
 
   if (fetchError) {
@@ -47,7 +48,7 @@ export async function PUT(request, { params }) {
   const { data, error } = await supabaseAdmin
     .from("applications")
     .update({ status })
-    .eq("id", params.id)
+    .eq("id", id)
     .select("id, status, name, email, jobs(title)")
     .single();
 

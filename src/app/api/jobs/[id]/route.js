@@ -8,12 +8,14 @@ export async function PUT(request, { params }) {
   if (!session) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
+  const { id } = await params;
+
 
   const body = await request.json();
   const { data, error } = await supabaseAdmin
     .from("jobs")
     .update({ ...body, updated_at: new Date().toISOString() })
-    .eq("id", params.id)
+    .eq("id", id)
     .select()
     .single();
 
@@ -30,8 +32,9 @@ export async function DELETE(_request, { params }) {
   if (!session) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
+  const { id } = await params;
 
-  const { error } = await supabaseAdmin.from("jobs").delete().eq("id", params.id);
+  const { error } = await supabaseAdmin.from("jobs").delete().eq("id", id);
 
   if (error) {
     return Response.json({ error: error.message }, { status: 500 });

@@ -9,6 +9,10 @@ export async function PUT(request, { params }) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
 
+  console.log("Params received:", params);
+  const { id } = await params;
+  console.log("Params received:", params);
+
   const {
     title,
     content,
@@ -26,7 +30,7 @@ export async function PUT(request, { params }) {
       photo_urls,
       updated_at: new Date().toISOString(),
     })
-    .eq("id", params.id)
+    .eq("id", id)
     .select()
     .single();
 
@@ -43,11 +47,13 @@ export async function DELETE(_request, { params }) {
   if (!session) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
+  const { id } = await params;
+
 
   const { error } = await supabaseAdmin
     .from("news_events")
     .delete()
-    .eq("id", params.id);
+    .eq("id", id);
 
   if (error) {
     return Response.json({ error: error.message }, { status: 500 });
