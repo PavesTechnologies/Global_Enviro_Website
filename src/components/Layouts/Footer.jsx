@@ -24,7 +24,7 @@ const Footer = () => {
 
           <p className="text-sm leading-relaxed mb-5 text-gray-200">
             <span className="font-semibold text-white">
-              Global Technologies Pvt Ltd
+              Global ENVIRO AIR SYSTEMS (P) Ltd
             </span>
             <br />
             Sy. No. 163/A, Gagillapur (Vil),
@@ -109,7 +109,7 @@ const Footer = () => {
       <div className="bg-black text-gray-400 py-3 text-sm text-center border-t border-gray-700">
         &copy; {new Date().getFullYear()}{" "}
         <span className="text-gray-200 font-medium">
-          GLOBAL TECHNOLOGIES PVT LTD
+          Global ENVIRO AIR SYSTEMS (P) Ltd
         </span>. All Rights Reserved.
       </div>
     </footer>

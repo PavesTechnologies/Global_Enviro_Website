@@ -11,14 +11,16 @@ export default function Certifications() {
       img: "/assets/images/Certificate1.jpg",
       desc: `Our ISO 9001:2008 certification highlights our dedication to superior design,
       manufacturing, and customer satisfaction. It reinforces our commitment to excellence
+      and reliability in delivering HVAC and pollution control solutions.Our ISO 9001:2008 certification highlights our dedication to superior design,
+      manufacturing, and customer satisfaction. It reinforces our commitment to excellence
       and reliability in delivering HVAC and pollution control solutions.`,
     },
-    {
-      name: "Global Technologies",
-      img: "/assets/images/Certificate2.jpg",
-      desc: `With ISO 9001:2008 accreditation, Global Technologies continues to deliver top-tier
-      engineering and material handling systems with precision, efficiency, and quality.`,
-    },
+    // {
+    //   name: "Global Technologies",
+    //   img: "/assets/images/Certificate2.jpg",
+    //   desc: `With ISO 9001:2008 accreditation, Global Technologies continues to deliver top-tier
+    //   engineering and material handling systems with precision, efficiency, and quality.`,
+    // },
     {
       name: "Global Enviro Air Systems (Expansion)",
       img: "/assets/images/Certificate3.jpg",
@@ -99,12 +101,12 @@ export default function Certifications() {
               <p className="text-base leading-relaxed text-gray-200 mb-4">
                 {active.desc}
               </p>
-              <motion.button
+              {/* <motion.button
                 whileHover={{ scale: 1.05 }}
                 className="mt-4 border border-blue-300 px-6 py-2 rounded-md hover:bg-blue-200 hover:text-[#081736] transition-all"
               >
                 Learn More
-              </motion.button>
+              </motion.button> */}
             </motion.div>
           </AnimatePresence>
         </div>

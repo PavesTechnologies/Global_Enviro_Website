@@ -18,7 +18,7 @@ export default function About() {
         viewport={{ once: true }}
       >
         <h2 className="text-blue-700 font-extrabold text-2xl uppercase tracking-[6px]">About Us</h2>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-[#003366] uppercase leading-tight">Global Enviro Group</h1>
+        {/* <h1 className="text-4xl md:text-5xl font-extrabold text-[#003366] uppercase leading-tight">Global Enviro Group</h1> */}
 
         {/* Simple Description */}
          <p className="text-gray-700 text-lg justify-start">Leading the industry in air pollution control, HVAC systems, 
@@ -32,7 +32,7 @@ export default function About() {
          </p> 
 
         {/* Know More Button */}
-        <motion.button
+        {/* <motion.button
           className="mt-6 w-40 py-3 px-6 bg-primary text-white font-semibold rounded-lg shadow-lg hover:cursor-pointer transition-colors"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +40,7 @@ export default function About() {
           viewport={{ once: true }}
         >
           Know More
-        </motion.button>
+        </motion.button> */}
       </motion.div>
 
       {/* Right Side Image (unchanged) */}

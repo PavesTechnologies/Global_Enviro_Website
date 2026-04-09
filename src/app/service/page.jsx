@@ -40,7 +40,7 @@ const categories = [
   {
     title: "Metallurgicals & Briquettes",
     description:
-      "Casting division offering liners, beaters, carbon steel, magna steel and cast iron components. Also supplying biomass briquettes as boiler fuel.",
+      "Casting division offering liners, beaters, carbon steel, magna steel and cast iron. Also supplying biomass briquettes as boiler fuel.",
     icon: <Gem className="w-12 h-12" strokeWidth={1.5} />,
     link: "/service/Metallurgicals",
     color: "from-slate-600 to-slate-800",
