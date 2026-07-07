@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function GalleryModal({ photos, initialIndex, onClose }) {
   const [current, setCurrent] = useState(initialIndex);
@@ -56,12 +57,15 @@ export default function GalleryModal({ photos, initialIndex, onClose }) {
           {current + 1} / {photos.length}
         </div>
 
-        <div className="gallery-modal-image-wrap">
-          <img
+        <div className="gallery-modal-image-wrap relative w-full h-[60vh]">
+          <Image
             key={current}
             src={photos[current]}
             alt={`Photo ${current + 1}`}
-            className="gallery-modal-image"
+            fill
+            sizes="(max-width: 768px) 100vw, 1200px"
+            className="gallery-modal-image object-contain"
+            priority={false}
           />
         </div>
 

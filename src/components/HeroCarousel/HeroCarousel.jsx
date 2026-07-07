@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
+import LazyAnimatePresence from "@/components/common/LazyAnimatePresence";
 import { cn } from "@/lib/utils";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -79,9 +80,10 @@ export default function HeroCarousel({
       onMouseEnter={() => setPaused(pauseOnHover && true)}
       onMouseLeave={() => setPaused(false)}
     >
-      <AnimatePresence mode="sync" custom={direction}>
-        <motion.div
+      <LazyAnimatePresence mode="sync" custom={direction}>
+        <MotionWrapper
           key={current}
+          as="div"
           className="absolute inset-0"
           custom={direction}
           variants={variants}
@@ -99,7 +101,8 @@ export default function HeroCarousel({
           }}
         >
           {/* Image */}
-          <motion.img
+          <MotionWrapper
+            as="img"
             key={`image-${current}`}
             src={slides[current].image}
             alt={slides[current].title}
@@ -110,7 +113,8 @@ export default function HeroCarousel({
 
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/70 flex flex-col justify-center text-primary-foreground px-8 md:px-20">
-            <motion.div
+            <MotionWrapper
+              as="div"
               key={`text-${current}`}
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
@@ -138,10 +142,10 @@ export default function HeroCarousel({
                   {slides[current].buttonText}
                 </a>
               )}
-            </motion.div>
+            </MotionWrapper>
           </div>
-        </motion.div>
-      </AnimatePresence>
+        </MotionWrapper>
+      </LazyAnimatePresence>
 
       {/* Arrows */}
       <button

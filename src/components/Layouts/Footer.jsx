@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import {
   FaPhone,
   FaEnvelope,
@@ -16,11 +17,7 @@ const Footer = () => {
 
         {/* --- COMPANY INFO --- */}
         <div>
-          <img
-            src="/assets/images/group-logo.png"
-            alt="Global Technologies Logo"
-            className="h-14 mb-4 object-contain"
-          />
+          <Image src="/assets/images/group-logo.png" alt="Global Technologies Logo" width={140} height={56} className="h-14 mb-4 object-contain" />
 
           <p className="text-sm leading-relaxed mb-5 text-gray-200">
             <span className="font-semibold text-white">

@@ -1,6 +1,7 @@
 "use client";
 import { Wind, Factory, Cog, Zap, Gem } from "lucide-react";
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
+import Image from "next/image";
 import Link from "next/link";
 
 const categories = [
@@ -51,44 +52,32 @@ export default function ServicePage() {
   return (
     <section className="relative min-h-screen py-24 px-6 md:px-12 lg:px-20 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-[url('/assets/images/hero-section.png')] bg-cover bg-center opacity-30 -z-10" />
-      <div className="absolute inset-0 bg-gradient-to-br from-white via-[#e8f0ff] to-[#dbeafe] -z-10" />
+      <div className="absolute inset-0 -z-10">
+        <Image src="/assets/images/hero-section.png" alt="bg" fill className="object-cover" sizes="100vw" priority={false} />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-[#e8f0ff] to-[#dbeafe]" />
+      </div>
 
       {/* Header */}
       <div className="text-center mb-16">
-        <motion.p
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-[#3877d4] uppercase tracking-[5px] text-sm font-semibold mb-3"
-        >
+        <MotionWrapper as="p" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-[#3877d4] uppercase tracking-[5px] text-sm font-semibold mb-3">
           What We Offer
-        </motion.p>
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-4xl md:text-5xl font-extrabold text-[#0b1e3d] mb-6"
-        >
+        </MotionWrapper>
+        <MotionWrapper as="h1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-4xl md:text-5xl font-extrabold text-[#0b1e3d] mb-6">
           Projects &amp; Products
-        </motion.h1>
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed"
-        >
+        </MotionWrapper>
+        <MotionWrapper as="p" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
           From air pollution control to precision clean rooms, bulk material
           handling to EPC power projects — Global Enviro delivers end-to-end
           industrial engineering solutions across five core domains.
-        </motion.p>
+        </MotionWrapper>
       </div>
 
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
         {categories.map((cat, index) => (
-          <motion.div
+          <MotionWrapper
             key={cat.title}
+            as="div"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.15, duration: 0.6 }}
@@ -124,7 +113,7 @@ export default function ServicePage() {
                 </Link>
               </div>
             </div>
-          </motion.div>
+          </MotionWrapper>
         ))}
       </div>
     </section>

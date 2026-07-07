@@ -58,7 +58,6 @@ export default function Home() {
       />
 
       {/* About Us Banner */}
-      <About />
       <section id="about-us">
         <About />
       </section>

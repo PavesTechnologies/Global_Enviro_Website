@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
 
 export default function AboutBanner() {
   return (
@@ -19,14 +19,15 @@ export default function AboutBanner() {
 
       {/* Banner Text */}
       <div className="relative container mx-auto px-6 pt-16 text-center">
-        <motion.h1
+        <MotionWrapper
+          as="h1"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-5xl font-bold text-blue-900 tracking-wide"
         >
           ABOUT US
-        </motion.h1>
+        </MotionWrapper>
       </div>
     </section>
   );

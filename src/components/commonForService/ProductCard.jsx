@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
 
 export default function ProductCard({ id, title, image, specs = {} }) {
   return (
-    <motion.div
+    <MotionWrapper
+      as="div"
       initial={{ y: 40, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
@@ -42,6 +43,6 @@ export default function ProductCard({ id, title, image, specs = {} }) {
           </tbody>
         </table>
       </div>
-    </motion.div>
+    </MotionWrapper>
   );
 }

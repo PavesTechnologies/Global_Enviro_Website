@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
+import Image from "next/image";
 
 const companies = [
   {
@@ -56,15 +57,17 @@ export default function GroupPage() {
           <path fill="#f9fafb" d="M0,32 C360,100 1080,0 1440,80 L1440,120 L0,120 Z" />
         </svg>
         <div className="relative container mx-auto px-6 pt-16 text-center">
-          <motion.h1
+          <MotionWrapper
+            as="h1"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl font-bold text-blue-900 tracking-wide"
           >
             Our Group of Companies
-          </motion.h1>
-          <motion.p
+          </MotionWrapper>
+          <MotionWrapper
+            as="p"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2 }}
@@ -72,14 +75,15 @@ export default function GroupPage() {
           >
             A collective of innovation and engineering excellence driving
             industrial solutions worldwide.
-          </motion.p>
+          </MotionWrapper>
         </div>
       </section>
 
       {/* Company Sections */}
       <div className="max-w-6xl mx-auto px-8 py-16 space-y-20">
         {companies.map((company, index) => (
-          <motion.div
+          <MotionWrapper
+            as="div"
             key={company.id}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -110,14 +114,16 @@ export default function GroupPage() {
             {/* Image */}
             <div className="md:w-1/2 flex justify-center">
               <div className={`overflow-hidden w-[360px] h-[360px] shadow-lg border border-gray-200 ${company.shape}`}>
-                <img
+                <Image
                   src={company.image}
                   alt={company.name}
+                  width={360}
+                  height={360}
                   className="w-full h-full object-cover"
                 />
               </div>
             </div>
-          </motion.div>
+          </MotionWrapper>
         ))}
       </div>
     </div>

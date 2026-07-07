@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
+import LazyAnimatePresence from "@/components/common/LazyAnimatePresence";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import HeroSection from "@/components/HeroSection/HeroSection";
 
@@ -45,9 +47,10 @@ function HVACAccordion({ section, isOpen, onToggle }) {
         <ChevronDown size={20} className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
       </button>
 
-      <AnimatePresence initial={false}>
+      <LazyAnimatePresence initial={false}>
         {isOpen && (
-          <motion.div
+          <MotionWrapper
+            as="div"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -58,9 +61,11 @@ function HVACAccordion({ section, isOpen, onToggle }) {
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
                 {section.items.map((item) => (
                   <div key={item.name} className="flex flex-col items-center text-center bg-gray-50 rounded-xl p-3 border border-gray-100 hover:shadow-md transition-shadow">
-                    <img
+                    <Image
                       src={item.img}
                       alt={item.name}
+                      width={320}
+                      height={160}
                       className="w-full h-28 object-cover rounded-lg mb-2"
                     />
                     <p className="text-xs font-medium text-gray-700 leading-tight">{item.name}</p>
@@ -68,9 +73,9 @@ function HVACAccordion({ section, isOpen, onToggle }) {
                 ))}
               </div>
             </div>
-          </motion.div>
+          </MotionWrapper>
         )}
-      </AnimatePresence>
+      </LazyAnimatePresence>
     </div>
   );
 }

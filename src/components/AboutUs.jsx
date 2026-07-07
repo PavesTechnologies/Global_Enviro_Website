@@ -1,22 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
 import { Building2, Leaf, Globe, Users } from "lucide-react";
 
 export default function AboutUs() {
   return (
     <section className="bg-white py-16 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center">
-        <motion.h2
+        <MotionWrapper
+          as="h2"
           className="text-4xl font-bold text-gray-800 mb-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           About
-        </motion.h2>
+        </MotionWrapper>
 
-        <motion.p
+        <MotionWrapper
+          as="p"
           className="text-gray-600 max-w-3xl mx-auto mb-12"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -27,7 +29,7 @@ export default function AboutUs() {
           manufacturing air pollution control equipment and industrial ventilation systems.
           With a strong focus on innovation and sustainability, we deliver reliable, energy-efficient
           solutions to clients across multiple industries worldwide.
-        </motion.p>
+        </MotionWrapper>
       </div>
 
       <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -53,7 +55,8 @@ export default function AboutUs() {
             desc: "Led by experienced engineers and environmental specialists dedicated to quality and service."
           }
         ].map((item, index) => (
-          <motion.div
+          <MotionWrapper
+            as="div"
             key={index}
             className="p-6 bg-gray-50 rounded-2xl shadow-md hover:shadow-lg transition-shadow"
             whileHover={{ scale: 1.05 }}
@@ -63,7 +66,7 @@ export default function AboutUs() {
               <h3 className="text-lg font-semibold text-gray-800">{item.title}</h3>
               <p className="text-gray-600 text-sm">{item.desc}</p>
             </div>
-          </motion.div>
+          </MotionWrapper>
         ))}
       </div>
 

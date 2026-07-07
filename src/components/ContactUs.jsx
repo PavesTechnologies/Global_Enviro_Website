@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
 
 const branches = [
   {
@@ -46,15 +46,17 @@ export default function ContactUS() {
           <path fill="#f9fafb" d="M0,32 C360,100 1080,0 1440,80 L1440,120 L0,120 Z" />
         </svg>
         <div className="relative container mx-auto px-6 pt-20 text-center">
-          <motion.h1
+          <MotionWrapper
+            as="h1"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="text-5xl font-bold text-blue-900 tracking-wide"
           >
             Get In Touch
-          </motion.h1>
-          <motion.p
+          </MotionWrapper>
+          <MotionWrapper
+            as="p"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
@@ -62,7 +64,7 @@ export default function ContactUS() {
           >
             Reach out to Global Enviro Air Systems for enquiries, support, or
             partnership discussions.
-          </motion.p>
+          </MotionWrapper>
         </div>
       </section>
 
@@ -119,7 +121,8 @@ export default function ContactUS() {
 
           <div className="grid gap-8 md:grid-cols-2">
             {branches.map((branch, index) => (
-              <motion.div
+              <MotionWrapper
+                as="div"
                 key={branch.name}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -171,7 +174,7 @@ export default function ContactUS() {
                     </a>
                   </div>
                 </div>
-              </motion.div>
+              </MotionWrapper>
             ))}
           </div>
         </div>

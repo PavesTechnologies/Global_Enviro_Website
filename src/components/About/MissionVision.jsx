@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
 import Image from "next/image";
 
 export default function MissionVision() {
@@ -22,7 +22,8 @@ export default function MissionVision() {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 md:px-16 flex flex-col items-center text-center">
         {/* Section Heading */}
-        <motion.h2
+        <MotionWrapper
+          as="h2"
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -30,9 +31,10 @@ export default function MissionVision() {
         >
           Our <span className="text-blue-400">Mission</span> &{" "}
           <span className="text-blue-400">Vision</span>
-        </motion.h2>
+        </MotionWrapper>
 
-        <motion.p
+        <MotionWrapper
+          as="p"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -40,12 +42,13 @@ export default function MissionVision() {
         >
           Striving to create a sustainable future through engineering excellence,
           innovation, and commitment to our clients’ success.
-        </motion.p>
+        </MotionWrapper>
 
         {/* Cards Container */}
         <div className="grid md:grid-cols-2 gap-10 w-full max-w-5xl">
           {/* Mission Card */}
-          <motion.div
+          <MotionWrapper
+            as="div"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -57,10 +60,11 @@ export default function MissionVision() {
               satisfaction to our clients and help in keeping the environment clean
               while reducing production costs through innovation and efficiency.
             </p>
-          </motion.div>
+          </MotionWrapper>
 
           {/* Vision Card */}
-          <motion.div
+          <MotionWrapper
+            as="div"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -73,7 +77,7 @@ export default function MissionVision() {
               mind and striving to create technology that drives a cleaner, smarter,
               and more sustainable future.
             </p>
-          </motion.div>
+          </MotionWrapper>
         </div>
       </div>
     </section>

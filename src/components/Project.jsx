@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
 
 const Project = () => {
   const data = [
@@ -61,7 +61,8 @@ const Project = () => {
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
         {paginatedData.map((item, index) => (
-          <motion.div
+          <MotionWrapper
+            as="div"
             key={index}
             whileHover={{ y: -8, boxShadow: "0px 8px 25px rgba(0,0,0,0.1)" }}
             initial={{ opacity: 0, y: 40 }}
@@ -75,7 +76,7 @@ const Project = () => {
             <p><strong>Boiler Capacity:</strong> {item.boiler}</p>
             <p><strong>Fuel Handling:</strong> {item.fuel}</p>
             <p><strong>Ash Handling:</strong> {item.ash}</p>
-          </motion.div>
+          </MotionWrapper>
         ))}
       </div>
 

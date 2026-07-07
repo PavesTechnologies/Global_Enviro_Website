@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 /**
  * Dynamic Image Hover Card Component
@@ -26,9 +27,11 @@ const ImageHoverCards = ({ cards = [] }) => {
           className="relative group overflow-hidden rounded-2xl shadow-lg cursor-pointer transition-transform duration-300 hover:scale-105 bg-white"
         >
           {/* Image */}
-          <img
+          <Image
             src={card.image}
             alt={card.title}
+            width={1200}
+            height={640}
             className="w-full h-64 object-cover transition-opacity duration-500 group-hover:opacity-30"
           />
 

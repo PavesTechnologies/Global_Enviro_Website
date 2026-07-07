@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { getNewsPhotoUrl } from "@/lib/newsPhotos";
 
 export default function ImageManager({ initialPhotos, onChange }) {
@@ -73,11 +74,15 @@ export default function ImageManager({ initialPhotos, onChange }) {
               ::
             </div>
 
-            <img
-              src={getNewsPhotoUrl(url)}
-              alt={`Image ${index + 1}`}
-              className="img-manager-thumb"
-            />
+            <div className="img-manager-thumb-wrapper">
+              <Image
+                src={getNewsPhotoUrl(url)}
+                alt={`Image ${index + 1}`}
+                width={240}
+                height={160}
+                className="img-manager-thumb object-cover"
+              />
+            </div>
 
             <span className="img-manager-badge">{index + 1}</span>
 

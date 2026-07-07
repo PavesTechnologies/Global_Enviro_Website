@@ -1,7 +1,8 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
+import Image from "next/image";
 import OurClientsPage from "@/app/OurClients/page";
 
 
@@ -41,7 +42,8 @@ const clientLogos = [
 
 const ClientsRow = ({ logos, reverse }) => (
   <div className="overflow-hidden w-full my-6">
-    <motion.div
+    <MotionWrapper
+      as="div"
       className="flex gap-12"
       animate={{ x: reverse ? ["0%", "-100%"] : ["-100%", "0%"] }}
       transition={{
@@ -51,14 +53,16 @@ const ClientsRow = ({ logos, reverse }) => (
       }}
     >
       {[...logos, ...logos].map((logo, index) => (
-        <img
+        <Image
           key={index}
           src={logo}
           alt="client logo"
+          width={120}
+          height={56}
           className="h-14 w-auto object-contain hover:scale-105 transition-transform duration-300 drop-shadow-md"
         />
       ))}
-    </motion.div>
+    </MotionWrapper>
   </div>
 );
 
@@ -84,20 +88,21 @@ const ClientsPage = () => {
       {/* Animated Button */}
       <div className="flex justify-center mt-10">
         <a href="/OurClients">
-        <motion.button
-          whileHover={{
-            scale: 1.08,
-            backgroundPosition: "right center",
-            boxShadow: "0px 8px 20px rgba(30, 64, 175, 0.3)",
-          }}
-          whileTap={{ scale: 0.95 }}
-          transition={{ type: "spring", stiffness: 200 }}
-          className="px-8 py-3 bg-gradient-to-tr from-primary to-accent text-white font-semibold rounded-full shadow-md bg-[length:200%_200%] transition-all duration-500"
-           onClick={() => router.push("/OurClients")}
-        >
-          View All Clients
-        </motion.button>
-            </a>
+          <MotionWrapper
+            as="button"
+            whileHover={{
+              scale: 1.08,
+              backgroundPosition: "right center",
+              boxShadow: "0px 8px 20px rgba(30, 64, 175, 0.3)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 200 }}
+            className="px-8 py-3 bg-gradient-to-tr from-primary to-accent text-white font-semibold rounded-full shadow-md bg-[length:200%_200%] transition-all duration-500"
+            onClick={() => router.push("/OurClients")}
+          >
+            View All Clients
+          </MotionWrapper>
+        </a>
       </div>
     </div>
   );

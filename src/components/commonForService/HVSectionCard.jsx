@@ -53,12 +53,13 @@
 
 
 "use client";
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
 import Image from "next/image";
 
 export default function HVSectionCard({ title, description, points, image }) {
   return (
-    <motion.section
+    <MotionWrapper
+      as="section"
       className="relative flex flex-col lg:flex-row items-center justify-between gap-2 bg-[#e6f7ff] p-8 rounded-2xl shadow-md my-2 overflow-hidden"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +81,8 @@ export default function HVSectionCard({ title, description, points, image }) {
       </div>
 
       {/* Right Image */}
-      <motion.div
+      <MotionWrapper
+        as="div"
         className="relative lg:w-1/3 flex justify-center items-center"
         initial={{ scale: 0.9, opacity: 0 }}
         whileInView={{ scale: 1, opacity: 1 }}
@@ -105,8 +107,8 @@ export default function HVSectionCard({ title, description, points, image }) {
             sizes="(max-width: 768px) 100vw, 33vw"
           />
         </div>
-      </motion.div>
-    </motion.section>
+      </MotionWrapper>
+    </MotionWrapper>
   );
 }
 

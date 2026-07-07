@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
 import { FaFlag, FaWind, FaIndustry, FaBolt } from "react-icons/fa";
 
 export default function OurJourney() {
@@ -37,20 +37,22 @@ export default function OurJourney() {
   return (
     <div className="bg-[#1F3A70] py-20 px-6">
       {/* Title */}
-      <motion.h1
+      <MotionWrapper
+        as="h1"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-4xl md:text-5xl font-bold mb-16 text-white text-center"
       >
         Our Journey
-      </motion.h1>
+      </MotionWrapper>
 
       {/* Timeline Wrapper */}
       <div className="relative max-w-4xl w-full mx-auto">
 
         {/* 🔥 Animated Line */}
-        <motion.div
+        <MotionWrapper
+          as="div"
           initial={{ height: 0, opacity: 0 }}
           whileInView={{ height: "100%", opacity: 1 }}
           viewport={{ once: true }}
@@ -69,7 +71,8 @@ export default function OurJourney() {
               </div>
 
               {/* 🟦 CARD */}
-              <motion.div
+              <MotionWrapper
+                as="div"
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -87,14 +90,15 @@ export default function OurJourney() {
                 <p className="text-sm text-blue-100 leading-relaxed">
                   {milestone.description}
                 </p>
-              </motion.div>
+              </MotionWrapper>
             </div>
           ))}
         </div>
       </div>
 
       {/* Footer Quote */}
-      <motion.div
+      <MotionWrapper
+        as="div"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
@@ -103,7 +107,7 @@ export default function OurJourney() {
         <p className="text-base italic text-blue-100">
           "Every milestone we cross strengthens our commitment to building a sustainable world for generations to come."
         </p>
-      </motion.div>
+      </MotionWrapper>
     </div>
   );
 }

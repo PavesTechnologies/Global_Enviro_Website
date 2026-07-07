@@ -1,6 +1,8 @@
 "use client";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
+import LazyAnimatePresence from "@/components/common/LazyAnimatePresence";
+import Image from "next/image";
 import { ChevronDown } from "lucide-react";
 import HeroSection from "@/components/HeroSection/HeroSection";
 
@@ -47,9 +49,10 @@ function MetAccordion({ section, isOpen, onToggle }) {
         <ChevronDown size={20} className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
       </button>
 
-      <AnimatePresence initial={false}>
+      <LazyAnimatePresence initial={false}>
         {isOpen && (
-          <motion.div
+          <MotionWrapper
+            as="div"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -58,9 +61,11 @@ function MetAccordion({ section, isOpen, onToggle }) {
           >
             <div className="bg-white px-6 py-6 flex flex-col md:flex-row gap-6">
               <div className="md:w-1/3">
-                <img
+                <Image
                   src={section.img}
                   alt={section.title}
+                  width={480}
+                  height={240}
                   className="rounded-xl object-cover w-full h-48 shadow"
                 />
               </div>
@@ -83,9 +88,9 @@ function MetAccordion({ section, isOpen, onToggle }) {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </MotionWrapper>
         )}
-      </AnimatePresence>
+      </LazyAnimatePresence>
     </div>
   );
 }

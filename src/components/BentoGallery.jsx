@@ -1,7 +1,13 @@
 "use client";
 
 import { useState } from "react";
-import GalleryModal from "@/components/GalleryModal";
+import dynamic from "next/dynamic";
+import Image from "next/image";
+
+const GalleryModal = dynamic(() => import("@/components/GalleryModal"), {
+  ssr: false,
+  loading: () => <div className="modal-loading" />,
+});
 
 export default function BentoGallery({ photos = [] }) {
   const [modalOpen, setModalOpen] = useState(false);
@@ -39,7 +45,7 @@ export default function BentoGallery({ photos = [] }) {
                 setModalOpen(true);
               }}
             >
-              <img src={url} alt={`Event photo ${index + 1}`} loading="lazy" />
+              <Image src={url} alt={`Event photo ${index + 1}`} width={400} height={300} className="object-cover" loading="lazy" />
             </button>
           );
         })}

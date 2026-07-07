@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
 
 const keyPersons = [
   { name: "Naveen",         role: "Head Accounts" },
@@ -21,7 +21,8 @@ export default function KeyPersons() {
 
         {/* Heading */}
         <div className="text-center mb-12">
-          <motion.h2
+          <MotionWrapper
+            as="h2"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -29,7 +30,7 @@ export default function KeyPersons() {
             className="text-4xl font-extrabold text-[#081736] mb-3"
           >
             Key Persons
-          </motion.h2>
+          </MotionWrapper>
           <p className="text-gray-500 text-lg">
             The dedicated leaders driving our operations forward
           </p>
@@ -39,7 +40,8 @@ export default function KeyPersons() {
         {/* Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {keyPersons.map((person, index) => (
-            <motion.div
+            <MotionWrapper
+              as="div"
               key={person.name}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -57,7 +59,7 @@ export default function KeyPersons() {
               <p className="text-xs text-[#3877d4] mt-1 font-medium leading-snug">
                 {person.role}
               </p>
-            </motion.div>
+            </MotionWrapper>
           ))}
         </div>
 

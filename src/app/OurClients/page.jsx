@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
+import Image from "next/image";
 
 const clients = [
   { name: "ISRO", logo: "https://www.logo.wine/a/logo/Indian_Space_Research_Organisation/Indian_Space_Research_Organisation-Logo.wine.svg" },
@@ -99,20 +100,22 @@ export default function OurClientsPage() {
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-6">
           {clients.map((client) => (
-            <motion.div
+            <MotionWrapper
               key={client.name}
               whileHover={{ y: -4 }}
               className="bg-white rounded-2xl border shadow-sm p-5 flex flex-col items-center gap-3 hover:shadow-md transition"
             >
               <div className="h-16 flex items-center justify-center">
-                <img
+                <Image
                   src={client.logo}
                   alt={client.name}
+                  width={140}
+                  height={56}
                   className="max-h-12 object-contain"
                 />
               </div>
               <p className="text-xs text-gray-500 text-center">{client.name}</p>
-            </motion.div>
+            </MotionWrapper>
           ))}
         </div>
       </section>

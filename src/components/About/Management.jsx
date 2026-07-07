@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import MotionWrapper from "@/components/common/MotionWrapper";
+import LazyAnimatePresence from "@/components/common/LazyAnimatePresence";
 import Image from "next/image";
 
 export default function Management() {
@@ -65,8 +66,8 @@ export default function Management() {
 
         {/* Left: Active Member Description */}
         <div className="space-y-6">
-          <AnimatePresence mode="wait">
-            <motion.div
+          <LazyAnimatePresence mode="wait">
+            <MotionWrapper
               key={active.name}
               initial={{ opacity: 0, x: -60 }}
               animate={{ opacity: 1, x: 0 }}
@@ -86,8 +87,8 @@ export default function Management() {
                 {active.desc}
               </p>
               {/* ❌ "Contact Us" button removed here */}
-            </motion.div>
-          </AnimatePresence>
+            </MotionWrapper>
+          </LazyAnimatePresence>
         </div>
 
         {/* Right: Team Cards */}
@@ -95,7 +96,8 @@ export default function Management() {
           <div className="absolute -top-16 right-0 w-80 h-80 bg-blue-400/20 blur-3xl rounded-full animate-pulse" />
 
           {team.map((member, index) => (
-            <motion.div
+            <MotionWrapper
+              as="div"
               key={member.name}
               whileHover={{ scale: 1.05 }}
               onMouseEnter={() => setActive(member)}
@@ -113,7 +115,7 @@ export default function Management() {
               </div>
               <h4 className="text-lg font-semibold text-gray-800">{member.name}</h4>
               <p className="text-sm text-gray-600">{member.title}</p>
-            </motion.div>
+              </MotionWrapper>
           ))}
         </div>
       </div>

@@ -5,6 +5,7 @@ import { FaPhone, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 
 /* ===================== NAV ITEMS ===================== */
 const navItems = [
@@ -115,7 +116,7 @@ const Navbar = () => {
         {/* TOP BAR */}
         {!isScrolled && (
           <div className="flex justify-between items-center px-6 py-2 border-b">
-            <img src="/assets/images/group-logo.png" className="h-12" />
+            <Image src="/assets/images/group-logo.png" width={160} height={48} alt="Group logo" className="h-12 object-contain" />
 
             <div className="hidden md:flex items-center gap-6 text-sm">
               <div className="flex items-center gap-2">
