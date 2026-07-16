@@ -44,7 +44,7 @@ export default function GlobalMetallurgicalsPage() {
       <HeroSection
         imageSrc="/assets/images/metallurgy.jpg"
         title="Global Metallurgicals"
-        subtitle="Specialists in Manganese Steel, Hi-Chrome Castings, and precision cast iron components for industrial applications."
+        subtitle="Precision Metal Castings for Industry."
         align="left"
         overlay="bg-black/55"
         height="h-[400px]"
@@ -60,15 +60,16 @@ export default function GlobalMetallurgicalsPage() {
             Precision Metal Castings for Industry
           </h2>
           <p className="text-gray-600 leading-relaxed">
-            Global Metallurgicals specialises in manufacturing Manganese Steel
-            Castings and Hi-Chrome Castings. Our cast iron items mainly include
-            Rotary Airlock Valves, Dust Collector Cones, Bearing Housings,
-            Liners and Beaters, and Hammers for crushers.
+            We specialize in high-performance Manganese Steel Castings and
+            Hi-Chrome Castings, engineered for extreme wear and impact applications.
+            Our core cast iron products include Rotary Airlock Valves, Dust Collector
+            Cones, Bearing Housings, Crusher Liners &amp; Beaters, and Hammers.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            With an induction furnace capacity of 500 Kgs, a dedicated Heat
-            Treatment facility, and full In-House Machining capability, we
-            deliver precision components that meet demanding industrial standards.
+            <span className="font-semibold text-[#0b1e3d]">In-House Capabilities That Deliver:</span> with
+            a 500 Kg induction furnace, a dedicated heat treatment facility, and complete
+            in-house machining, we maintain full quality control from melt to final
+            component. The result: precision parts built to demanding industrial standards.
           </p>
           <Link
             href="/contactUs"

@@ -61,7 +61,7 @@ export default function SVBioFuelsPage() {
       <HeroSection
         imageSrc="/assets/images/fuel handling system.png"
         title="SV Bio Fuels"
-        subtitle="Sustainable biomass briquette solutions for industrial energy needs — clean, efficient, and renewable."
+        subtitle="Green Fuel, Real Impact — Powering Industry, Sustainably."
         align="left"
         overlay="bg-black/60"
         height="h-[400px]"
@@ -74,18 +74,21 @@ export default function SVBioFuelsPage() {
             About SV Bio Fuels
           </p>
           <h2 className="text-3xl font-bold text-[#0b1e3d]">
-            Renewable Fuel for Industry
+            Green Fuel, Real Impact
           </h2>
           <p className="text-gray-600 leading-relaxed">
-            SV Bio Fuels focuses on sustainable and eco-friendly fuel solutions,
-            specializing in biomass briquettes and renewable energy alternatives.
-            The company aims to provide efficient fuel systems that reduce
-            environmental impact while supporting industrial energy needs.
+            Powering industry, sustainably. We deliver sustainable, eco-friendly fuel
+            solutions through high-quality biomass briquettes and renewable energy
+            alternatives. Our mission is simple: help industries meet their energy needs
+            while cutting carbon footprint.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Our biomass briquettes are manufactured from agricultural waste and
-            biomass materials, offering a high-calorific, low-ash fuel alternative
-            for industrial boilers, kilns, and process heating systems.
+            We design efficient fuel systems that lower costs, reduce emissions, and
+            support cleaner production.
+          </p>
+          <p className="text-gray-600 leading-relaxed">
+            <span className="font-semibold text-[#0b1e3d]">The SV Bio Fuels Advantage:</span> reliable
+            supply, consistent calorific value, and a direct path to your sustainability goals.
           </p>
           <Link
             href="/contactUs"

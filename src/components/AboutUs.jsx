@@ -24,11 +24,12 @@ export default function AboutUs() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
         >
-          Global Enviro Air Systems (P) Ltd. is a leading environmental engineering
-          company headquartered in Hyderabad, India. We specialize in designing and
-          manufacturing air pollution control equipment and industrial ventilation systems.
-          With a strong focus on innovation and sustainability, we deliver reliable, energy-efficient
-          solutions to clients across multiple industries worldwide.
+          We lead the industry in air pollution control, HVAC systems, bulk material
+          handling, and end-to-end industrial solutions. Our expertise spans clean room
+          technology, metal castings, and global import-export operations. What sets us
+          apart is our commitment to truly understanding client needs and delivering
+          solutions that work. As one of the industry&apos;s most trusted names, Global Enviro
+          Air Systems Pvt. Ltd. is strategically expanding across diverse sectors.
         </MotionWrapper>
       </div>
 
