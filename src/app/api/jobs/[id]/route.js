@@ -9,7 +9,6 @@ export async function PUT(request, { params }) {
   }
   const { id } = await params;
 
-
   const body = await request.json();
   const { data, error } = await supabaseAdmin
     .from("jobs")
