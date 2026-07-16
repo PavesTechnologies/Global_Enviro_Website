@@ -79,7 +79,14 @@ const imageMap = {
 
 function AccordionItem({ section, isOpen, onToggle }) {
   return (
-    <div id={section.id} className="scroll-mt-28 border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+    <div
+      id={section.id}
+      className={`scroll-mt-32 rounded-xl overflow-hidden border transition-all duration-300 ${
+        isOpen
+          ? "border-blue-300 shadow-lg ring-1 ring-blue-200"
+          : "border-gray-200 shadow-sm hover:shadow-md"
+      }`}
+    >
       {/* Header */}
       <button
         onClick={onToggle}
