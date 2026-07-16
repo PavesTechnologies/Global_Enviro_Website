@@ -9,7 +9,7 @@ const companies = [
     id: 1,
     name: "Global Enviro Air Systems (P) Ltd",
     description:
-      "Global Enviro Air Systems Private Limited is a distinguished designer and manufacturer specializing in a diverse range of air pollution control systems. Our systems are meticulously crafted to reduce or eliminate the emission of pollutants into the atmosphere. Additionally, we serve as turnkey solution providers for HVAC Cleanrooms projects, offering a comprehensive range of solutions such as air handling units, Puff Panels, Doors, and Dust collectors tailored for manufacturing areas.",
+      "Engineering Clean Air, Enabling Clean Industry. We design and manufacture advanced air pollution control systems, engineered to drastically reduce or eliminate industrial emissions into the atmosphere. As turnkey solution providers for HVAC and Clean room projects, we deliver complete systems — air handling units, puff panels, clean room doors, and high-efficiency dust collectors — all tailored for precision manufacturing environments. We also specialize in bulk material handling for cement and fly ash, with proven unloading systems for silos and racks.",
     image: "/assets/images/global image.jpg",
     shape: "rounded-full",
     link: "/Ourgroup/GlobalEnviroAirSystems",
@@ -29,7 +29,7 @@ const companies = [
     id: 3,
     name: "Global Metallurgicals",
     description:
-      "The company specialises in manufacturing Manganese Steel Castings and Hi-Chrome Castings. Cast iron items mainly include Rotary Airlock Valves, Dust Collector Cones, Bearing Housings, Liners, and Beaters, hammers for crushers with induction furnace capacity of 500 kgs, Heat Treatment facility, and in-house machining.",
+      "Precision Metal Castings for Industry. We specialize in high-performance Manganese Steel Castings and Hi-Chrome Castings, engineered for extreme wear and impact applications. Our core cast iron products include Rotary Airlock Valves, Dust Collector Cones, Bearing Housings, Crusher Liners & Beaters, and Hammers. With a 500 Kg induction furnace, a dedicated heat treatment facility, and complete in-house machining, we maintain full quality control from melt to final component.",
     image: "/assets/images/metallurgy.jpg",
     shape: "rounded-full",
     link: "/Ourgroup/GlobalMetallurgy",
@@ -39,7 +39,7 @@ const companies = [
     id: 4,
     name: "SV Bio Fuels",
     description:
-      "SV Bio Fuels focuses on sustainable and eco-friendly fuel solutions, specializing in biomass briquettes and renewable energy alternatives. The company aims to provide efficient fuel systems that reduce environmental impact while supporting industrial energy needs.",
+      "Green Fuel, Real Impact — Powering Industry, Sustainably. We deliver sustainable, eco-friendly fuel solutions through high-quality biomass briquettes and renewable energy alternatives. Our mission is simple: help industries meet their energy needs while cutting carbon footprint. We design efficient fuel systems that lower costs, reduce emissions, and support cleaner production — backed by reliable supply, consistent calorific value, and a direct path to your sustainability goals.",
     image: "/assets/images/fuel handling system.png",
     shape: "rounded-full",
     link: "/Ourgroup/SVBioFuels",

@@ -44,7 +44,7 @@ export default function GlobalEnviroAirSystemsPage() {
       <HeroSection
         imageSrc="/assets/images/global image.jpg"
         title="Global Enviro Air Systems (P) Ltd"
-        subtitle="Leading designer and manufacturer of air pollution control systems and HVAC clean room solutions since 1999."
+        subtitle="Engineering Clean Air, Enabling Clean Industry."
         align="left"
         overlay="bg-black/55"
         height="h-[400px]"
@@ -57,23 +57,23 @@ export default function GlobalEnviroAirSystemsPage() {
             About the Company
           </p>
           <h2 className="text-3xl font-bold text-[#0b1e3d]">
-            Global Enviro Air Systems Pvt. Ltd.
+            Engineering Clean Air, Enabling Clean Industry
           </h2>
           <p className="text-gray-600 leading-relaxed">
-            Global Enviro Air Systems Private Limited is a distinguished designer
-            and manufacturer specializing in a diverse range of air pollution
-            control systems. Our systems are meticulously crafted to reduce or
-            eliminate the emission of pollutants into the atmosphere.
+            We design and manufacture advanced air pollution control systems,
+            engineered to drastically reduce or eliminate industrial emissions
+            into the atmosphere.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            We serve as turnkey solution providers for HVAC Cleanrooms projects,
-            offering air handling units, Puff Panels, Doors, and Dust Collectors
-            tailored for manufacturing areas. We also provide solutions for
-            cement and fly ash unloading systems from silos and racks.
+            As turnkey solution providers for HVAC and Clean room projects, we
+            deliver complete systems: air handling units, puff panels, clean room
+            doors, and high-efficiency dust collectors — all tailored for precision
+            manufacturing environments. We also specialize in bulk material handling
+            for cement and fly ash, with proven unloading systems for silos and racks.
           </p>
           <p className="text-gray-600 leading-relaxed">
-            Our systems cater to cement, power, steel, pharmaceuticals, paper,
-            distilleries, food, and scientific industries.
+            <span className="font-semibold text-[#0b1e3d]">Industries We Serve:</span> Cement | Power |
+            Steel | Pharmaceuticals | Paper | Distilleries | Food Processing | Scientific Research
           </p>
           <Link
             href="/service"

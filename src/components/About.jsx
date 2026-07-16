@@ -19,18 +19,19 @@ export default function About() {
         viewport={{ once: true }}
       >
         <h2 className="text-blue-700 font-extrabold text-2xl uppercase tracking-[6px]">About Us</h2>
-        {/* <h1 className="text-4xl md:text-5xl font-extrabold text-[#003366] uppercase leading-tight">Global Enviro Group</h1> */}
+        <h1 className="text-2xl md:text-2xl font-bold text-[#003366] leading-tight">Two and a Half Decades of Engineering Excellence</h1>
 
         {/* Simple Description */}
-         <p className="text-gray-700 text-lg justify-start">Leading the industry in air pollution control, HVAC systems, 
-          bulk material handling,and industrial solutions with over a decade of excellence.</p>
-         <p className="text-gray-700 text-lg justify-start">Global Industries now has an established presence in an array of activities that include 
-         Air Pollution Control, Clean Room and HVAC systems,Metal Castings and Exports and Imports. One of the key components of our
-         business culture is the ability to identify and understand our client needs appropriately.</p> 
+         <p className="text-gray-700 text-lg justify-start">We lead the industry in air pollution control, HVAC systems,
+          bulk material handling, and end-to-end industrial solutions. Our expertise spans clean room technology,
+          metal castings, and global import-export operations.</p>
+         <p className="text-gray-700 text-lg justify-start">What sets us apart is our commitment to truly understanding
+          client needs and delivering solutions that work.</p>
 
-          <p className="text-gray-700 text-lg justify-start">As one of the few companies that have reached an unenviable stature, Global Group through its strategic business 
-          endeavours, envisions spectacular growth and presence over varied sectors across the sub continent in the forthcoming years.
-         </p> 
+          <p className="text-gray-700 text-lg justify-start">As one of the industry&apos;s most trusted names, Global Enviro Air Systems Pvt. Ltd.
+          is strategically expanding across diverse sectors. We envision strong, sustainable growth throughout the
+          subcontinent in the years ahead.
+         </p>
 
         {/* Know More Button */}
         {/* <motion.button
