@@ -58,13 +58,13 @@ import MotionWrapper from "@/components/common/MotionWrapper";
 import Image from "next/image";
 import ImageLightbox from "@/components/common/ImageLightbox";
 
-export default function HVSectionCard({ title, description, points, image, gallery }) {
+export default function HVSectionCard({ title, heading, description, points, groups, image, gallery }) {
   const [previewSrc, setPreviewSrc] = useState(null);
 
   return (
     <MotionWrapper
       as="section"
-      className="relative flex flex-col bg-[#e6f7ff] p-8 rounded-2xl shadow-md my-2 overflow-hidden"
+      className="relative flex flex-col bg-[#e6f7ff] p-8 rounded-2xl shadow-md my-2 overflow-hidden border-l-4 border-[#3877d4] hover:shadow-lg transition-shadow duration-300"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -72,9 +72,23 @@ export default function HVSectionCard({ title, description, points, image, galle
     >
       <div className="flex flex-col lg:flex-row items-center justify-between gap-2">
         {/* Left Content */}
-        <div className={`${image ? "lg:w-2/3" : "w-full"} space-y-2`}>
-          <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
-          <p className="text-gray-600 text-base leading-relaxed">{description}</p>
+        <div className={`${image ? "lg:w-2/3" : "w-full"} space-y-3`}>
+          <div className="space-y-1">
+            <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
+            {heading && (
+              <h4 className="text-lg font-semibold text-[#004c91] leading-snug">{heading}</h4>
+            )}
+          </div>
+          {description && (
+            <div className="space-y-1">
+              {heading && (
+                <span className="inline-block text-xs font-bold uppercase tracking-wider text-[#3877d4]">
+                  Product Overview
+                </span>
+              )}
+              <p className="text-gray-600 text-base leading-relaxed">{description}</p>
+            </div>
+          )}
           <ul className="list-none space-y-2">
              {points.map((point, index) => (
               <li key={index} className="flex items-start gap-2 text-gray-800">
@@ -111,6 +125,27 @@ export default function HVSectionCard({ title, description, points, image, galle
           </MotionWrapper>
         )}
       </div>
+
+      {/* Grouped lists (e.g. Advantages / Benefits) */}
+      {groups && groups.length > 0 && (
+        <div className="w-full mt-6 pt-6 border-t border-white/60 grid sm:grid-cols-2 gap-x-10 gap-y-6">
+          {groups.map((group) => (
+            <div key={group.label}>
+              <h5 className="text-sm font-bold uppercase tracking-wider text-[#3877d4] mb-3">
+                {group.label}
+              </h5>
+              <ul className="list-none space-y-2">
+                {group.items.map((item, index) => (
+                  <li key={index} className="flex items-start gap-2 text-gray-700 text-sm leading-relaxed">
+                    <span className="text-green-600 font-bold mt-0.5">✓</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      )}
 
       {/* Additional photos strip */}
       {gallery && gallery.length > 0 && (

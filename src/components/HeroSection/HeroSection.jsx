@@ -1,9 +1,11 @@
 'use client'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
 import { cn } from '@/lib/utils'
 
 export default function HeroSection({
   imageSrc,
+  images,
   title,
   subtitle,
   primaryAction,
@@ -19,18 +21,36 @@ export default function HeroSection({
     right: 'items-end text-right',
   }
 
+  const slides =
+    images && images.length > 0 ? images : imageSrc ? [imageSrc] : []
+  const [current, setCurrent] = useState(0)
+
+  useEffect(() => {
+    if (slides.length <= 1) return
+    const id = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length)
+    }, 4500)
+    return () => clearInterval(id)
+  }, [slides.length])
+
   return (
     <section
       className={cn('relative w-full overflow-hidden', height, className)}
     >
-      {/* Background Image */}
-      <Image
-        src={imageSrc}
-        alt={title}
-        fill
-        priority
-        className="object-cover"
-      />
+      {/* Background Image(s) */}
+      {slides.map((src, index) => (
+        <Image
+          key={src}
+          src={src}
+          alt={title}
+          fill
+          priority={index === 0}
+          className={cn(
+            'object-cover transition-opacity duration-1000 ease-in-out',
+            index === current ? 'opacity-100' : 'opacity-0'
+          )}
+        />
+      ))}
 
       {/* Overlay */}
       <div className={cn('absolute inset-0', overlay)} />
@@ -75,6 +95,26 @@ export default function HeroSection({
           </div>
         </div>
       </div>
+
+      {/* Slide indicators */}
+      {slides.length > 1 && (
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {slides.map((src, index) => (
+            <button
+              key={src}
+              type="button"
+              onClick={() => setCurrent(index)}
+              aria-label={`Go to slide ${index + 1}`}
+              className={cn(
+                'h-2.5 rounded-full transition-all duration-300',
+                index === current
+                  ? 'w-6 bg-white'
+                  : 'w-2.5 bg-white/50 hover:bg-white/80'
+              )}
+            />
+          ))}
+        </div>
+      )}
     </section>
   )
 }
