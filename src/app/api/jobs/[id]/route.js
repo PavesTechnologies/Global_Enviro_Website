@@ -4,12 +4,10 @@ import { supabaseAdmin } from "@/lib/supabase/server";
 
 export async function PUT(request, { params }) {
   const session = await getServerSession(authOptions);
-
   if (!session) {
     return Response.json({ error: "Unauthorized" }, { status: 401 });
   }
   const { id } = await params;
-
 
   const body = await request.json();
   const { data, error } = await supabaseAdmin

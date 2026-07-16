@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import useOpenOnHash from "@/lib/useOpenOnHash";
 import MotionWrapper from "@/components/common/MotionWrapper";
 import LazyAnimatePresence from "@/components/common/LazyAnimatePresence";
 import { ChevronDown } from "lucide-react";
@@ -338,7 +339,14 @@ const sections = [
 
 function MHAccordion({ section, isOpen, onToggle }) {
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+    <div
+      id={section.id}
+      className={`scroll-mt-32 rounded-xl overflow-hidden border transition-all duration-300 ${
+        isOpen
+          ? "border-blue-300 shadow-lg ring-1 ring-blue-200"
+          : "border-gray-200 shadow-sm hover:shadow-md"
+      }`}
+    >
       <button
         onClick={onToggle}
         className={`w-full flex items-center justify-between px-6 py-4 text-left text-white font-semibold text-base ${section.color} hover:opacity-90 transition-all`}
@@ -396,8 +404,11 @@ function MHAccordion({ section, isOpen, onToggle }) {
   );
 }
 
+const sectionIds = sections.map((s) => s.id);
+
 export default function MaterialHandlingPage() {
   const [openId, setOpenId] = useState("fuel-handling");
+  useOpenOnHash(sectionIds, setOpenId);
 
   return (
     <main>

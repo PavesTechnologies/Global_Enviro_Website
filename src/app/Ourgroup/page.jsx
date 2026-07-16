@@ -8,8 +8,9 @@ const companies = [
   {
     id: 1,
     name: "Global Enviro Air Systems (P) Ltd",
+    tagline: "Engineering Clean Air, Enabling Clean Industry",
     description:
-      "Engineering Clean Air, Enabling Clean Industry. We design and manufacture advanced air pollution control systems, engineered to drastically reduce or eliminate industrial emissions into the atmosphere. As turnkey solution providers for HVAC and Clean room projects, we deliver complete systems — air handling units, puff panels, clean room doors, and high-efficiency dust collectors — all tailored for precision manufacturing environments. We also specialize in bulk material handling for cement and fly ash, with proven unloading systems for silos and racks.",
+      "We design and manufacture advanced air pollution control systems, engineered to drastically reduce or eliminate industrial emissions into the atmosphere. As turnkey solution providers for HVAC and Clean room projects, we deliver complete systems — air handling units, puff panels, clean room doors, and high-efficiency dust collectors — all tailored for precision manufacturing environments. We also specialize in bulk material handling for cement and fly ash, with proven unloading systems for silos and racks.",
     image: "/assets/images/global image.jpg",
     shape: "rounded-full",
     link: "/Ourgroup/GlobalEnviroAirSystems",
@@ -28,8 +29,9 @@ const companies = [
   {
     id: 3,
     name: "Global Metallurgicals",
+    tagline: "Precision Metal Castings for Industry",
     description:
-      "Precision Metal Castings for Industry. We specialize in high-performance Manganese Steel Castings and Hi-Chrome Castings, engineered for extreme wear and impact applications. Our core cast iron products include Rotary Airlock Valves, Dust Collector Cones, Bearing Housings, Crusher Liners & Beaters, and Hammers. With a 500 Kg induction furnace, a dedicated heat treatment facility, and complete in-house machining, we maintain full quality control from melt to final component.",
+      "We specialize in high-performance Manganese Steel Castings and Hi-Chrome Castings, engineered for extreme wear and impact applications. Our core cast iron products include Rotary Airlock Valves, Dust Collector Cones, Bearing Housings, Crusher Liners & Beaters, and Hammers. In-House Capabilities That Deliver — with a 500 Kg induction furnace, a dedicated heat treatment facility, and complete in-house machining, we maintain full quality control from melt to final component.",
     image: "/assets/images/metallurgy.jpg",
     shape: "rounded-full",
     link: "/Ourgroup/GlobalMetallurgy",
@@ -38,8 +40,9 @@ const companies = [
   {
     id: 4,
     name: "SV Bio Fuels",
+    tagline: "Green Fuel, Real Impact — Powering Industry, Sustainably",
     description:
-      "Green Fuel, Real Impact — Powering Industry, Sustainably. We deliver sustainable, eco-friendly fuel solutions through high-quality biomass briquettes and renewable energy alternatives. Our mission is simple: help industries meet their energy needs while cutting carbon footprint. We design efficient fuel systems that lower costs, reduce emissions, and support cleaner production — backed by reliable supply, consistent calorific value, and a direct path to your sustainability goals.",
+      "We deliver sustainable, eco-friendly fuel solutions through high-quality biomass briquettes and renewable energy alternatives. Our mission is simple: help industries meet their energy needs while cutting carbon footprint. We design efficient fuel systems that lower costs, reduce emissions, and support cleaner production.",
     image: "/assets/images/fuel handling system.png",
     shape: "rounded-full",
     link: "/Ourgroup/SVBioFuels",
@@ -98,9 +101,19 @@ export default function GroupPage() {
               <h2 className="text-3xl md:text-4xl font-semibold text-[#0f172a]">
                 {company.name}
               </h2>
+              {company.tagline && (
+                <p className="text-[#3877d4] font-semibold text-lg">
+                  {company.tagline}
+                </p>
+              )}
               <p className="text-gray-600 leading-relaxed text-justify">
                 {company.description}
               </p>
+              {company.industries && (
+                <p className="text-gray-700 text-sm font-medium">
+                  {company.industries}
+                </p>
+              )}
               <Link
                 href={company.link}
                 target={company.external ? "_blank" : "_self"}
