@@ -191,6 +191,7 @@ const Navbar = () => {
                         ) : (
                           <Link
                             href={sub.url}
+                            scroll={false}
                             className="flex justify-between px-3 py-2 text-sm hover:bg-gray-100"
                           >
                             {sub.title}
@@ -203,7 +204,7 @@ const Navbar = () => {
                           <ul className="absolute left-full top-0 bg-white shadow-lg min-w-[200px] z-50">
                             {sub.subDropdown.map((child) => (
                               <li key={child.title}>
-                                <Link href={child.url} className="block px-3 py-2 text-sm hover:bg-gray-100">
+                                <Link href={child.url} scroll={false} className="block px-3 py-2 text-sm hover:bg-gray-100">
                                   {child.title}
                                 </Link>
                               </li>
