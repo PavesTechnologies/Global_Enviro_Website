@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import useOpenOnHash from "@/lib/useOpenOnHash";
 import MotionWrapper from "@/components/common/MotionWrapper";
 import LazyAnimatePresence from "@/components/common/LazyAnimatePresence";
 import Image from "next/image";
@@ -78,7 +79,7 @@ const imageMap = {
 
 function AccordionItem({ section, isOpen, onToggle }) {
   return (
-    <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+    <div id={section.id} className="scroll-mt-28 border border-gray-200 rounded-xl overflow-hidden shadow-sm">
       {/* Header */}
       <button
         onClick={onToggle}
@@ -174,8 +175,11 @@ function AccordionItem({ section, isOpen, onToggle }) {
   );
 }
 
+const sectionIds = sections.map((s) => s.id);
+
 export default function AirPollutionControlPage() {
   const [openId, setOpenId] = useState("dust-extraction");
+  useOpenOnHash(sectionIds, setOpenId);
 
   return (
     <main>

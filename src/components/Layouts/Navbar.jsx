@@ -26,10 +26,10 @@ const navItems = [
     title: "Group",
     url: "/Ourgroup",
     dropdown: [
-      { title: "Global Enviro Air Systems", url: "/Ourgroup" },
-      { title: "Indophil Jettech Energy", url: "/Ourgroup" },
-      { title: "Global Metallurgicals", url: "/Ourgroup" },
-      { title: "SV Bio Fuels", url: "/Ourgroup" },
+      { title: "Global Enviro Air Systems", url: "/Ourgroup/GlobalEnviroAirSystems" },
+      { title: "Indophil Jettech Energy", url: "https://www.jettechenergy.com/", external: true },
+      { title: "Global Metallurgicals", url: "/Ourgroup/GlobalMetallurgy" },
+      { title: "SV Bio Fuels", url: "/Ourgroup/SVBioFuels" },
     ],
   },
 
@@ -179,13 +179,24 @@ const Navbar = () => {
                         onMouseEnter={() => sub.subDropdown && setActiveSubDropdown(sub.title)}
                         onMouseLeave={() => setActiveSubDropdown(null)}
                       >
-                        <Link
-                          href={sub.url}
-                          className="flex justify-between px-3 py-2 text-sm hover:bg-gray-100"
-                        >
-                          {sub.title}
-                          {sub.subDropdown && <ChevronRight size={12} />}
-                        </Link>
+                        {sub.external ? (
+                          <a
+                            href={sub.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex justify-between px-3 py-2 text-sm hover:bg-gray-100"
+                          >
+                            {sub.title} ↗
+                          </a>
+                        ) : (
+                          <Link
+                            href={sub.url}
+                            className="flex justify-between px-3 py-2 text-sm hover:bg-gray-100"
+                          >
+                            {sub.title}
+                            {sub.subDropdown && <ChevronRight size={12} />}
+                          </Link>
+                        )}
 
                         {/* SUBDROPDOWN */}
                         {sub.subDropdown && activeSubDropdown === sub.title && (
