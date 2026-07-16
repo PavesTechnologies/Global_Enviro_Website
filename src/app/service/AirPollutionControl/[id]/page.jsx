@@ -1,9 +1,9 @@
 'use client';
 import { useParams } from 'next/navigation';
-import PulseJetBagFilter from "@/components/PulseJetBagFilter";
+import PulseJetBagFilter from "@/app/service/AirPollutionControl/DustExtraction/[slug]/PulseJetBagFilter";
 import DustExtraction from "@/components/DustExtraction";
 import HVAC from "@/app/service/HVAC/page.jsx";
-import CentrifugalFans from '@/components/CentrifugalFans';
+import CentrifugalFans from '@/app/service/AirPollutionControl/DustExtraction/[slug]/CentrifugalFans';
 
 
 

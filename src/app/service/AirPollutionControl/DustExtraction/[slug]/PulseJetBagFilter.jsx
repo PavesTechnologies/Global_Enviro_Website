@@ -45,11 +45,46 @@ export default function PulseJetBagFilterPage() {
         {/* RIGHT SIDE - Image */}
         <div className="relative w-full h-[320px]">
           <Image
-            src="/assets/images/pulsejet.png"
-            alt="Pulse Jet Bag Filter"
+            src="/assets/images/Air_Pollution/a01. Pulsejet Bag Filter for Boiler.jpg"
+            alt="Pulse Jet Bag Filter for Boiler"
             fill
             className="object-contain rounded-lg shadow-md"
           />
+        </div>
+      </section>
+
+      {/* ---------- Application Gallery ---------- */}
+      <section className="max-w-6xl mx-auto px-6 py-6">
+        <h2 className="text-2xl font-semibold text-blue-800 mb-4">
+          Built for Every Application
+        </h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* <div className="text-center">
+            <div className="relative w-full h-[220px]">
+              <Image
+                src="/assets/images/Air_Pollution/a01. Pulsejet Bag Filter for Boiler.jpg"
+                alt="Pulse Jet Bag Filter for Boiler"
+                fill
+                className="object-contain rounded-lg shadow-md"
+              />
+            </div>
+            <p className="mt-2 text-sm font-medium text-gray-600">
+              Pulse Jet Bag Filter for Boiler
+            </p>
+          </div> */}
+          <div className="text-center">
+            <div className="relative w-full h-[220px]">
+              <Image
+                src="/assets/images/Air_Pollution/a02. Pulsejet Bag Filter for Process Industries.jpg"
+                alt="Pulse Jet Bag Filter for Process Industries"
+                fill
+                className="object-contain rounded-lg shadow-md"
+              />
+            </div>
+            <p className="mt-2 text-sm font-medium text-gray-600">
+              Pulse Jet Bag Filter for Process Industries
+            </p>
+          </div>
         </div>
       </section>
 

@@ -31,7 +31,7 @@ export default function CentrifugalFansPage() {
         {/* RIGHT SIDE – Image */}
         <div className="relative w-full h-[320px]">
           <Image
-            src="/assets/images/centrifugal fans.png"
+            src="/assets/images/Air_Pollution/a03. Centrifugal Fans-1.jpeg"
             alt="Centrifugal Fans"
             fill
             className="object-contain rounded-lg shadow-md"

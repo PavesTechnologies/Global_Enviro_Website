@@ -3,6 +3,7 @@ import { useState } from "react";
 import MotionWrapper from "@/components/common/MotionWrapper";
 import LazyAnimatePresence from "@/components/common/LazyAnimatePresence";
 import Image from "next/image";
+import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import HeroSection from "@/components/HeroSection/HeroSection";
 
@@ -11,24 +12,26 @@ const sections = [
     id: "dust-extraction",
     title: "1. Dust Extraction Systems",
     color: "bg-blue-600",
+    basePath: "DustExtraction",
     subsystems: [
-      "Pulse Jet Bag Filter",
-      "Single Cyclone Separator",
-      "Treema Cyclone Separator",
-      "Multi Cyclone Separator",
-      "Centrifugal Fans",
-      "RAV (Rotary Air Lock Valve)",
-      "Axial Flow Fans",
+      { name: "Pulse Jet Bag Filter", slug: "pulse-jet-bag-filter" },
+      { name: "Single Cyclone Separator", slug: "single-cyclone-separator" },
+      { name: "Treema Cyclone Separator", slug: "treema-cyclone-separator" },
+      { name: "Multi Cyclone Separator", slug: "multi-cyclone-separator" },
+      { name: "Centrifugal Fans", slug: "centrifugal-fans" },
+      { name: "RAV (Rotary Air Lock Valve)", slug: "rav-rotary-air-lock-valve" },
+      { name: "Axial Flow Fans", slug: "axial-flow-fans" },
     ],
   },
   {
     id: "fuel-extraction",
     title: "2. Fuel Extraction Systems",
     color: "bg-cyan-600",
+    basePath: "FuelExtraction",
     subsystems: [
-      "Wet Scrubber",
-      "Ventury Scrubber",
-      "Carbon Filter for Odour Control",
+      { name: "Wet Scrubber", slug: "wet-scrubber" },
+      // { name: "Venturi Scrubber", slug: "venturi-scrubber" },
+      { name: "Carbon Filter for Odour Control", slug: "carbon-filter-for-odour-control" },
     ],
   },
   {
@@ -55,13 +58,13 @@ const sections = [
 ];
 
 const commonEquipment = [
-  "Compact Dust Collector",
-  "Telescopic Loading Spout",
-  "Horizontal Positioner",
-  "Flow Control Gates",
-  "Pneumatic Slide Gates",
-  "Manual Slide Gates",
-  "IFM (Insert Filter Module)",
+  { name: "Compact Dust Collector", slug: "compact-dust-collector" },
+  { name: "Telescopic Loading Spout", slug: "telescopic-loading-spout" },
+  { name: "Horizontal Positioner", slug: "horizontal-positioner" },
+  { name: "Flow Control Gates", slug: "flow-control-gates" },
+  { name: "Pneumatic Slide Gates", slug: "pneumatic-slide-gates" },
+  // { name: "Manual Slide Gates", slug: "manual-slide-gates" },
+  { name: "IFM (Insert Filter Module)", slug: "ifm-insert-filter-module" },
 ];
 
 // Image map — use your existing images where they match
@@ -119,12 +122,25 @@ function AccordionItem({ section, isOpen, onToggle }) {
                       Systems / Equipment
                     </p>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                      {section.subsystems.map((item) => (
-                        <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
-                          {item}
-                        </li>
-                      ))}
+                      {section.subsystems.map((item) => {
+                        const isLinked = typeof item === "object";
+                        const label = isLinked ? item.name : item;
+                        return (
+                          <li key={label} className="flex items-center gap-2 text-sm">
+                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                            {isLinked ? (
+                              <Link
+                                href={`/service/AirPollutionControl/${section.basePath}/${item.slug}`}
+                                className="text-gray-700 hover:text-blue-700 hover:underline transition-colors"
+                              >
+                                {label}
+                              </Link>
+                            ) : (
+                              <span className="text-gray-700">{label}</span>
+                            )}
+                          </li>
+                        );
+                      })}
                     </ul>
                   </div>
                 )}
@@ -136,9 +152,14 @@ function AccordionItem({ section, isOpen, onToggle }) {
                     </p>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                       {commonEquipment.map((item) => (
-                        <li key={item} className="flex items-center gap-2 text-sm text-gray-700">
+                        <li key={item.slug} className="flex items-center gap-2 text-sm">
                           <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0" />
-                          {item}
+                          <Link
+                            href={`/service/AirPollutionControl/CommonEquipment/${item.slug}`}
+                            className="text-gray-700 hover:text-blue-700 hover:underline transition-colors"
+                          >
+                            {item.name}
+                          </Link>
                         </li>
                       ))}
                     </ul>
