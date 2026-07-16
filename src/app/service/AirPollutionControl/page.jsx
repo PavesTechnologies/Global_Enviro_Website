@@ -70,9 +70,9 @@ const commonEquipment = [
 
 // Image map — use your existing images where they match
 const imageMap = {
-  "dust-extraction": "/assets/images/dust extraction.png",
-  "fuel-extraction": "/assets/images/carbon.png",
-  "silo-bin": "/assets/images/ash handling.png",
+  "dust-extraction": "/assets/images/Air_Pollution/a01. Pulsejet Bag Filter for Boiler.jpg",
+  "fuel-extraction": "/assets/images/Air_Pollution/b02. Carbon Filter for Odour Control.jpeg",
+  "silo-bin": "/assets/images/Air_Pollution/d03. Horizontal Positioner.jpg",
   "bulk-loading": "/assets/images/pulsejet.png",
   "wagon": "/assets/images/rotary airlock valve.png",
 };
