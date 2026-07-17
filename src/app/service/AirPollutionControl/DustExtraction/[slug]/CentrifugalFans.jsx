@@ -6,29 +6,42 @@ export default function CentrifugalFansPage() {
   return (
     <div className="bg-white text-gray-800 leading-relaxed">
       {/* ---------- Intro Section ---------- */}
-      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6 py-10">
-        {/* LEFT SIDE – Text */}
+      <section className="max-w-6xl mx-auto px-6 py-10">
+        <h1 className="text-4xl font-bold mb-4 text-blue-800">
+          Centrifugal Fans
+        </h1>
+        <p className="text-lg text-blue-700 font-medium mb-4">
+          High-Pressure Air Moving Equipment for Process &amp; Ventilation
+        </p>
+      </section>
+
+      {/* ---------- Product Overview ---------- */}
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6 py-6">
         <div>
-          <h1 className="text-4xl font-bold mb-4 text-blue-800">
-            Centrifugal Fans
-          </h1>
+          <h2 className="text-2xl font-semibold text-blue-800 mb-3">
+            Product Overview
+          </h2>
           <p>
-            Centrifugal Blowers from Global Enviro are among the most efficient
-            and versatile air-moving systems used in modern industries. These
-            fans are built to deliver consistent airflow, low vibration, and
-            quiet operation, making them ideal for a variety of air handling and
-            process applications.
+            Centrifugal Fans, also called industrial blowers, use a rotating
+            impeller to increase the velocity of air/gas and convert it into
+            pressure. A critical component in boiler systems that pulls flue
+            gases out of the furnace and pushes them up the chimney. By
+            creating a negative pressure (draft) inside the boiler, it
+            ensures safe operation and continuous combustion. They are
+            designed for high-pressure applications where axial fans cannot
+            deliver required static pressure. Used for dust collection,
+            combustion air, drying, cooling, and pneumatic conveying.
           </p>
-          <p className="mt-3">
-            Our centrifugal fans are precision-engineered with aerodynamic
-            designs that enhance airflow efficiency while minimizing energy
-            consumption. Each fan is fabricated with robust materials and
-            high-quality components, ensuring long life and reliability even in
-            challenging operating environments.
-          </p>
+          <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
+          <ul className="list-disc pl-6 mt-1 space-y-1">
+            <li>Boiler ID/FD/SA fans</li>
+            <li>Dust collectors</li>
+            <li>Bag filters</li>
+            <li>Cyclones</li>
+            <li>Chemical &amp; Fertilizer Plants</li>
+          </ul>
         </div>
 
-        {/* RIGHT SIDE – Image */}
         <div className="relative w-full h-[320px]">
           <Image
             src="/assets/images/Air_Pollution/a03. Centrifugal Fans-1.jpeg"
@@ -39,90 +52,72 @@ export default function CentrifugalFansPage() {
         </div>
       </section>
 
-      {/* ---------- Applications ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-6">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-3">
-          Applications
-        </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>Induced Draft (ID) and Forced Draft (FD) Systems</li>
-          <li>Primary Air (PA) Systems in Boilers</li>
-          <li>Dust Extraction Systems</li>
-          <li>Fume Exhaust Systems</li>
-          <li>Pneumatic Conveying Systems</li>
-          <li>Industrial Ventilation and Air Circulation</li>
-        </ul>
-      </section>
-
       {/* ---------- Key Features ---------- */}
       <section className="max-w-6xl mx-auto px-6 py-6">
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
+        <ul className="list-disc pl-6 space-y-2">
           <li>
-            <strong>High Efficiency:</strong> Designed for maximum airflow with
-            minimal power usage.
+            <strong>High Static Pressure:</strong> Delivers 10x more pressure
+            than axial fans. Essential for ducting, filters, cyclones.
           </li>
           <li>
-            <strong>Low Noise Operation:</strong> Engineered blades ensure
-            smooth, quiet performance.
+            <strong>Multiple Blade Types:</strong>
+            <ul className="list-disc pl-6 mt-1 space-y-1">
+              <li>Backward Curved: High efficiency 80-85%, for clean air</li>
+              <li>Forward Curved: Compact, low noise</li>
+              <li>Radial Blade: Self-cleaning, for heavy dust/chips, Aero foil</li>
+            </ul>
           </li>
           <li>
-            <strong>Durable Construction:</strong> Built with high-grade SS316,
-            SS304, or IS2062 materials.
+            <strong>Energy Efficient:</strong> Aerodynamically designed
+            impellers with VFD option save 20-40% power.
           </li>
           <li>
-            <strong>Wide Temperature Range:</strong> Performs reliably in
-            environments up to 400°C.
+            <strong>Robust Construction:</strong> Heavy-duty bearings,
+            vibration isolators for 24x7 operations.
           </li>
           <li>
-            <strong>Flexible Design Options:</strong> Available in multiple
-            blade types — Forward, Backward, Radial, and Aerofoil.
+            <strong>Low Noise:</strong> Scroll casing and inlet cone reduce
+            turbulence and noise levels.
           </li>
           <li>
-            <strong>Easy Maintenance:</strong> Simple design for quick assembly,
-            disassembly, and servicing.
-          </li>
-        </ul>
-      </section>
-
-      {/* ---------- Why Choose ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-6">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-3">
-          Why Choose Global Enviro Centrifugal Fans?
-        </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
-            <strong>Advanced Aerodynamic Design:</strong> Optimized for enhanced
-            airflow and reduced resistance.
+            <strong>Customizable:</strong> Inlet/outlet orientation,
+            spark-proof, high-temp, weatherproof options.
           </li>
           <li>
-            <strong>Energy Efficient:</strong> Low operating costs through
-            efficient power utilization.
-          </li>
-          <li>
-            <strong>Custom-Built Solutions:</strong> Tailored to match your
-            specific process and performance needs.
-          </li>
-          <li>
-            <strong>Proven Reliability:</strong> Designed to perform
-            continuously under tough industrial conditions.
+            <strong>Easy Maintenance:</strong> Split casing &amp; easy belt
+            access for quick service.
           </li>
         </ul>
       </section>
 
-      {/* ---------- Performance Section ---------- */}
+      {/* ---------- Technical Specifications ---------- */}
       <section className="max-w-6xl mx-auto px-6 py-6">
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
-          Performance You Can Rely On
+          Technical Specifications
         </h2>
-        <p>
-          With a reputation for quality engineering and dependable performance,
-          Global Enviro Centrifugal Fans are the preferred choice for industries
-          seeking efficient air movement, long-lasting durability, and energy
-          savings across multiple applications.
-        </p>
+        <ul className="list-disc pl-6 space-y-1">
+          <li>
+            <strong>Capacity Range:</strong> 500 CMH to 3,00,000 CMH
+          </li>
+          <li>
+            <strong>Temperature:</strong> Up to 300°C with suitable material
+            selection
+          </li>
+          <li>
+            <strong>Types of Impellers:</strong> Backward Curved / Forward
+            Curved / Radial Blade / Aero foil
+          </li>
+          <li>
+            <strong>Types of Drive:</strong> Direct Drive / Belt Drive /
+            Coupled Drive
+          </li>
+          <li>
+            <strong>MOC:</strong> Carbon Steel (IS2062) / SS304 / SS316
+          </li>
+        </ul>
       </section>
     </div>
   );

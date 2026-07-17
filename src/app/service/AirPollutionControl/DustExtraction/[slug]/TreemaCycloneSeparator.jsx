@@ -6,25 +6,38 @@ export default function TreemaCycloneSeparatorPage() {
   return (
     <div className="bg-white text-gray-800 leading-relaxed">
       {/* ---------- Intro Section ---------- */}
-      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6 py-10">
+      <section className="max-w-6xl mx-auto px-6 py-10">
+        <h1 className="text-4xl font-bold mb-4 text-blue-800">
+          Treema Cyclone Separator
+        </h1>
+        <p className="text-lg text-blue-700 font-medium mb-4">
+          High-Efficiency Multi-Cyclone Dust Collection System
+        </p>
+      </section>
+
+      {/* ---------- Product Overview ---------- */}
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6 py-6">
         <div>
-          <h1 className="text-4xl font-bold mb-4 text-blue-800">
-            Treema Cyclone Separator
-          </h1>
+          <h2 className="text-2xl font-semibold text-blue-800 mb-3">
+            Product Overview
+          </h2>
           <p>
-            The Treema Cyclone Separator is a high-efficiency cyclone design
-            engineered with an optimized cone geometry and inlet profile to
-            deliver superior particle separation compared to conventional
-            cyclones. Its refined vortex path increases residence time,
-            allowing finer particulate to be captured before the air stream
-            exits.
+            Treema Cyclone Separator is a high-efficiency, multi-stage
+            centrifugal dust collector designed to remove 95-99% of coarse
+            and fine particulate matter from industrial exhaust gas streams.
+            Using twin or quad cyclones in series, it achieves higher
+            separation efficiency than conventional single cyclones without
+            filters or water.
           </p>
-          <p className="mt-3">
-            Global Enviro manufactures Treema-type separators as compact,
-            standalone dust collectors for medium-duty applications, or as an
-            efficient pre-separation stage ahead of bag filters where fine
-            dust loading needs to be reduced.
-          </p>
+          <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
+          <ul className="list-disc pl-6 mt-1 space-y-1">
+            <li>Cement &amp; Mineral Processing Plants</li>
+            <li>Pharmaceutical Industries</li>
+            <li>Food Processing Units</li>
+            <li>Steel &amp; Foundry Industries</li>
+            <li>Chemical &amp; Fertilizer Plants</li>
+            <li>Woodworking &amp; Packaging Industries</li>
+          </ul>
         </div>
 
         <div className="relative w-full h-[320px]">
@@ -37,60 +50,71 @@ export default function TreemaCycloneSeparatorPage() {
         </div>
       </section>
 
-      {/* ---------- Technical Specifications ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-6">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-3">
-          Technical Specifications
-        </h2>
-        <table className="table-auto w-full text-sm border-collapse">
-          <tbody>
-            <tr className="border-b">
-              <td className="font-medium py-2 pr-3">Application</td>
-              <td>Fine-to-medium dust separation</td>
-            </tr>
-            <tr className="border-b">
-              <td className="font-medium py-2 pr-3">Collection Efficiency</td>
-              <td>Higher than conventional single cyclones</td>
-            </tr>
-            <tr className="border-b">
-              <td className="font-medium py-2 pr-3">Footprint</td>
-              <td>Compact — suited for space-constrained installations</td>
-            </tr>
-            <tr className="border-b">
-              <td className="font-medium py-2 pr-3">MOC</td>
-              <td>MS / SS304 / SS316</td>
-            </tr>
-            <tr>
-              <td className="font-medium py-2 pr-3">Design</td>
-              <td>Optimized cone geometry with extended vortex path</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
       {/* ---------- Key Features ---------- */}
       <section className="max-w-6xl mx-auto px-6 py-6">
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>Improved separation efficiency versus standard cyclones</li>
-          <li>Compact footprint ideal for retrofits and spot extraction</li>
-          <li>Low maintenance, no moving parts</li>
-          <li>Robust fabrication for continuous industrial operation</li>
+        <ul className="list-disc pl-6 space-y-2">
+          <li>
+            <strong>Multi-Cyclone Design:</strong> Two or more high-efficiency
+            Treema cyclones in series for cumulative 99% efficiency on fine
+            dust.
+          </li>
+          <li>
+            <strong>No Filter Media:</strong> Zero consumables. No bags,
+            cartridges, or cloth to replace.
+          </li>
+          <li>
+            <strong>Constant Airflow:</strong> Performance doesn&apos;t
+            degrade due to clogging like bag filters.
+          </li>
+          <li>
+            <strong>Low Maintenance:</strong> No moving parts inside cyclone
+            body. Only periodic hopper emptying needed.
+          </li>
+          <li>
+            <strong>Compact Footprint:</strong> Higher efficiency in smaller
+            space versus conventional cyclones.
+          </li>
+          <li>
+            <strong>Customizable:</strong> Designed per your gas flow, dust
+            load, temperature, and space.
+          </li>
+          <li>
+            <strong>Dry Collection:</strong> No water, no sludge disposal.
+            Collected dust can be recycled/reused.
+          </li>
+          <li>
+            <strong>High Temperature Ready:</strong> Suitable for boiler flue
+            gas and hot process exhaust.
+          </li>
         </ul>
       </section>
 
-      {/* ---------- Applications ---------- */}
+      {/* ---------- Technical Specifications ---------- */}
       <section className="max-w-6xl mx-auto px-6 py-6">
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
-          Applications
+          Technical Specifications
         </h2>
         <ul className="list-disc pl-6 space-y-1">
-          <li>Standalone dust collection for line and spot extraction</li>
-          <li>Pre-separator ahead of bag filters and scrubbers</li>
-          <li>Cement, mineral processing, and bulk material handling plants</li>
-          <li>Woodworking and agro-processing dust recovery</li>
+          <li>
+            <strong>Capacity Range:</strong> 500 CMH to 3,00,000 CMH
+          </li>
+          <li>
+            <strong>Type of Fuel:</strong> Coal, Biomass, Wood, Pet Coke
+          </li>
+          <li>
+            <strong>Temperature:</strong> Up to 300°C depending on
+            application
+          </li>
+          <li>
+            <strong>Types of Cleaning:</strong> Centrifugal Separation (No
+            moving parts)
+          </li>
+          <li>
+            <strong>MOC:</strong> Carbon Steel (IS2062) / SS304 / SS316
+          </li>
         </ul>
       </section>
     </div>
