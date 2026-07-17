@@ -109,14 +109,14 @@ const Navbar = () => {
 
   return (
     <>
-      <div style={{ height: isScrolled ? "48px" : "100px" }} />
+      <div style={{ height: isScrolled ? "48px" : "112px" }} />
 
       <header className="fixed top-0 left-0 w-full z-50 bg-white shadow">
 
         {/* TOP BAR */}
         {!isScrolled && (
           <div className="flex justify-between items-center px-6 py-2 border-b">
-            <Image src="/assets/images/group-logo.png" width={160} height={48} alt="Group logo" className="h-12 object-contain" />
+            <Image src="/assets/images/group-logo.png" width={220} height={66} alt="Group logo" className="h-16 object-contain" />
 
             <div className="hidden md:flex items-center gap-6 text-sm">
               <div className="flex items-center gap-2">

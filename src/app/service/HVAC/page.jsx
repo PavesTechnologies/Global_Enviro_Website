@@ -3,20 +3,23 @@ import { useState } from "react";
 import useOpenOnHash from "@/lib/useOpenOnHash";
 import MotionWrapper from "@/components/common/MotionWrapper";
 import LazyAnimatePresence from "@/components/common/LazyAnimatePresence";
+import Image from "next/image";
+import Link from "next/link";
 import { ChevronDown } from "lucide-react";
 import HeroSection from "@/components/HeroSection/HeroSection";
-import HVSectionCard from "@/components/commonForService/HVSectionCard";
 
 const sections = [
   {
     id: "hvac",
     title: "1. HVAC Systems",
     color: "bg-cyan-700",
+    basePath: "HVACSystems",
     intro:
       "An HVAC System is designed to control and maintain indoor air quality, temperature, humidity, and ventilation within commercial, industrial, pharmaceutical, healthcare, and clean room environments. These systems ensure occupant comfort, process reliability, and compliance with environmental standards. HVAC Systems provide a complete solution for climate control, ventilation, and air purification, ensuring optimal indoor conditions, enhanced productivity, and compliance with industry standards.",
     items: [
       {
         title: "AHUs (Air Handling Units)",
+        slug: "ahus-air-handling-units",
         description:
           "Air Handling Unit (AHU) is a central component of an HVAC (Heating, Ventilation, and Air Conditioning) system that conditions and circulates air throughout a building. It is designed to provide clean, comfortable, and controlled indoor air by filtering, heating, cooling, humidifying, or dehumidifying the air before distributing it to occupied spaces.",
         points: [
@@ -43,6 +46,7 @@ const sections = [
       },
       {
         title: "Pass Box (Dynamic & Static)",
+        slug: "pass-box-dynamic-static",
         description:
           "Dynamic Pass Box is a cleanroom equipment used to transfer materials between areas of different cleanliness classifications while minimizing contamination. Unlike a static pass box, a dynamic pass box is equipped with a HEPA-filtered airflow system that continuously cleans the air inside the chamber during material transfer. Static Pass Box is a cleanroom equipment used for the safe transfer of materials between two controlled areas without allowing personnel movement between them. It acts as a barrier to minimize contamination and maintain the cleanliness of the connected rooms.",
         points: [
@@ -69,6 +73,7 @@ const sections = [
       },
       {
         title: "Modules, Grills, Diffusers & Linear Bar Grills",
+        slug: "modules-grills-diffusers-linear-bar-grills",
         description:
           "The Module is a specialized HVAC and cleanroom component designed to deliver filtered, conditioned air into a controlled environment. It is typically installed in the ceiling, Wall and is used to maintain air cleanliness, airflow patterns, temperature, humidity, and room pressurization. The primary purpose of a Supply Air Module is to Supply clean and filtered air to a room, Maintain required air changes per hour (ACH), Control airborne contamination, Ensure positive or negative room pressure as required, Provide uniform air distribution.",
         points: [
@@ -97,6 +102,7 @@ const sections = [
       },
       {
         title: "Filters (Pre, Fine & HEPA)",
+        slug: "filters-pre-fine-hepa",
         description:
           "Pre-filters and fine filters are air filtration components used in HVAC systems, cleanrooms, and air handling units (AHUs) to remove airborne particles and improve indoor air quality. They are often installed in stages, with pre-filters protecting downstream fine filters and high-efficiency filters. A pre-filter is the first stage of filtration that captures larger particles from the incoming air stream and fine filter is the second-stage filter that removes smaller airborne particles not captured by the pre-filter.",
         points: [
@@ -124,6 +130,7 @@ const sections = [
       },
       {
         title: "Laminar Flow Unit",
+        slug: "laminar-flow-unit",
         description:
           "Laminar Air Flow (LAF) Unit is a clean-air workstation designed to provide a contamination-free working environment by directing highly filtered air in a uniform, unidirectional flow over the work area. It is widely used in pharmaceutical, microbiological, electronics, and research applications where product protection from airborne contamination is critical. We engineer Laminar Flow Units that deliver ISO Class 5 air exactly where your product lives. We ensure H14 HEPA filtration with scan-tested, zero-leak integrity in every unit. We build with SS304 work zones, coved corners, and flush surfaces for easy cleaning. We build reliability into every weld and seal, because contamination has no second chance. This is how we protect your critical process – with airflow we stand behind.",
         points: [
@@ -148,6 +155,7 @@ const sections = [
       },
       {
         title: "Air Shower",
+        slug: "air-shower",
         description:
           "Air Shower is a self-contained chamber installed at the entrance of cleanrooms and controlled environments. It uses high-velocity HEPA-filtered air jets to remove dust, lint, and other contaminants from personnel or materials before they enter a clean area. Emergency stops, LED indicators, and toughened glass meet GMP and safety requirements. Every unit ships with velocity mapping, DOP test reports, and full validation support. This isn't just moving air. It's protecting critical environments from the first step inside. Built for reliability in every nozzle, weld, and seal, because classification depends on entry. Pure air begins at the door.",
         points: [
@@ -171,6 +179,7 @@ const sections = [
       },
       {
         title: "Dust Collector",
+        slug: "dust-collector",
         description:
           "Dust Collector is an air pollution control system designed to capture, filter, and remove dust, powder, particles, and other airborne particles generated during industrial processes. It helps maintain clean air, protects workers, improves product quality, enhance operational efficiency and ensures compliance with environmental and occupational safety regulations.",
         points: [
@@ -198,11 +207,13 @@ const sections = [
     id: "paneling",
     title: "2. Paneling",
     color: "bg-teal-700",
+    basePath: "Paneling",
     intro:
       "Clean room panel systems are modular, prefabricated enclosures designed to achieve and maintain ISO-classified environments by controlling particulates, temperature, humidity, and pressure. The system uses insulated sandwich panels with PUF, Rockwool cores clad in powder-coated GI, SS304/SS316 sheets for chemical resistance and minimal particle shedding. Flush wall-to-ceiling and wall-to-floor covings, silicone-sealed joints, and concealed fasteners eliminate crevices to meet GMP, FDA, and ISO 14644 standards. Integrated doors, view glass panels, pass boxes, and walkable ceiling grids support personnel movement and equipment installation without compromising air tightness. Compatible with HEPA/ULPA terminal modules, laminar flow units, and differential pressure monitoring, the panels ensure unidirectional airflow and contamination control. Quick installation, demountable design, and easy wipe-down surfaces reduce downtime during validation and maintenance because clean room integrity directly impacts product quality.",
     items: [
       {
         title: "Panel for Walls, Partitions & Ceiling",
+        slug: "panel-for-walls-partitions-ceiling",
         description:
           "Clean Room Panels are prefabricated wall and ceiling panels used to construct cleanrooms and controlled environments. We provide smooth, non-shedding, easy-to-clean surfaces that help maintain cleanliness, hygiene, and environmental control in industries such as pharmaceuticals, biotechnology, electronics, healthcare, manufacturing Industries, and food processing. Manufactured with high-density PUF insulation between pre-coated, powder coated GI sheets, Stainless Steel Sheets, these panels provide superior thermal insulation, structural strength, airtight sealing, and clean room compatibility. We ensure fast installation, reduced energy consumption, and long-lasting performance in controlled environments. We meet cleanroom and GMP requirements.",
         points: [
@@ -235,6 +246,7 @@ const sections = [
       },
       {
         title: "Doors",
+        slug: "doors",
         description:
           "Metal Doors are durable, hygienic, and secure doors commonly used in cleanrooms, pharmaceutical facilities, hospitals, laboratories, industrial facilities, and commercial facilities. We are designed to provide strength, cleanliness, fire resistance, and environmental control while withstanding frequent use. Industrial and clean room doors are specially designed to provide secure, hygienic, and efficient access control in controlled environments and industrial facilities. Built with durable materials and precision-engineered sealing systems, these doors ensure smooth operation, thermal insulation, contamination control, and long-term reliability.",
         points: [
@@ -275,6 +287,7 @@ const sections = [
       },
       {
         title: "Crush Panel",
+        slug: "crush-panel",
         description:
           "Crush Panel is a specially designed panel to install in cleanrooms, pharmaceutical facilities, and bulk drugs laboratories to protect personnel's escape from the fire, fumes, and hazard situations.",
         points: [
@@ -294,6 +307,7 @@ const sections = [
       },
       {
         title: "Glass Windows",
+        slug: "glass-windows",
         description:
           "Glass Windows in cleanrooms are specially designed viewing windows installed in walls, puff panels and partitions to provide visibility between areas while maintaining cleanliness, improve safety and supervision, process monitoring without room entry, pressure integrity and environmental control. We are manufactured with smooth, flush surfaces to prevent dust accumulation and facilitate easy cleaning. Manufactured using high-quality toughened and double-glazed glass with precision engineered frames, these windows provide excellent visibility, airtight sealing, durability, and aesthetic appeal while maintaining hygienic and controlled environments.",
         points: [
@@ -320,7 +334,13 @@ const sections = [
   },
 ];
 
-function HVACAccordion({ section, isOpen, onToggle }) {
+// One representative image per section (shown in the accordion body)
+const imageMap = {
+  hvac: "/assets/images/hvac-projects/ahu.jpg",
+  paneling: "/assets/images/hvac-projects/panel-1.jpg",
+};
+
+function AccordionItem({ section, isOpen, onToggle }) {
   return (
     <div
       id={section.id}
@@ -330,14 +350,19 @@ function HVACAccordion({ section, isOpen, onToggle }) {
           : "border-gray-200 shadow-sm hover:shadow-md"
       }`}
     >
+      {/* Header */}
       <button
         onClick={onToggle}
         className={`w-full flex items-center justify-between px-6 py-4 text-left text-white font-semibold text-base ${section.color} hover:opacity-90 transition-all`}
       >
         <span>{section.title}</span>
-        <ChevronDown size={20} className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`} />
+        <ChevronDown
+          size={20}
+          className={`transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
 
+      {/* Body */}
       <LazyAnimatePresence initial={false}>
         {isOpen && (
           <MotionWrapper
@@ -348,12 +373,38 @@ function HVACAccordion({ section, isOpen, onToggle }) {
             transition={{ duration: 0.35 }}
             className="overflow-hidden"
           >
-            <div className="bg-white px-6 py-6">
-              <p className="text-gray-600 text-base leading-relaxed mb-6">{section.intro}</p>
-              <div className="flex flex-col gap-8">
-                {section.items.map((item) => (
-                  <HVSectionCard key={item.title} {...item} />
-                ))}
+            <div className="bg-white px-6 py-5 flex flex-col md:flex-row gap-6">
+              {/* Image */}
+              <div className="md:w-1/3">
+                <Image
+                  src={imageMap[section.id]}
+                  alt={section.title}
+                  width={480}
+                  height={240}
+                  className="rounded-xl object-cover w-full h-48 shadow"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="md:w-2/3 space-y-4">
+                <div>
+                  <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
+                    Systems / Equipment
+                  </p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    {section.items.map((item) => (
+                      <li key={item.slug} className="flex items-center gap-2 text-sm">
+                        <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
+                        <Link
+                          href={`/service/HVAC/${section.basePath}/${item.slug}`}
+                          className="text-gray-700 hover:text-blue-700 hover:underline transition-colors"
+                        >
+                          {item.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </MotionWrapper>
@@ -393,7 +444,7 @@ export default function HVACPage() {
 
         <div className="space-y-4">
           {sections.map((section) => (
-            <HVACAccordion
+            <AccordionItem
               key={section.id}
               section={section}
               isOpen={openId === section.id}
