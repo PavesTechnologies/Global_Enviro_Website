@@ -33,16 +33,16 @@ export default function WetScrubberPage() {
           </p>
           <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
-            <li>Chemical fumes</li>
-            <li>Acid mists</li>
-            <li>Foundry dust</li>
-            <li>Boiler flue gas</li>
-            <li>Odorous gases</li>
-            <li>Combustible dusts</li>
+            <li className="break-inside-avoid">Chemical fumes</li>
+            <li className="break-inside-avoid">Acid mists</li>
+            <li className="break-inside-avoid">Foundry dust</li>
+            <li className="break-inside-avoid">Boiler flue gas</li>
+            <li className="break-inside-avoid">Odorous gases</li>
+            <li className="break-inside-avoid">Combustible dusts</li>
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full aspect-4/3">
           <Image
             src="/assets/images/Air_Pollution/b01. Wet Scrubber.png"
             alt="Wet Scrubber"
@@ -57,38 +57,38 @@ export default function WetScrubberPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
+        <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Dual Removal:</strong> Simultaneously removes particulate
             matter and absorbs gaseous pollutants like SO₂, HCl, NH₃ and Cl₂.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Handles Tough Dust:</strong> No blinding or choking with
             sticky, hygroscopic, or oily dust. Fire/explosion risk eliminated.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>High Temp Handling:</strong> Hot gases directly taken
             without pre-cooling. Quenching section reduces temperature before
             main scrubbing.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Corrosion Resistant:</strong> PP/FRP/rubber lining used
             for acidic or alkaline gases. No corrosion issues like in bag
             filters.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Compact Design:</strong> Lower footprint than ESPs for the
             same gas volume. Suitable for space constraints.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Low Maintenance:</strong> No bags or electrodes to
             replace. Only pump, nozzles, and pH dosing need attention.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Turndown Capability:</strong> Can operate at 50-110% of
             design flow with stable efficiency.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Byproduct Recovery:</strong> Scrubbing liquid can be
             treated to recover product or neutralize for safe disposal.
           </li>
@@ -100,27 +100,27 @@ export default function WetScrubberPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Technical Specification
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
+        <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Capacity Range:</strong> 500 CMH to 3,00,000 CMH
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Type of Fuel:</strong> Coal, Biomass, Furnace Oil, Gas
             &amp; Chemical Process Applications
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Temperature:</strong> Up to 250°C depending on scrubbing
             liquid and material selection
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Scrubber:</strong> Venturi Type / Packed Bed /
             Spray Tower / Cyclonic Scrubber
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Cleaning:</strong> Water Based / Chemical Based /
             Alkali Scrubbing System
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>MOC:</strong> Carbon Steel (IS2062) / FRP / SS304 / SS316
             (If required FRP can be done)
           </li>

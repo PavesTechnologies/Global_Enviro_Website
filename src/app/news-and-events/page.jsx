@@ -1,23 +1,16 @@
-import { headers } from "next/headers";
 import NewsGalleryList from "@/components/news/NewsGalleryList";
+import { getPublishedNews } from "@/lib/queries/news";
 
-async function getNews() {
-  const headerList = await headers();
-  const host = headerList.get("x-forwarded-host") || headerList.get("host");
-  const protocol = headerList.get("x-forwarded-proto") || "http";
-  const baseUrl = process.env.NEXTAUTH_URL || `${protocol}://${host}`;
-
-  const response = await fetch(`${baseUrl}/api/news`, { cache: "no-store" });
-
-  if (!response.ok) {
-    return [];
-  }
-
-  return response.json();
-}
+export const dynamic = "force-dynamic";
 
 export default async function NewsAndEventsPage() {
-  const items = await getNews();
+  let items = [];
+
+  try {
+    items = await getPublishedNews();
+  } catch {
+    items = [];
+  }
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white px-6 py-16">

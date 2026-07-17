@@ -14,6 +14,8 @@ const sections = [
     title: "1. Dust Extraction Systems",
     color: "bg-blue-600",
     basePath: "DustExtraction",
+    description:
+      "A Dust Extraction System is designed to capture, filter, and remove airborne dust, fumes, and particulate matter generated during industrial processes. The system helps maintain a clean and safe working environment, protects equipment, improves product quality, and ensures compliance with environmental and workplace safety regulations. Dust Extraction Systems provide an effective and reliable solution for controlling airborne dust and particulates, ensuring cleaner operations, safer workplaces, and environmentally compliant industrial processes.",
     subsystems: [
       { name: "Pulse Jet Bag Filter", slug: "pulse-jet-bag-filter" },
       { name: "Single Cyclone Separator", slug: "single-cyclone-separator" },
@@ -29,6 +31,8 @@ const sections = [
     title: "2. Fuel Extraction Systems",
     color: "bg-cyan-600",
     basePath: "FuelExtraction",
+    description:
+      "A Fuel Extraction System is designed to extract, reclaim, and transfer fuel from storage bunkers, silos, stockyards, or hoppers to downstream conveying and combustion systems. It ensures a controlled, continuous, and reliable fuel supply to boilers, furnaces, kilns, and power generation units. Fuel Extraction Systems provide a reliable and efficient solution for reclaiming and feeding fuel from storage facilities, ensuring uninterrupted operation and optimal performance of industrial combustion and power generation systems.",
     subsystems: [
       { name: "Wet Scrubber", slug: "wet-scrubber" },
       // { name: "Venturi Scrubber", slug: "venturi-scrubber" },
@@ -37,25 +41,25 @@ const sections = [
   },
   {
     id: "silo-bin",
-    title: "3. Silo / Bin Aeration for Cement / Fly Ash Systems",
+    title: "3. Bin Aeration for Cement _ Fly Ash Systems",
     color: "bg-indigo-600",
     subsystems: ["Silo", "Root Blower"],
     commonEquipment: true,
   },
-  {
-    id: "bulk-loading",
-    title: "4. Bulk Loading Systems",
-    color: "bg-violet-600",
-    subsystems: [],
-    commonEquipment: true,
-  },
-  {
-    id: "wagon",
-    title: "5. Wagon Loading / Unloading",
-    color: "bg-purple-700",
-    subsystems: ["Clinker Wagon", "Cement Wagon", "Fly Ash Wagon"],
-    commonEquipment: true,
-  },
+  // {
+  //   id: "bulk-loading",
+  //   title: "4. Bulk Loading Systems",
+  //   color: "bg-violet-600",
+  //   subsystems: [],
+  //   commonEquipment: true,
+  // },
+  // {
+  //   id: "wagon",
+  //   title: "5. Wagon Loading / Unloading",
+  //   color: "bg-purple-700",
+  //   subsystems: ["Clinker Wagon", "Cement Wagon", "Fly Ash Wagon"],
+  //   commonEquipment: true,
+  // },
 ];
 
 const commonEquipment = [
@@ -110,46 +114,54 @@ function AccordionItem({ section, isOpen, onToggle }) {
             transition={{ duration: 0.35 }}
             className="overflow-hidden"
           >
-            <div className="bg-white px-6 py-5 flex flex-col md:flex-row gap-6">
+            <div className="bg-white px-6 py-6 flex flex-col md:flex-row md:items-center gap-6">
               {/* Image */}
-              <div className="md:w-1/3">
-                <Image
-                  src={imageMap[section.id]}
-                  alt={section.title}
-                  width={480}
-                  height={240}
-                  className="rounded-xl object-cover w-full h-48 shadow"
-                />
+              <div className="md:w-1/3 shrink-0">
+                <div className="relative w-full aspect-4/3 rounded-xl bg-gray-50 border border-gray-100">
+                  <Image
+                    src={imageMap[section.id]}
+                    alt={section.title}
+                    fill
+                    className="object-contain p-4"
+                  />
+                </div>
               </div>
 
               {/* Content */}
               <div className="md:w-2/3 space-y-4">
+                {section.description && (
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {section.description}
+                  </p>
+                )}
+
                 {section.subsystems.length > 0 && (
                   <div>
                     <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                       Systems / Equipment
                     </p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {section.subsystems.map((item) => {
                         const isLinked = typeof item === "object";
                         const label = isLinked ? item.name : item;
-                        return (
-                          <li key={label} className="flex items-center gap-2 text-sm">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
-                            {isLinked ? (
-                              <Link
-                                href={`/service/AirPollutionControl/${section.basePath}/${item.slug}`}
-                                className="text-gray-700 hover:text-blue-700 hover:underline transition-colors"
-                              >
-                                {label}
-                              </Link>
-                            ) : (
-                              <span className="text-gray-700">{label}</span>
-                            )}
-                          </li>
+                        return isLinked ? (
+                          <Link
+                            key={label}
+                            href={`/service/AirPollutionControl/${section.basePath}/${item.slug}`}
+                            className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 text-sm text-gray-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                          >
+                            {label}
+                          </Link>
+                        ) : (
+                          <span
+                            key={label}
+                            className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 text-sm text-gray-500"
+                          >
+                            {label}
+                          </span>
                         );
                       })}
-                    </ul>
+                    </div>
                   </div>
                 )}
 
@@ -158,19 +170,17 @@ function AccordionItem({ section, isOpen, onToggle }) {
                     <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                       Common Equipment
                     </p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {commonEquipment.map((item) => (
-                        <li key={item.slug} className="flex items-center gap-2 text-sm">
-                          <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0" />
-                          <Link
-                            href={`/service/AirPollutionControl/CommonEquipment/${item.slug}`}
-                            className="text-gray-700 hover:text-blue-700 hover:underline transition-colors"
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
+                        <Link
+                          key={item.slug}
+                          href={`/service/AirPollutionControl/CommonEquipment/${item.slug}`}
+                          className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 text-sm text-gray-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                        >
+                          {item.name}
+                        </Link>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 )}
               </div>

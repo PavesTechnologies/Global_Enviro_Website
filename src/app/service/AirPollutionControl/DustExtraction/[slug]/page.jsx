@@ -19,6 +19,16 @@ const componentMap = {
   'axial-flow-fans': AxialFlowFans,
 };
 
+const items = [
+  { name: 'Pulse Jet Bag Filter', slug: 'pulse-jet-bag-filter' },
+  { name: 'Single Cyclone Separator', slug: 'single-cyclone-separator' },
+  { name: 'Treema Cyclone Separator', slug: 'treema-cyclone-separator' },
+  { name: 'Multi Cyclone Separator', slug: 'multi-cyclone-separator' },
+  { name: 'Centrifugal Fans', slug: 'centrifugal-fans' },
+  { name: 'RAV (Rotary Air Lock Valve)', slug: 'rav-rotary-air-lock-valve' },
+  { name: 'Axial Flow Fans', slug: 'axial-flow-fans' },
+];
+
 export default function DustExtractionDetail() {
   const { slug } = useParams();
   const Component = componentMap[slug];
@@ -37,12 +47,34 @@ export default function DustExtractionDetail() {
     );
   }
 
+  const otherItems = items.filter((item) => item.slug !== slug);
+
   return (
     <main>
       <Component />
+
+      {otherItems.length > 0 && (
+        <div className="max-w-6xl mx-auto px-6 pb-8">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
+            More Dust Extraction Systems
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {otherItems.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/service/AirPollutionControl/DustExtraction/${item.slug}`}
+                className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 text-sm text-gray-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="max-w-6xl mx-auto px-6 pb-12">
         <Link
-          href="/service/AirPollutionControl"
+          href="/service/AirPollutionControl#dust-extraction"
           className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:underline"
         >
           ← Back to Air Pollution Control Systems

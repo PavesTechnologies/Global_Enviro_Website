@@ -1,19 +1,15 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase/server";
+import { getActiveJobs } from "@/lib/queries/jobs";
 
 export async function GET() {
-  const { data, error } = await supabaseAdmin
-    .from("jobs")
-    .select("*")
-    .eq("is_active", true)
-    .order("created_at", { ascending: false });
-
-  if (error) {
+  try {
+    const data = await getActiveJobs();
+    return Response.json(data);
+  } catch (error) {
     return Response.json({ error: error.message }, { status: 500 });
   }
-
-  return Response.json(data);
 }
 
 export async function POST(request) {

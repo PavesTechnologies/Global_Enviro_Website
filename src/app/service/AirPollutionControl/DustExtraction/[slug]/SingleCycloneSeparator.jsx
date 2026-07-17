@@ -33,17 +33,17 @@ export default function SingleCycloneSeparatorPage() {
           </p>
           <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
-            <li>Cement &amp; Mineral Industries</li>
-            <li>Woodworking &amp; Sawdust Collection</li>
-            <li>Food Processing Plants</li>
-            <li>Boiler &amp; Furnace Systems</li>
-            <li>Chemical &amp; Fertilizer Industries</li>
-            <li>Material Handling Systems</li>
-            <li>Industrial Dust Collection Applications</li>
+            <li className="break-inside-avoid">Cement &amp; Mineral Industries</li>
+            <li className="break-inside-avoid">Woodworking &amp; Sawdust Collection</li>
+            <li className="break-inside-avoid">Food Processing Plants</li>
+            <li className="break-inside-avoid">Boiler &amp; Furnace Systems</li>
+            <li className="break-inside-avoid">Chemical &amp; Fertilizer Industries</li>
+            <li className="break-inside-avoid">Material Handling Systems</li>
+            <li className="break-inside-avoid">Industrial Dust Collection Applications</li>
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full aspect-4/3">
           <Image
             src="/assets/images/Air_Pollution/a04. Single Cyclone Separator.png"
             alt="Single Cyclone Separator"
@@ -58,15 +58,15 @@ export default function SingleCycloneSeparatorPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Efficient separation of dust and solid particles</li>
-          <li>Operates without moving internal parts</li>
-          <li>Low maintenance and long service life</li>
-          <li>Compact and robust construction</li>
-          <li>Handles high-temperature and high-dust-load applications</li>
-          <li>Reduces load on downstream filtration systems</li>
-          <li>Energy-efficient operation with continuous performance</li>
-          <li>Available in customized capacities and configurations</li>
+        <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">Efficient separation of dust and solid particles</li>
+          <li className="break-inside-avoid">Operates without moving internal parts</li>
+          <li className="break-inside-avoid">Low maintenance and long service life</li>
+          <li className="break-inside-avoid">Compact and robust construction</li>
+          <li className="break-inside-avoid">Handles high-temperature and high-dust-load applications</li>
+          <li className="break-inside-avoid">Reduces load on downstream filtration systems</li>
+          <li className="break-inside-avoid">Energy-efficient operation with continuous performance</li>
+          <li className="break-inside-avoid">Available in customized capacities and configurations</li>
         </ul>
       </section>
 
@@ -75,23 +75,23 @@ export default function SingleCycloneSeparatorPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Technical Specifications
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
+        <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Capacity Range:</strong> 500 CMH to 2,00,000 CMH
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Temperature:</strong> Up to 300°C depending on
             application
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Separation:</strong> High Efficiency /
             Conventional / Tangential Entry Type
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Discharge:</strong> Rotary Airlock / Manual
             Collection / Screw Conveyor
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>MOC:</strong> Carbon Steel (IS2062) / SS304 / SS316
           </li>
         </ul>

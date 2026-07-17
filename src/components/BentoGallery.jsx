@@ -9,7 +9,7 @@ const GalleryModal = dynamic(() => import("@/components/GalleryModal"), {
   loading: () => <div className="modal-loading" />,
 });
 
-export default function BentoGallery({ photos = [] }) {
+export default function BentoGallery({ photos = [], onPhotoClick }) {
   const [modalOpen, setModalOpen] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
 
@@ -40,7 +40,13 @@ export default function BentoGallery({ photos = [] }) {
               type="button"
               className={`bento-img${isLast ? " has-more" : ""}`}
               data-more={isLast ? `+${remaining}` : undefined}
-              onClick={() => {
+              onClick={(event) => {
+                if (onPhotoClick) {
+                  event.stopPropagation();
+                  onPhotoClick(index);
+                  return;
+                }
+
                 setStartIndex(index);
                 setModalOpen(true);
               }}

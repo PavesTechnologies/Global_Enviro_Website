@@ -1,19 +1,15 @@
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { supabaseAdmin } from "@/lib/supabase/server";
+import { getPublishedNews } from "@/lib/queries/news";
 
 export async function GET() {
-  const { data, error } = await supabaseAdmin
-    .from("news_events")
-    .select("*")
-    .eq("is_published", true)
-    .order("event_date", { ascending: false });
-
-  if (error) {
+  try {
+    const data = await getPublishedNews();
+    return Response.json(data);
+  } catch (error) {
     return Response.json({ error: error.message }, { status: 500 });
   }
-
-  return Response.json(data);
 }
 
 export async function POST(request) {

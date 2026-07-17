@@ -1,23 +1,16 @@
-import { headers } from "next/headers";
 import CareersBrowser from "@/components/careers/CareersBrowser";
+import { getActiveJobs } from "@/lib/queries/jobs";
 
-async function getJobs() {
-  const headerList = await headers();
-  const host = headerList.get("x-forwarded-host") || headerList.get("host");
-  const protocol = headerList.get("x-forwarded-proto") || "http";
-  const baseUrl = process.env.NEXTAUTH_URL || `${protocol}://${host}`;
-
-  const response = await fetch(`${baseUrl}/api/jobs`, { cache: "no-store" });
-
-  if (!response.ok) {
-    return [];
-  }
-
-  return response.json();
-}
+export const dynamic = "force-dynamic";
 
 export default async function CareersPage() {
-  const jobs = await getJobs();
+  let jobs = [];
+
+  try {
+    jobs = await getActiveJobs();
+  } catch {
+    jobs = [];
+  }
 
   return (
     <main className="mx-auto max-w-6xl px-6 py-12">

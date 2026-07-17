@@ -31,16 +31,16 @@ export default function TreemaCycloneSeparatorPage() {
           </p>
           <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
-            <li>Cement &amp; Mineral Processing Plants</li>
-            <li>Pharmaceutical Industries</li>
-            <li>Food Processing Units</li>
-            <li>Steel &amp; Foundry Industries</li>
-            <li>Chemical &amp; Fertilizer Plants</li>
-            <li>Woodworking &amp; Packaging Industries</li>
+            <li className="break-inside-avoid">Cement &amp; Mineral Processing Plants</li>
+            <li className="break-inside-avoid">Pharmaceutical Industries</li>
+            <li className="break-inside-avoid">Food Processing Units</li>
+            <li className="break-inside-avoid">Steel &amp; Foundry Industries</li>
+            <li className="break-inside-avoid">Chemical &amp; Fertilizer Plants</li>
+            <li className="break-inside-avoid">Woodworking &amp; Packaging Industries</li>
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full aspect-4/3">
           <Image
             src="/assets/images/Air_Pollution/a05. Treema Cyclone Separator.jpg"
             alt="Treema Cyclone Separator"
@@ -55,37 +55,37 @@ export default function TreemaCycloneSeparatorPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
+        <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Multi-Cyclone Design:</strong> Two or more high-efficiency
             Treema cyclones in series for cumulative 99% efficiency on fine
             dust.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>No Filter Media:</strong> Zero consumables. No bags,
             cartridges, or cloth to replace.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Constant Airflow:</strong> Performance doesn&apos;t
             degrade due to clogging like bag filters.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Low Maintenance:</strong> No moving parts inside cyclone
             body. Only periodic hopper emptying needed.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Compact Footprint:</strong> Higher efficiency in smaller
             space versus conventional cyclones.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Customizable:</strong> Designed per your gas flow, dust
             load, temperature, and space.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Dry Collection:</strong> No water, no sludge disposal.
             Collected dust can be recycled/reused.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>High Temperature Ready:</strong> Suitable for boiler flue
             gas and hot process exhaust.
           </li>
@@ -97,22 +97,22 @@ export default function TreemaCycloneSeparatorPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Technical Specifications
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
+        <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Capacity Range:</strong> 500 CMH to 3,00,000 CMH
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Type of Fuel:</strong> Coal, Biomass, Wood, Pet Coke
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Temperature:</strong> Up to 300°C depending on
             application
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Cleaning:</strong> Centrifugal Separation (No
             moving parts)
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>MOC:</strong> Carbon Steel (IS2062) / SS304 / SS316
           </li>
         </ul>

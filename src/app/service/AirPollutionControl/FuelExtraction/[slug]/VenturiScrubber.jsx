@@ -36,15 +36,15 @@ export default function VenturiScrubberPage() {
           </p>
           <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
-            <li>Fine particulate and sub-micron dust</li>
-            <li>Foundry and metallurgical fumes</li>
-            <li>Boiler flue gas with high dust loading</li>
-            <li>Chemical process off-gases</li>
-            <li>Combustible or explosive dust streams</li>
+            <li className="break-inside-avoid">Fine particulate and sub-micron dust</li>
+            <li className="break-inside-avoid">Foundry and metallurgical fumes</li>
+            <li className="break-inside-avoid">Boiler flue gas with high dust loading</li>
+            <li className="break-inside-avoid">Chemical process off-gases</li>
+            <li className="break-inside-avoid">Combustible or explosive dust streams</li>
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full aspect-4/3">
           <Image
             src="/assets/images/Air_Pollution/b01. Wet Scrubber.png"
             alt="Venturi Scrubber"
@@ -59,40 +59,40 @@ export default function VenturiScrubberPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
+        <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>High Collection Efficiency:</strong> Converging-diverging
             throat design delivers superior removal of fine and sub-micron
             particulates compared to conventional scrubbers.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Dual Removal:</strong> Simultaneously removes particulate
             matter and absorbs gaseous pollutants such as SO₂, HCl, NH₃ and
             Cl₂.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Handles Tough Dust:</strong> Effective on sticky,
             hygroscopic, or oily dust with no blinding or choking. Fire and
             explosion risk eliminated.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>High Temp Handling:</strong> Hot gases can be taken
             directly without pre-cooling; an integrated quenching section
             reduces temperature ahead of the throat.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Corrosion Resistant:</strong> PP/FRP/rubber-lined
             construction for acidic or alkaline gas streams.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Compact Footprint:</strong> Smaller installation area than
             ESPs for the same gas volume, suited to space-constrained sites.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Low Maintenance:</strong> No bags or electrodes; upkeep is
             limited to the pump, spray nozzles, and pH dosing system.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Adjustable Pressure Drop:</strong> Throat velocity can be
             tuned to balance collection efficiency against fan power
             consumption.
@@ -105,27 +105,27 @@ export default function VenturiScrubberPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Technical Specification
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
+        <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Capacity Range:</strong> 500 CMH to 3,00,000 CMH
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Type of Fuel:</strong> Coal, Biomass, Furnace Oil, Gas
             &amp; Chemical Process Applications
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Temperature:</strong> Up to 250°C depending on scrubbing
             liquid and material selection
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Scrubber Type:</strong> Venturi (converging-diverging
             throat)
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Cleaning:</strong> Water Based / Chemical Based /
             Alkali Scrubbing System
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>MOC:</strong> Carbon Steel (IS2062) / FRP / SS304 / SS316
             (If required FRP can be done)
           </li>
