@@ -11,7 +11,7 @@ export default function PneumaticSlideGatesPage() {
           Pneumatic Slide Gates
         </h1>
         <p>
-          Global Enviro&apos;s Pneumatic Slide Gate is an air-cylinder
+          Pneumatic Slide Gate is an air-cylinder
           operated shut-off device that uses a flat blade to open or close
           the flow of dry bulk solids from silos, hoppers, and chutes. Fast
           2-5 second actuation makes it ideal for batching, dosing, and
@@ -26,23 +26,17 @@ export default function PneumaticSlideGatesPage() {
           <h2 className="text-2xl font-semibold text-blue-800 mb-3">
             Product Overview
           </h2>
-          <p>
-            An air cylinder drives the blade through its full stroke in just
-            2-5 seconds — far faster than a motorized gate — making it well
-            suited to batch weighing and feeder isolation where speed and
-            repeatability matter.
-          </p>
           <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
-            <li>Batch weighing</li>
-            <li>Truck loading</li>
-            <li>Feeder isolation</li>
-            <li>Filter discharge</li>
-            <li>Pneumatic conveying systems</li>
+            <li className="break-inside-avoid">Batch weighing</li>
+            <li className="break-inside-avoid">Truck loading</li>
+            <li className="break-inside-avoid">Feeder isolation</li>
+            <li className="break-inside-avoid">Filter discharge</li>
+            <li className="break-inside-avoid">Pneumatic conveying systems</li>
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full aspect-4/3">
           <Image
             src="/assets/images/Air_Pollution/d05. Pneumatic Slide Gates.jpg"
             alt="Pneumatic Slide Gates"
@@ -57,36 +51,36 @@ export default function PneumaticSlideGatesPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
+        <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Fast Operation:</strong> 2-5 sec full stroke versus 30-60
             sec for a motorized gate. Perfect for batching accuracy.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Fail-Safe Action:</strong> Spring-return or air-reservoir
             closes the gate on air/power failure — no silo emptying risk.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Dust-Tight Seal:</strong> Full perimeter gasket + bonnet
             seal. &lt;0.1% leakage, &lt;20 mg/NM³ emission.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Self-Cleaning Blade:</strong> Beveled edge scrapes the
             seat clean on closing — no material jam or leakage.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Low Profile:</strong> Body height 120-200mm only, fits in
             tight spaces under existing equipment.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Position Feedback:</strong> Magnetic reed switches for
             open/close status to PLC — no false signals.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Maintenance Free:</strong> Only cylinder seals wear.
             Blade and body last 5+ years in cement duty.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Modular Design:</strong> Bolted construction — change
             blade/seal without removing the gate from the line.
           </li>
@@ -98,27 +92,27 @@ export default function PneumaticSlideGatesPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Technical Specification
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
+        <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Capacity Range:</strong> 10 TPH to 500 TPH material
             handling capacity
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Type of Application:</strong> Dust Tight Flow Control for
             Hoppers, Silos &amp; Pneumatic Conveying Systems
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Temperature:</strong> Up to 250°C depending on sealing
             and actuator type
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Gates:</strong> Slide Type / Knife Edge
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Operation:</strong> Pneumatic Cylinder Operated /
             Solenoid Controlled Automation
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>MOC:</strong> Carbon Steel (IS2062)
           </li>
         </ul>

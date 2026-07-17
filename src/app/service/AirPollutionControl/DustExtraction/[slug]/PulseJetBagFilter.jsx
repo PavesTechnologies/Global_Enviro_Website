@@ -32,17 +32,17 @@ export default function PulseJetBagFilterPage() {
           </p>
           <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
-            <li>Cement &amp; Mineral Processing Plants</li>
-            <li>Pharmaceutical Industries</li>
-            <li>Food Processing Units</li>
-            <li>Steel &amp; Foundry Industries</li>
-            <li>Chemical &amp; Fertilizer Plants</li>
-            <li>Woodworking &amp; Packaging Industries</li>
-            <li>Material Handling &amp; Crushing Systems</li>
+            <li className="break-inside-avoid">Cement &amp; Mineral Processing Plants</li>
+            <li className="break-inside-avoid">Pharmaceutical Industries</li>
+            <li className="break-inside-avoid">Food Processing Units</li>
+            <li className="break-inside-avoid">Steel &amp; Foundry Industries</li>
+            <li className="break-inside-avoid">Chemical &amp; Fertilizer Plants</li>
+            <li className="break-inside-avoid">Woodworking &amp; Packaging Industries</li>
+            <li className="break-inside-avoid">Material Handling &amp; Crushing Systems</li>
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full aspect-4/3">
           <Image
             src="/assets/images/Air_Pollution/a01. Pulsejet Bag Filter for Boiler.jpg"
             alt="Pulse Jet Bag Filter"
@@ -57,15 +57,15 @@ export default function PulseJetBagFilterPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>High dust collection efficiency for fine particles</li>
-          <li>Continuous operation with automatic pulse cleaning</li>
-          <li>Low maintenance and long filter bag life</li>
-          <li>Compact and robust construction</li>
-          <li>Energy-efficient operation with reduced pressure loss</li>
-          <li>Suitable for high dust load applications</li>
-          <li>Easy access for inspection and maintenance</li>
-          <li>Customized capacities and filtration configurations available</li>
+        <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">High dust collection efficiency for fine particles</li>
+          <li className="break-inside-avoid">Continuous operation with automatic pulse cleaning</li>
+          <li className="break-inside-avoid">Low maintenance and long filter bag life</li>
+          <li className="break-inside-avoid">Compact and robust construction</li>
+          <li className="break-inside-avoid">Energy-efficient operation with reduced pressure loss</li>
+          <li className="break-inside-avoid">Suitable for high dust load applications</li>
+          <li className="break-inside-avoid">Easy access for inspection and maintenance</li>
+          <li className="break-inside-avoid">Customized capacities and filtration configurations available</li>
         </ul>
       </section>
 
@@ -74,27 +74,27 @@ export default function PulseJetBagFilterPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Technical Specifications
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
+        <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Capacity Range:</strong> 500 CMH to 3,00,000 CMH
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Type of Fuel:</strong> Coal, Biomass, Furnace Oil, Gas,
             Pet Coke
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Temperature:</strong> Up to 300°C depending on filter
             media
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Filter Bags:</strong> Polyester, PP, Nomex,
             PTFE, Fiberglass
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Cleaning:</strong> Pulse Jet / Reverse Air /
             Shaker Type
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>MOC:</strong> IS2062 / SS304 / SS316
           </li>
         </ul>

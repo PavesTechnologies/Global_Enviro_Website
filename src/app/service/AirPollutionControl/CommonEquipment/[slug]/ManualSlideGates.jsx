@@ -34,15 +34,15 @@ export default function ManualSlideGatesPage() {
           </p>
           <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
-            <li>Silo and hopper isolation</li>
-            <li>Maintenance shut-off points</li>
-            <li>Low-frequency flow isolation</li>
-            <li>Cement, fly ash, and mineral handling</li>
-            <li>Standalone installations without air/power supply</li>
+            <li className="break-inside-avoid">Silo and hopper isolation</li>
+            <li className="break-inside-avoid">Maintenance shut-off points</li>
+            <li className="break-inside-avoid">Low-frequency flow isolation</li>
+            <li className="break-inside-avoid">Cement, fly ash, and mineral handling</li>
+            <li className="break-inside-avoid">Standalone installations without air/power supply</li>
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full aspect-4/3">
           <Image
             src="/assets/images/Air_Pollution/d04. Flow Control Gates.png"
             alt="Manual Slide Gates"
@@ -57,33 +57,33 @@ export default function ManualSlideGatesPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
+        <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>No Air/Power Required:</strong> Hand wheel or lever
             operation — ideal where compressed air or electrical supply is
             unavailable.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Positive Shut-Off:</strong> Knife edge cuts through the
             material column with no leakage, even with fine powders.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Dust-Tight Design:</strong> Full perimeter seal + bonnet
             gasket prevents dust emission to atmosphere.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Wear Resistant:</strong> Hardox or ceramic lined blade and
             guides for abrasive materials like cement, sand, clinker.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Self-Cleaning:</strong> Blade scrapes seat on closing —
             no material buildup to prevent full closure.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Low Headroom:</strong> Slim body design fits under
             existing hoppers easily.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Maintenance Friendly:</strong> Simple mechanical design,
             replaceable blade, split frame for in-line service.
           </li>
@@ -95,26 +95,26 @@ export default function ManualSlideGatesPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Technical Specification
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
+        <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Capacity Range:</strong> 10 TPH to 500 TPH material
             handling capacity
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Type of Application:</strong> Flow Isolation for Hoppers,
             Silos &amp; Chutes
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Temperature:</strong> Up to 400°C depending on material
             and sealing arrangement
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Gates:</strong> Slide Gate / Knife Edge
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Operation:</strong> Hand Wheel / Lever Operated
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>MOC:</strong> Carbon Steel (IS2062)
           </li>
         </ul>

@@ -34,17 +34,17 @@ export default function CarbonFilterForOdourControlPage() {
           </p>
           <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
-            <li>STP odour</li>
-            <li>ETP exhausts</li>
-            <li>Food processing</li>
-            <li>Pharma solvents</li>
-            <li>Chemical fumes</li>
-            <li>Kitchen exhaust</li>
-            <li>Waste plants</li>
+            <li className="break-inside-avoid">STP odour</li>
+            <li className="break-inside-avoid">ETP exhausts</li>
+            <li className="break-inside-avoid">Food processing</li>
+            <li className="break-inside-avoid">Pharma solvents</li>
+            <li className="break-inside-avoid">Chemical fumes</li>
+            <li className="break-inside-avoid">Kitchen exhaust</li>
+            <li className="break-inside-avoid">Waste plants</li>
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full aspect-4/3">
           <Image
             src="/assets/images/Air_Pollution/b02. Carbon Filter for Odour Control.jpeg"
             alt="Carbon Filter for Odour Control"
@@ -59,36 +59,36 @@ export default function CarbonFilterForOdourControlPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>
+        <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>High Surface Area:</strong> 1 gram of carbon = 500-1500
             m² internal area, giving huge capacity to trap odor molecules.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Broad Spectrum:</strong> Removes 100+ compounds — H₂S,
             mercaptans, amines, aldehydes, ketones, solvents, ozone.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>No Water/Chemical:</strong> Dry process with no effluent
             or dosing pumps. Plug-and-play after commissioning.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Low Pressure Drop:</strong> 100-150 mm wc only — can run
             with existing AHU/fan in most cases.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Impregnated Options:</strong> KOH, KI, or KMnO₄
             impregnated carbon available for H₂S, NH₃, and formaldehyde.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Modular Design:</strong> Multiple trays or cartridges for
             easy carbon change — no vessel entry needed.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Polishing Stage:</strong> Achieves outlet odour &lt;2
             OU/M³ or non-detectable by human nose.
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Fire Safety:</strong> Thermal sensors and water spray for
             beds &gt;5 M³ carbon, preventing auto-ignition.
           </li>
@@ -100,27 +100,27 @@ export default function CarbonFilterForOdourControlPage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Technical Specification
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
+        <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Capacity Range:</strong> 500 CMH to 2,00,000 CMH
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Type of Application:</strong> Odour Control / Fume &amp;
             Gas Filtration
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Temperature:</strong> Up to 80°C to 120°C depending on
             carbon media
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Carbon Media:</strong> Activated Carbon
             Granules / Pellets / Impregnated Carbon
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Filtration:</strong> Single Bed / Multi Bed /
             Chemical Adsorption System
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>MOC:</strong> Carbon Steel (IS2062) / FRP / SS304 / SS316
           </li>
         </ul>

@@ -31,16 +31,16 @@ export default function RotaryAirLockValvePage() {
           </p>
           <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
-            <li>Cement plants</li>
-            <li>Fly ash handling systems</li>
-            <li>Food &amp; grain processing</li>
-            <li>Chemical and pharmaceutical industries</li>
-            <li>Boiler and dust collector systems</li>
-            <li>Plastic pellet and mineral processing</li>
+            <li className="break-inside-avoid">Cement plants</li>
+            <li className="break-inside-avoid">Fly ash handling systems</li>
+            <li className="break-inside-avoid">Food &amp; grain processing</li>
+            <li className="break-inside-avoid">Chemical and pharmaceutical industries</li>
+            <li className="break-inside-avoid">Boiler and dust collector systems</li>
+            <li className="break-inside-avoid">Plastic pellet and mineral processing</li>
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full aspect-4/3">
           <Image
             src="/assets/images/Air_Pollution/a07. Rotary Air Lock Valve.jpg"
             alt="RAV (Rotary Air Lock Valve)"
@@ -55,18 +55,18 @@ export default function RotaryAirLockValvePage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Key Features
         </h2>
-        <ul className="list-disc pl-6 space-y-2">
-          <li>Continuous and uniform material feeding</li>
-          <li>Excellent air-locking capability</li>
-          <li>Heavy-duty rotor construction</li>
-          <li>Low maintenance operation</li>
-          <li>Compact and robust design</li>
-          <li>
+        <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">Continuous and uniform material feeding</li>
+          <li className="break-inside-avoid">Excellent air-locking capability</li>
+          <li className="break-inside-avoid">Heavy-duty rotor construction</li>
+          <li className="break-inside-avoid">Low maintenance operation</li>
+          <li className="break-inside-avoid">Compact and robust design</li>
+          <li className="break-inside-avoid">
             Available in cast iron, mild steel, and stainless steel
             construction
           </li>
-          <li>Suitable for abrasive and high-temperature materials</li>
-          <li>Gear motor driven for smooth rotation</li>
+          <li className="break-inside-avoid">Suitable for abrasive and high-temperature materials</li>
+          <li className="break-inside-avoid">Gear motor driven for smooth rotation</li>
         </ul>
       </section>
 
@@ -75,26 +75,26 @@ export default function RotaryAirLockValvePage() {
         <h2 className="text-2xl font-semibold text-blue-800 mb-3">
           Technical Specification
         </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>
+        <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
+          <li className="break-inside-avoid">
             <strong>Capacity Range:</strong> 1 TPH to 200 TPH dust handling
             capacity
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Type of Application:</strong> Dust Collection
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Temperature:</strong> Up to 250°C with suitable sealing
             arrangement
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Rotor:</strong> Open Type / Closed Type / Blow
             Through Type
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>Types of Drive:</strong> Direct Drive / Chain Drive
           </li>
-          <li>
+          <li className="break-inside-avoid">
             <strong>MOC:</strong> Carbon Steel (IS2062) / SS304 / SS316
           </li>
         </ul>
