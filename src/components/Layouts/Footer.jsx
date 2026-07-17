@@ -24,11 +24,10 @@ const Footer = () => {
     {
       title: 'Our Services',
       links: [
-        { name: 'Air Pollution Control Systems', url: '/services/air-control' },
-        { name: 'Material Handling Systems', url: '/services/material-handling' },
-        { name: 'HVAC & Ventilation Solutions', url: '/services/hvac' },
-        { name: 'EPC Power Projects', url: '/services/epc' },
-        { name: 'Environmental Consulting', url: '/services/consulting' },
+        { name: 'Air Pollution Control Systems', url: '/service/AirPollutionControl' },
+        { name: 'Material Handling Systems', url: '/service/MaterialHandling' },
+        { name: 'HVAC & Ventilation Solutions', url: '/service/HVAC' },
+        { name: 'EPC Power Projects', url: '/service/EPCPower' },
       ],
     },
     {

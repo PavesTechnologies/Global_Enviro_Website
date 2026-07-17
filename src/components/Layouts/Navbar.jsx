@@ -22,6 +22,11 @@ const navItems = [
   },
   {
     title: "Group", url: "/Ourgroup",
+    dropdown: [
+      { title: "Global Enviro", url: "/about" },
+      { title: "JET TECH", url: "https://www.jettechenergy.com/" },
+      { title: "Global Metallurgy", url: "/Ourgroup/GlobalMetallurgy" },
+    ]
   },
   {
     title: "Services",

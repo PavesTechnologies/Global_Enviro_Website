@@ -46,6 +46,7 @@ export default function HVACPage() {
       <section className="flex flex-col lg:flex-row px-10 py-16 gap-10">
         {/* LEFT SIDE */}
         <div className="lg:w-1/2 space-y-6">
+        <h1 className="text-4xl font-bold text-accent justify-center">HVAC Clean Room Projects</h1>
           <h2 className="text-3xl font-bold text-black">ABOUT US</h2>
           <p className="text-lg leading-relaxed">
             Ours is an Engineering-based company and glad to introduce us as one of the
