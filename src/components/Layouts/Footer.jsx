@@ -17,13 +17,13 @@ const Footer = () => {
 
         {/* --- COMPANY INFO --- */}
         <div>
-          <div className="inline-block bg-white rounded-lg p-3 mb-4 shadow-sm border border-gray-200">
-            <Image src="/assets/images/group-logo.png" alt="Global Technologies Logo" width={220} height={88} className="h-20 object-contain" />
+          <div className="inline-block bg-gray-100 rounded-lg p-3 mb-4 ">
+            <Image src="/assets/images/group-logo.png" alt="GLOBAL Technologies Logo" width={220} height={88} className="h-20 object-contain" />
           </div>
 
           <p className="text-sm leading-relaxed mb-5 text-gray-600">
             <span className="font-semibold text-gray-900">
-              Global ENVIRO AIR SYSTEMS (P) Ltd
+              GLOBAL ENVIRO AIR SYSTEMS (P) Ltd
             </span>
             <br />
             Sy. No. 163/A, Gagillapur (Vil),
@@ -107,7 +107,7 @@ const Footer = () => {
       <div className="bg-gray-200 text-gray-600 py-3 text-sm text-center border-t border-gray-300">
         &copy; {new Date().getFullYear()}{" "}
         <span className="text-gray-800 font-medium">
-          Global ENVIRO AIR SYSTEMS (P) Ltd
+          GLOBAL ENVIRO AIR SYSTEMS (P) Ltd
         </span>. All Rights Reserved.
       </div>
     </footer>

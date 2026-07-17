@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaPhone, FaEnvelope, FaBars, FaTimes } from "react-icons/fa";
 import { ChevronDown, ChevronRight } from "lucide-react";
 import { usePathname } from "next/navigation";
@@ -89,17 +89,10 @@ const navItems = [
 
 /* ===================== COMPONENT ===================== */
 const Navbar = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
   const pathname = usePathname();
-
-  useEffect(() => {
-    const handleScroll = () => setIsScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   const isActive = (url) => {
     if (!url || url.startsWith("http")) return false;
@@ -109,33 +102,29 @@ const Navbar = () => {
 
   return (
     <>
-      <div style={{ height: isScrolled ? "48px" : "112px" }} />
-
-      <header className="fixed top-0 left-0 w-full z-50 bg-white shadow">
+      <header className="sticky top-0 z-50 w-full bg-white shadow">
 
         {/* TOP BAR */}
-        {!isScrolled && (
-          <div className="flex justify-between items-center px-6 py-2 border-b">
-            <Image src="/assets/images/group-logo.png" width={220} height={66} alt="Group logo" className="h-16 object-contain" />
+        <div className="flex justify-between items-center px-6 py-2 border-b">
+          <Image src="/assets/images/group-logo.png" width={220} height={66} alt="Group logo" className="h-16 object-contain" />
 
-            <div className="hidden md:flex items-center gap-6 text-sm">
-              <div className="flex items-center gap-2">
-                <FaPhone className="text-blue-600" />
-                <span>+91 98480 31866</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <FaEnvelope className="text-blue-600" />
-                <span>ksr@globalenviro.in</span>
-              </div>
-              <Link
-                href="/RequestQuote"
-                className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
-              >
-                REQUEST A QUOTE
-              </Link>
+          <div className="hidden md:flex items-center gap-6 text-sm">
+            <div className="flex items-center gap-2">
+              <FaPhone className="text-blue-600" />
+              <span>+91 98480 31866</span>
             </div>
+            <div className="flex items-center gap-2">
+              <FaEnvelope className="text-blue-600" />
+              <span>ksr@globalenviro.in</span>
+            </div>
+            <Link
+              href="/RequestQuote"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+            >
+              REQUEST A QUOTE
+            </Link>
           </div>
-        )}
+        </div>
 
         {/* MAIN NAV */}
         <nav className="bg-[#3877d4]">
