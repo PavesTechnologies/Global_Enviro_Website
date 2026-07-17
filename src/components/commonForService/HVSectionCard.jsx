@@ -56,9 +56,10 @@
 import { useState } from "react";
 import MotionWrapper from "@/components/common/MotionWrapper";
 import Image from "next/image";
+import Link from "next/link";
 import ImageLightbox from "@/components/common/ImageLightbox";
 
-export default function HVSectionCard({ title, heading, description, points, groups, image, gallery }) {
+export default function HVSectionCard({ title, heading, description, points, groups, image, gallery, href }) {
   const [previewSrc, setPreviewSrc] = useState(null);
 
   return (
@@ -74,7 +75,15 @@ export default function HVSectionCard({ title, heading, description, points, gro
         {/* Left Content */}
         <div className={`${image ? "lg:w-2/3" : "w-full"} space-y-3`}>
           <div className="space-y-1">
-            <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
+            <h3 className="text-2xl font-bold text-gray-800">
+              {href ? (
+                <Link href={href} className="hover:text-blue-700 hover:underline transition-colors">
+                  {title}
+                </Link>
+              ) : (
+                title
+              )}
+            </h3>
             {heading && (
               <h4 className="text-lg font-semibold text-[#004c91] leading-snug">{heading}</h4>
             )}
