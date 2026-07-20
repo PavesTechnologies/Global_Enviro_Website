@@ -17,6 +17,7 @@ export default function BriquettesDetail() {
         <h1 className="text-2xl font-semibold">Page Not Found</h1>
         <Link
           href="/service/Metallurgicals#briquettes"
+          scroll={false}
           className="mt-4 inline-block text-blue-700 hover:underline"
         >
           Back to Metallurgicals &amp; Briquettes
@@ -31,6 +32,7 @@ export default function BriquettesDetail() {
       <div className="max-w-6xl mx-auto px-6 pb-12">
         <Link
           href="/service/Metallurgicals#briquettes"
+          scroll={false}
           className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:underline"
         >
           ← Back to Metallurgicals &amp; Briquettes

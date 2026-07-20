@@ -387,6 +387,12 @@ function AccordionItem({ section, isOpen, onToggle }) {
 
               {/* Content */}
               <div className="md:w-2/3 space-y-4">
+                {section.intro && (
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    {section.intro}
+                  </p>
+                )}
+
                 <div>
                   <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                     Systems / Equipment
