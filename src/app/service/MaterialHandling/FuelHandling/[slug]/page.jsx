@@ -25,6 +25,19 @@ const componentMap = {
   'crusher-cum-screen': CrusherCumScreen,
 };
 
+const items = [
+  { name: 'Coal Handling', slug: 'coal-handling' },
+  { name: 'Husk Handling', slug: 'husk-handling' },
+  { name: 'Biomass Briquettes Handling', slug: 'biomass-briquettes-handling' },
+  { name: 'Belt Conveyor', slug: 'belt-conveyor' },
+  { name: 'Bucket Elevator', slug: 'bucket-elevator' },
+  { name: 'Slot Chain Conveyor', slug: 'slot-chain-conveyor' },
+  { name: 'Vibratory Screen (Single/Double/Triple Deck)', slug: 'vibratory-screen' },
+  { name: 'Screw Conveyor', slug: 'screw-conveyor' },
+  { name: 'Crusher (Impact Hammer Mill)', slug: 'crusher-impact-hammer-mill' },
+  { name: 'Crusher Cum Screen', slug: 'crusher-cum-screen' },
+];
+
 export default function FuelHandlingDetail() {
   const { slug } = useParams();
   const Component = componentMap[slug];
@@ -35,6 +48,7 @@ export default function FuelHandlingDetail() {
         <h1 className="text-2xl font-semibold">Page Not Found</h1>
         <Link
           href="/service/MaterialHandling#fuel-handling"
+          scroll={false}
           className="mt-4 inline-block text-blue-700 hover:underline"
         >
           Back to Material Handling Systems
@@ -43,12 +57,35 @@ export default function FuelHandlingDetail() {
     );
   }
 
+  const otherItems = items.filter((item) => item.slug !== slug);
+
   return (
     <main>
       <Component />
+
+      {otherItems.length > 0 && (
+        <div className="max-w-6xl mx-auto px-6 pb-8">
+          <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide mb-2">
+            More Fuel Handling Systems
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {otherItems.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/service/MaterialHandling/FuelHandling/${item.slug}`}
+                className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 text-sm text-gray-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="max-w-6xl mx-auto px-6 pb-12">
         <Link
           href="/service/MaterialHandling#fuel-handling"
+          scroll={false}
           className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:underline"
         >
           ← Back to Material Handling Systems
