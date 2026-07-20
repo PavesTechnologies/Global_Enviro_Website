@@ -6,33 +6,26 @@ export default function CarbonFilterForOdourControlPage() {
   return (
     <div className="bg-white text-gray-800 leading-relaxed">
       {/* ---------- Intro Section ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-10">
-        <h1 className="text-4xl font-bold mb-4 text-blue-800">
+      <section className="max-w-6xl mx-auto px-6 py-6">
+        <h1 className="text-4xl font-bold mb-2 text-blue-800">
           Carbon Filter for Odour Control
         </h1>
-        <p>
-          Global Enviro&apos;s Activated Carbon Filter is an adsorption
-          system that removes odour, H₂S, mercaptans, solvents, and organic
-          vapors from air/gas streams. Microporous carbon granules trap odor
-          molecules on their huge internal surface area, making it ideal as a
-          final polishing stage after dust collectors or scrubbers where
-          smell is the main concern.
-        </p>
       </section>
 
       {/* ---------- Product Overview ---------- */}
-      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6 py-6">
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-3 items-center px-6 py-4">
         <div>
-          <h2 className="text-2xl font-semibold text-blue-800 mb-3">
+          <h2 className="text-2xl font-semibold text-blue-800 mb-2">
             Product Overview
           </h2>
           <p>
-            Activated carbon works through adsorption, trapping odor and
-            gas-phase pollutants on the vast internal surface area of its
-            microporous granules. Used as a dry, plug-and-play polishing
-            stage, it requires no water or chemical dosing.
+            Activated Carbon Filter removes odour, H₂S, mercaptans, solvents,
+            and organic vapors from air/gas streams by adsorption. Microporous
+            carbon granules trap odor molecules on their huge internal
+            surface area. Used as final polishing stage after dust collectors
+            or scrubbers where smell is the main issue.
           </p>
-          <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
+          <p className="mt-2 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
             <li className="break-inside-avoid">STP odour</li>
             <li className="break-inside-avoid">ETP exhausts</li>
@@ -55,8 +48,8 @@ export default function CarbonFilterForOdourControlPage() {
       </section>
 
       {/* ---------- Key Features ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-6">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-3">
+      <section className="max-w-6xl mx-auto px-6 py-4">
+        <h2 className="text-2xl font-semibold text-blue-800 mb-2">
           Key Features
         </h2>
         <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
@@ -96,8 +89,8 @@ export default function CarbonFilterForOdourControlPage() {
       </section>
 
       {/* ---------- Technical Specification ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-6">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-3">
+      <section className="max-w-6xl mx-auto px-6 py-4">
+        <h2 className="text-2xl font-semibold text-blue-800 mb-2">
           Technical Specification
         </h2>
         <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">

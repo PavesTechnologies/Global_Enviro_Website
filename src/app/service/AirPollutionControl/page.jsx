@@ -43,7 +43,7 @@ const sections = [
     id: "silo-bin",
     title: "3. Bin Aeration for Cement _ Fly Ash Systems",
     color: "bg-indigo-600",
-    subsystems: ["Silo", "Root Blower"],
+    subsystems: [],
     commonEquipment: true,
   },
   // {

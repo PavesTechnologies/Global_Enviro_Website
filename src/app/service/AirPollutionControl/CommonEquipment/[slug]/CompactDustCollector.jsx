@@ -6,27 +6,27 @@ export default function CompactDustCollectorPage() {
   return (
     <div className="bg-white text-gray-800 leading-relaxed">
       {/* ---------- Intro Section ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-10">
-        <h1 className="text-4xl font-bold mb-4 text-blue-800">
+      <section className="max-w-6xl mx-auto px-6 py-6">
+        <h1 className="text-4xl font-bold mb-2 text-blue-800">
           Compact Dust Collector
         </h1>
-        <p>
-           Compact Dust Collector is a high-efficiency,
-          small-footprint dust collection system using pleated cartridge
-          filters. Designed for source capture, intermittent duty, and indoor
-          installation, it replaces bulky bag filters where space is limited.
-          Pulse jet cleaning provides continuous online operation with
-          minimal compressed air.
-        </p>
       </section>
 
       {/* ---------- Product Overview ---------- */}
-      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6 py-6">
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-3 items-center px-6 py-4">
         <div>
-          <h2 className="text-2xl font-semibold text-blue-800 mb-3">
+          <h2 className="text-2xl font-semibold text-blue-800 mb-2">
             Product Overview
           </h2>
-          <p className="mt-3 font-semibold text-gray-700">Ideal For:</p>
+          <p>
+            Compact Dust Collector is a high-efficiency,
+            small-footprint dust collection system using pleated cartridge
+            filters. Designed for source capture, intermittent duty, and
+            indoor installation, it replaces bulky bag filters where space is
+            limited. Pulse jet cleaning provides continuous online operation
+            with minimal compressed air.
+          </p>
+          <p className="mt-2 font-semibold text-gray-700">Ideal For:</p>
           <ul className="list-disc pl-6 mt-1 space-y-1">
             <li className="break-inside-avoid">Welding fumes</li>
             <li className="break-inside-avoid">Laser / plasma cutting</li>
@@ -50,8 +50,8 @@ export default function CompactDustCollectorPage() {
       </section>
 
       {/* ---------- Key Features ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-6">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-3">
+      <section className="max-w-6xl mx-auto px-6 py-4">
+        <h2 className="text-2xl font-semibold text-blue-800 mb-2">
           Key Features
         </h2>
         <ul className="list-disc pl-6 space-y-2 md:columns-2 md:gap-x-10">
@@ -87,8 +87,8 @@ export default function CompactDustCollectorPage() {
       </section>
 
       {/* ---------- Technical Specification ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-6">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-3">
+      <section className="max-w-6xl mx-auto px-6 py-4">
+        <h2 className="text-2xl font-semibold text-blue-800 mb-2">
           Technical Specification
         </h2>
         <ul className="list-disc pl-6 space-y-1 md:columns-2 md:gap-x-10">
