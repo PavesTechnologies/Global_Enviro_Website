@@ -21,20 +21,31 @@ export default function LinersPage() {
         </p>
       </section>
 
-      {/* ---------- Ideal For ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-6">
-        <h2 className="text-2xl font-semibold text-blue-800 mb-3">
-          Ideal For
-        </h2>
-        <ul className="list-disc pl-6 space-y-1">
-          <li>Cement &amp; Mining Industries</li>
-          <li>Pumps, Valves &amp; Compressors</li>
-          <li>Material Handling Equipment</li>
-          <li>Heavy Engineering Applications</li>
-          <li>Power &amp; Process Industries</li>
-          <li>Machinery &amp; Automotive Components</li>
-          <li>Industrial Manufacturing Units</li>
-        </ul>
+      {/* ---------- Product Overview ---------- */}
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start px-6 py-6">
+        <div>
+          <h2 className="text-2xl font-semibold text-blue-800 mb-3">
+            Ideal For
+          </h2>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>Cement &amp; Mining Industries</li>
+            <li>Pumps, Valves &amp; Compressors</li>
+            <li>Material Handling Equipment</li>
+            <li>Heavy Engineering Applications</li>
+            <li>Power &amp; Process Industries</li>
+            <li>Machinery &amp; Automotive Components</li>
+            <li>Industrial Manufacturing Units</li>
+          </ul>
+        </div>
+
+        <div className="relative w-full aspect-4/3 rounded-xl bg-gray-50 border border-gray-100">
+          <Image
+            src="/assets/images/metallurgicals-projects/casting-1.jpg"
+            alt="Casting Division View 1"
+            fill
+            className="object-contain p-4"
+          />
+        </div>
       </section>
 
       {/* ---------- Application Gallery ---------- */}
@@ -43,25 +54,21 @@ export default function LinersPage() {
           Casting Division
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="text-center">
-            <div className="relative w-full h-[220px]">
-              <Image
-                src="/assets/images/metallurgicals-projects/casting-1.jpg"
-                alt="Casting Division View 1"
-                fill
-                className="object-contain rounded-lg shadow-md"
-              />
-            </div>
+          <div className="relative w-full aspect-4/3 rounded-xl bg-gray-50 border border-gray-100">
+            <Image
+              src="/assets/images/metallurgicals-projects/casting-1.jpg"
+              alt="Casting Division View 1"
+              fill
+              className="object-contain p-4"
+            />
           </div>
-          <div className="text-center">
-            <div className="relative w-full h-[220px]">
-              <Image
-                src="/assets/images/metallurgicals-projects/casting-2.jpg"
-                alt="Casting Division View 2"
-                fill
-                className="object-contain rounded-lg shadow-md"
-              />
-            </div>
+          <div className="relative w-full aspect-4/3 rounded-xl bg-gray-50 border border-gray-100">
+            <Image
+              src="/assets/images/metallurgicals-projects/casting-2.jpg"
+              alt="Casting Division View 2"
+              fill
+              className="object-contain p-4"
+            />
           </div>
         </div>
       </section>

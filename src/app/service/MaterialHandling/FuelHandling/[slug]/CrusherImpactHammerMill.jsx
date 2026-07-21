@@ -21,7 +21,7 @@ export default function CrusherImpactHammerMillPage() {
       </section>
 
       {/* ---------- Product Overview ---------- */}
-      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6 py-6">
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start px-6 py-6">
         <div>
           <h2 className="text-2xl font-semibold text-blue-800 mb-3">
             Product Overview
