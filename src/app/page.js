@@ -64,7 +64,7 @@ export default function Home() {
       {/* Hero Carousel */}
       <HeroCarousel
         slides={slides}
-        interval={2000}
+        interval={3000}
         pauseOnHover={false}
         pauseOnBtnHover={true}
       />

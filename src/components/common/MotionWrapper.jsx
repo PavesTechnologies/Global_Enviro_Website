@@ -2,6 +2,11 @@
 
 import React, { useEffect, useState } from "react";
 
+// Cached at module scope so components remounted via a changing `key`
+// (e.g. carousel slides) don't each restart from an un-animated fallback
+// render while framer-motion re-resolves its dynamic import.
+let cachedMotionModule = null;
+
 export default function MotionWrapper({
   as = "div",
   children,
@@ -23,12 +28,15 @@ export default function MotionWrapper({
   className,
   ...props
 }) {
-  const [motionModule, setMotionModule] = useState(null);
+  const [motionModule, setMotionModule] = useState(cachedMotionModule);
 
   useEffect(() => {
+    if (cachedMotionModule) return;
+
     let mounted = true;
     import("framer-motion")
       .then((mod) => {
+        cachedMotionModule = mod;
         if (mounted) setMotionModule(mod);
       })
       .catch(() => {

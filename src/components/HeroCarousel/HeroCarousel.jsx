@@ -69,9 +69,9 @@ export default function HeroCarousel({
 
   // Slide animation variants
     const variants = {
-      enter: (dir) => ({ x: dir > 0 ? 100 : -100 }),
+      enter: (dir) => ({ x: dir > 0 ? "100%" : "-100%" }),
       center: { x: 0 },
-      exit: (dir) => ({ x: dir > 0 ? -100 : 100 }),
+      exit: (dir) => ({ x: dir > 0 ? "-100%" : "100%" }),
     };
 
   return (
@@ -117,12 +117,15 @@ export default function HeroCarousel({
               as="div"
               key={`text-${current}`}
               initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -40 }}
-              transition={{
-                duration: 0.6,
-                ease: "easeOut",
-                delay: 0.3,
+              animate={{
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.6, ease: "easeOut", delay: 0.3 },
+              }}
+              exit={{
+                opacity: 0,
+                y: -20,
+                transition: { duration: 0.2, ease: "easeOut", delay: 0 },
               }}
               className="max-w-4xl"
             >
