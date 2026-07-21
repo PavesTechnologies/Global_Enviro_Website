@@ -387,6 +387,9 @@ function AccordionItem({ section, isOpen, onToggle }) {
 
               {/* Content */}
               <div className="md:w-2/3 space-y-4">
+                <h3 className="text-2xl font-bold text-[#0b1e3d]">
+                  {section.title.replace(/^\d+\.\s*/, "")}
+                </h3>
                 {section.intro && (
                   <p className="text-sm text-gray-600 leading-relaxed">
                     {section.intro}
