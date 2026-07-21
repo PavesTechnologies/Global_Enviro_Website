@@ -1,12 +1,13 @@
 import HeroSection from "@/components/HeroSection/HeroSection";
 import Link from "next/link";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const highlights = [
   { label: "Founded",        value: "1999" },
   { label: "Headquarters",   value: "Hyderabad, Telangana" },
   { label: "Specialization", value: "Air Pollution Control & HVAC" },
-  { label: "Industries",     value: "Cement, Power, Steel, Pharma, Paper" },
+  // { label: "Industries",     value: "Cement, Power, Steel, Pharma, Paper" },
 ];
 
 const divisions = [
@@ -85,17 +86,25 @@ export default function GlobalEnviroAirSystemsPage() {
 
         {/* Highlights */}
         <div className="grid grid-cols-2 gap-4">
-          {highlights.map((h) => (
-            <div
-              key={h.label}
-              className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center"
-            >
-              <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">
-                {h.label}
-              </p>
-              <p className="text-base font-bold text-[#0b1e3d]">{h.value}</p>
-            </div>
-          ))}
+          {highlights.map((h, index) => {
+            const isLastOdd =
+              index === highlights.length - 1 && highlights.length % 2 !== 0;
+
+            return (
+              <div
+                key={h.label}
+                className={cn(
+                  "bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center",
+                  isLastOdd && "col-span-2 max-w-[calc(50%-0.5rem)] mx-auto"
+                )}
+              >
+                <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">
+                  {h.label}
+                </p>
+                <p className="text-base font-bold text-[#0b1e3d]">{h.value}</p>
+              </div>
+            );
+          })}
         </div>
       </section>
 

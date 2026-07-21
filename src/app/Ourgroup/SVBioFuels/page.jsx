@@ -101,7 +101,7 @@ export default function SVBioFuelsPage() {
         {/* Image */}
         <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
           <Image
-            src="/assets/images/ash handling.png"
+            src="/assets/images/metallurgicals-projects/biomass-briquettes.jpg"
             alt="SV Bio Fuels"
             fill
             className="object-cover"

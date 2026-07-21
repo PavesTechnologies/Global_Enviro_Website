@@ -24,7 +24,7 @@ export default function DoorsPage() {
       </section>
 
       {/* ---------- Product Overview ---------- */}
-      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center px-6 py-6">
+      <section className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-start px-6 py-6">
         <div>
           <h2 className="text-2xl font-semibold text-blue-800 mb-3">
             Product Overview
@@ -156,39 +156,117 @@ export default function DoorsPage() {
             <li>
               <strong>Finish:</strong> Pure Polyester Powder Coated Surface
             </li>
-            <li>
-              <strong>Clean Room Door:</strong> Galvanized Plain Skin Pass
-              Steel / SS304, 0.8 mm shutter &amp; 1.2 mm frame, 44 mm
-              shutter thickness, Honeycomb/PUF infill — for Pharma, Food
-              Industries, Hospitals, Offices
-            </li>
-            <li>
-              <strong>Commercial Door:</strong> Galvanized Plain Skin Pass
-              Steel / SS304, 0.8 mm shutter &amp; 1.2 mm frame, 44 mm
-              shutter thickness, Honeycomb infill — for Malls, Residential,
-              Institutions, Offices
-            </li>
-            <li>
-              <strong>General Purpose Door:</strong> Galvanized Plain Skin
-              Pass Steel / SS304, 0.8 mm shutter &amp; 1.2 mm frame, 44 mm
-              shutter thickness, Honeycomb infill — suitable for All
-              applications
-            </li>
-            <li>
-              <strong>Fire Door:</strong> Galvanized Plain Skin Pass Steel /
-              SS304, 0.8–1.2 mm shutter &amp; 1.2 mm frame, 44 mm shutter
-              thickness, Rockwool infill — for Shopping Malls, Pharma,
-              Industries, Apartments
-            </li>
-            <li>
-              <strong>Single Door Size Range:</strong> 750–1200 mm (W) x
-              1200–2500 mm (H)
-            </li>
-            <li>
-              <strong>Double Door Size Range:</strong> 1000–2300 mm (W) x
-              1200–2500 mm (H)
-            </li>
           </ul>
+        </div>
+      </section>
+
+      {/* ---------- Door Type Specification Table ---------- */}
+      <section className="max-w-6xl mx-auto px-6 py-6">
+        <h2 className="text-2xl font-semibold text-blue-800 mb-4">
+          Door Type Specifications
+        </h2>
+        <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
+          <table className="w-full min-w-160 text-sm text-left border-collapse">
+            <thead>
+              <tr className="bg-blue-800 text-white">
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Specification</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Clean Room Door</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Commercial Door</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">General Purpose</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Fire Door</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-t border-gray-200 bg-white">
+                <td className="px-4 py-3 font-medium text-gray-700 align-top">Material</td>
+                <td className="px-4 py-3 align-top">Galvanized Plain Skin Pass Steel / Stainless Steel 304 Grade</td>
+                <td className="px-4 py-3 align-top">Galvanized Plain Skin Pass Steel / Stainless Steel 304 Grade</td>
+                <td className="px-4 py-3 align-top">Galvanized Plain Skin Pass Steel / Stainless Steel 304 Grade</td>
+                <td className="px-4 py-3 align-top">Galvanized Plain Skin Pass Steel / Stainless Steel 304 Grade</td>
+              </tr>
+              <tr className="border-t border-gray-200 bg-gray-50">
+                <td className="px-4 py-3 font-medium text-gray-700 align-top">Sheet Thickness</td>
+                <td className="px-4 py-3 align-top">0.8 mm (Shutter) / 1.2 mm (Frame)</td>
+                <td className="px-4 py-3 align-top">0.8 mm (Shutter) / 1.2 mm (Frame)</td>
+                <td className="px-4 py-3 align-top">0.8 mm (Shutter) / 1.2 mm (Frame)</td>
+                <td className="px-4 py-3 align-top">0.8, 1.2 mm (Shutter) / 1.2 mm (Frame)</td>
+              </tr>
+              <tr className="border-t border-gray-200 bg-white">
+                <td className="px-4 py-3 font-medium text-gray-700 align-top">Shutter Thickness</td>
+                <td className="px-4 py-3 align-top">44 mm</td>
+                <td className="px-4 py-3 align-top">44 mm</td>
+                <td className="px-4 py-3 align-top">44 mm</td>
+                <td className="px-4 py-3 align-top">44 mm</td>
+              </tr>
+              <tr className="border-t border-gray-200 bg-gray-50">
+                <td className="px-4 py-3 font-medium text-gray-700 align-top">Infill Material</td>
+                <td className="px-4 py-3 align-top">Honeycomb / PUF</td>
+                <td className="px-4 py-3 align-top">Honeycomb</td>
+                <td className="px-4 py-3 align-top">Honeycomb</td>
+                <td className="px-4 py-3 align-top">Rockwool</td>
+              </tr>
+              <tr className="border-t border-gray-200 bg-white">
+                <td className="px-4 py-3 font-medium text-gray-700 align-top">Applications</td>
+                <td className="px-4 py-3 align-top">Pharma, Food Industries, Hospitals, Offices</td>
+                <td className="px-4 py-3 align-top">Malls, Residential, Institutions, Offices</td>
+                <td className="px-4 py-3 align-top">All</td>
+                <td className="px-4 py-3 align-top">Shopping Malls, Pharma, Industries, Apartments</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      {/* ---------- Door Size Range Table ---------- */}
+      <section className="max-w-6xl mx-auto px-6 py-6">
+        <h2 className="text-2xl font-semibold text-blue-800 mb-4">
+          Door Size Range
+        </h2>
+        <div className="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
+          <table className="w-full min-w-160 text-sm text-left border-collapse">
+            <thead>
+              <tr className="bg-blue-800 text-white">
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Door Type</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Dimension</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Clean Room Door</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Commercial Door</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">General Purpose</th>
+                <th className="px-4 py-3 font-semibold whitespace-nowrap">Fire Door</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-t border-gray-200 bg-white">
+                <td className="px-4 py-3 font-medium text-gray-700 align-top" rowSpan={2}>Single Door</td>
+                <td className="px-4 py-3 align-top">Width (mm)</td>
+                <td className="px-4 py-3 align-top">750–1200</td>
+                <td className="px-4 py-3 align-top">750–1200</td>
+                <td className="px-4 py-3 align-top">750–1200</td>
+                <td className="px-4 py-3 align-top">750–1200</td>
+              </tr>
+              <tr className="border-t border-gray-200 bg-white">
+                <td className="px-4 py-3 align-top">Height (mm)</td>
+                <td className="px-4 py-3 align-top">1200–2500</td>
+                <td className="px-4 py-3 align-top">1200–2500</td>
+                <td className="px-4 py-3 align-top">1200–2500</td>
+                <td className="px-4 py-3 align-top">1200–2500</td>
+              </tr>
+              <tr className="border-t border-gray-200 bg-gray-50">
+                <td className="px-4 py-3 font-medium text-gray-700 align-top" rowSpan={2}>Double Door</td>
+                <td className="px-4 py-3 align-top">Width (mm)</td>
+                <td className="px-4 py-3 align-top">1000–2300</td>
+                <td className="px-4 py-3 align-top">1000–2300</td>
+                <td className="px-4 py-3 align-top">1000–2300</td>
+                <td className="px-4 py-3 align-top">1000–2300</td>
+              </tr>
+              <tr className="border-t border-gray-200 bg-gray-50">
+                <td className="px-4 py-3 align-top">Height (mm)</td>
+                <td className="px-4 py-3 align-top">1200–2500</td>
+                <td className="px-4 py-3 align-top">1200–2500</td>
+                <td className="px-4 py-3 align-top">1200–2500</td>
+                <td className="px-4 py-3 align-top">1200–2500</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
     </div>
