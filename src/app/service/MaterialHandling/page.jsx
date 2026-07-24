@@ -99,16 +99,17 @@ function AccordionItem({ section, isOpen, onToggle }) {
             transition={{ duration: 0.35 }}
             className="overflow-hidden"
           >
-            <div className="bg-white px-6 py-5 flex flex-col md:flex-row gap-6">
+            <div className="bg-white px-6 py-6 flex flex-col md:flex-row md:items-center gap-6">
               {/* Image */}
-              <div className="md:w-1/3">
-                <Image
-                  src={imageMap[section.id]}
-                  alt={section.title}
-                  width={480}
-                  height={240}
-                  className="rounded-xl object-cover w-full h-48 shadow"
-                />
+              <div className="md:w-1/3 shrink-0">
+                <div className="relative w-full aspect-4/3 rounded-xl bg-gray-50 border border-gray-100">
+                  <Image
+                    src={imageMap[section.id]}
+                    alt={section.title}
+                    fill
+                    className="object-contain p-4"
+                  />
+                </div>
               </div>
 
               {/* Content */}
@@ -118,19 +119,17 @@ function AccordionItem({ section, isOpen, onToggle }) {
                     <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                       System Types
                     </p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {section.subsystems.map((item) => (
-                        <li key={item.slug} className="flex items-center gap-2 text-sm">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0" />
-                          <Link
-                            href={`/service/MaterialHandling/${section.basePath}/${item.slug}`}
-                            className="text-gray-700 hover:text-blue-700 hover:underline transition-colors"
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
+                        <Link
+                          key={item.slug}
+                          href={`/service/MaterialHandling/${section.basePath}/${item.slug}`}
+                          className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 text-sm text-gray-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                        >
+                          {item.name}
+                        </Link>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 )}
 
@@ -139,19 +138,17 @@ function AccordionItem({ section, isOpen, onToggle }) {
                     <p className="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-2">
                       Equipment
                     </p>
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <div className="flex flex-wrap gap-2">
                       {section.equipment.map((item) => (
-                        <li key={item.slug} className="flex items-center gap-2 text-sm">
-                          <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 shrink-0" />
-                          <Link
-                            href={`/service/MaterialHandling/${section.basePath}/${item.slug}`}
-                            className="text-gray-700 hover:text-blue-700 hover:underline transition-colors"
-                          >
-                            {item.name}
-                          </Link>
-                        </li>
+                        <Link
+                          key={item.slug}
+                          href={`/service/MaterialHandling/${section.basePath}/${item.slug}`}
+                          className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 text-sm text-gray-700 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700"
+                        >
+                          {item.name}
+                        </Link>
                       ))}
-                    </ul>
+                    </div>
                   </div>
                 )}
               </div>

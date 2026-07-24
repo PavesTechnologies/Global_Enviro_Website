@@ -66,17 +66,18 @@ export default function Management() {
 
         {/* Left: Active Member Description */}
         <div className="space-y-6">
+          <h2 className="text-4xl font-bold text-blue-100">
+            Our Management Team
+          </h2>
+
           <LazyAnimatePresence mode="wait">
             <MotionWrapper
               key={active.name}
-              initial={{ opacity: 0, x: -60 }}
+              initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 60 }}
-              transition={{ duration: 0.7 }}
+              exit={{ opacity: 0, x: 40 }}
+              transition={{ duration: 0.4 }}
             >
-              <h2 className="text-4xl font-bold mb-3 text-blue-100">
-                Our Management Team
-              </h2>
               <h3 className="text-2xl font-semibold text-blue-300 mb-1">
                 {active.name}
               </h3>
@@ -86,7 +87,6 @@ export default function Management() {
               <p className="text-base leading-relaxed text-gray-200">
                 {active.desc}
               </p>
-              {/* ❌ "Contact Us" button removed here */}
             </MotionWrapper>
           </LazyAnimatePresence>
         </div>
@@ -95,28 +95,39 @@ export default function Management() {
         <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
           <div className="absolute -top-16 right-0 w-80 h-80 bg-blue-400/20 blur-3xl rounded-full animate-pulse" />
 
-          {team.map((member, index) => (
-            <MotionWrapper
-              as="div"
-              key={member.name}
-              whileHover={{ scale: 1.05 }}
-              onMouseEnter={() => setActive(member)}
-              className={`bg-white text-center p-6 rounded-2xl shadow-lg cursor-pointer transition-all w-[230px] relative z-10 ${
-                index === 2 ? "sm:col-span-2" : ""
-              }`}
-            >
-              <div className="relative w-24 h-24 mx-auto mb-4">
-                <Image
-                  src={member.img}
-                  alt={member.name}
-                  fill
-                  className="object-cover rounded-full border-2 border-blue-800"
-                />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-800">{member.name}</h4>
-              <p className="text-sm text-gray-600">{member.title}</p>
+          {team.map((member, index) => {
+            const isActive = active.name === member.name;
+            return (
+              <MotionWrapper
+                as="button"
+                type="button"
+                key={member.name}
+                whileHover={{ scale: 1.05 }}
+                onMouseEnter={() => setActive(member)}
+                onFocus={() => setActive(member)}
+                onClick={() => setActive(member)}
+                aria-pressed={isActive}
+                aria-label={`Show details for ${member.name}, ${member.title}`}
+                className={`bg-white text-center p-6 rounded-2xl shadow-lg cursor-pointer transition-all w-[230px] relative z-10 outline-none focus-visible:ring-4 focus-visible:ring-blue-400/60 ${
+                  isActive ? "ring-4 ring-blue-400 shadow-blue-500/30" : "ring-0"
+                } ${index === 2 ? "sm:col-span-2" : ""}`}
+              >
+                <div className="relative w-24 h-24 mx-auto mb-4">
+                  <Image
+                    src={member.img}
+                    alt={member.name}
+                    fill
+                    sizes="96px"
+                    className={`object-cover rounded-full border-2 transition-colors ${
+                      isActive ? "border-blue-500" : "border-blue-800"
+                    }`}
+                  />
+                </div>
+                <h4 className="text-lg font-semibold text-gray-800">{member.name}</h4>
+                <p className="text-sm text-gray-600">{member.title}</p>
               </MotionWrapper>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

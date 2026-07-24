@@ -44,8 +44,6 @@ const navItems = [
           { title: "Dust Extraction Systems", url: "/service/AirPollutionControl#dust-extraction" },
           { title: "Fuel Extraction Systems", url: "/service/AirPollutionControl#fuel-extraction" },
           { title: "Silo / Bin Aeration", url: "/service/AirPollutionControl#silo-bin" },
-          { title: "Bulk Loading Systems", url: "/service/AirPollutionControl#bulk-loading" },
-          { title: "Wagon Loading/Unloading", url: "/service/AirPollutionControl#wagon" },
         ],
       },
       {
@@ -143,7 +141,7 @@ const Navbar = () => {
                 {/* MAIN LINK */}
                 {item.external ? (
                   <a href={item.url} target="_blank" rel="noopener noreferrer" className="px-3 py-1">
-                    {item.title} ↗
+                    {item.title} 
                   </a>
                 ) : (
                   <Link
@@ -175,12 +173,11 @@ const Navbar = () => {
                             rel="noopener noreferrer"
                             className="flex justify-between px-3 py-2 text-sm hover:bg-gray-100"
                           >
-                            {sub.title} ↗
+                            {sub.title} 
                           </a>
                         ) : (
                           <Link
                             href={sub.url}
-                            scroll={false}
                             className="flex justify-between px-3 py-2 text-sm hover:bg-gray-100"
                           >
                             {sub.title}

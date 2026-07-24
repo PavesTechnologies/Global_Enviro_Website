@@ -44,7 +44,7 @@ export default function NewsDetailModal({ item, photos, initialIndex = 0, onClos
         className="news-detail-modal-content"
         onClick={(event) => event.stopPropagation()}
       >
-        <div className="news-detail-modal-media">
+        <div className="news-detail-modal-topbar">
           <button
             type="button"
             className="news-detail-modal-close"
@@ -53,7 +53,9 @@ export default function NewsDetailModal({ item, photos, initialIndex = 0, onClos
           >
             x
           </button>
+        </div>
 
+        <div className="news-detail-modal-media">
           <div className="news-detail-modal-counter">
             {current + 1} / {photos.length}
           </div>

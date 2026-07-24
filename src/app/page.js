@@ -6,6 +6,16 @@ import MissionVision from "@/components/About/MissionVision";
 import OurInfrastructure from "@/components/About/OurInfrastructure";
 import Certifications from "@/components/About/Certifications";
 import OurJourney from "@/components/About/OurJourney";
+import ScrollToHash from "@/components/common/ScrollToHash";
+
+const sectionIds = [
+  "about-us",
+  "management",
+  "key-persons",
+  "mission",
+  "infrastructure",
+  "certifications",
+];
 
 
 export default function Home() {
@@ -49,41 +59,43 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col w-full">
+      <ScrollToHash ids={sectionIds} />
+
       {/* Hero Carousel */}
-      <HeroCarousel 
-        slides={slides} 
-        interval={2000}   
-        pauseOnHover={false} 
-        pauseOnBtnHover={true} 
+      <HeroCarousel
+        slides={slides}
+        interval={3000}
+        pauseOnHover={false}
+        pauseOnBtnHover={true}
       />
 
       {/* About Us Banner */}
-      <section id="about-us">
+      <section id="about-us" className="scroll-mt-36">
         <About />
       </section>
-      
+
       {/* Management */}
-      <section id="management">
+      <section id="management" className="scroll-mt-36">
         <Management />
       </section>
 
       {/* Key Persons */}
-      <section id="key-persons">
+      <section id="key-persons" className="scroll-mt-36">
         <KeyPersons />
       </section>
 
       {/* Mission & Vision */}
-      <section id="mission">
+      <section id="mission" className="scroll-mt-36">
         <MissionVision />
       </section>
 
       {/* Our Infrastructure */}
-      <section id="infrastructure">
+      <section id="infrastructure" className="scroll-mt-36">
         <OurInfrastructure />
       </section>
 
       {/* Certifications */}
-      <section id="certifications">
+      <section id="certifications" className="scroll-mt-36">
         <Certifications />
       </section>
 

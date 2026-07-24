@@ -1,14 +1,32 @@
 "use client";
 
+import { useReducedMotion } from "framer-motion";
 import MotionWrapper from "@/components/common/MotionWrapper";
 
 export default function AboutBanner() {
+  const reduceMotion = useReducedMotion();
+
+  // When the user prefers reduced motion, render content in its final state
+  // (no offset / no fade) so nothing animates and nothing can stay hidden.
+  const rise = (delay) =>
+    reduceMotion
+      ? {}
+      : {
+          initial: { opacity: 0, y: 24 },
+          whileInView: { opacity: 1, y: 0 },
+          viewport: { once: true, amount: 0.3 },
+          transition: { duration: 0.7, delay },
+        };
+
   return (
-    <section className="relative bg-gradient-to-r from-blue-100 to-blue-50 pb-20">
-      {/* SVG Curve */}
+    <section className="relative bg-linear-to-r from-blue-100 to-blue-50 pb-28">
+      {/* SVG Curve (decorative) */}
       <svg
-        className="absolute bottom-0 left-0 w-full"
+        aria-hidden="true"
+        focusable="false"
+        className="absolute bottom-0 left-0 w-full pointer-events-none"
         viewBox="0 0 1440 120"
+        preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -18,32 +36,26 @@ export default function AboutBanner() {
       </svg>
 
       {/* Banner Text */}
-      <div className="relative container mx-auto px-6 pt-16 text-center max-w-4xl">
+      <div className="relative mx-auto px-6 pt-16 text-center max-w-4xl">
         <MotionWrapper
           as="h1"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-5xl font-bold text-blue-900 tracking-wide"
+          {...rise(0)}
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 tracking-wide"
         >
           ABOUT US
         </MotionWrapper>
 
         <MotionWrapper
           as="h2"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.15 }}
-          className="mt-4 text-xl md:text-2xl font-semibold text-blue-800"
+          {...rise(0.15)}
+          className="mt-4 text-lg sm:text-xl md:text-2xl font-semibold text-blue-800"
         >
           Global Enviro Air Systems: Two and a Half Decades of Engineering Excellence
         </MotionWrapper>
 
         <MotionWrapper
           as="p"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
+          {...rise(0.3)}
           className="mt-6 text-gray-700 text-base md:text-lg leading-relaxed"
         >
           We lead the industry in air pollution control, HVAC systems, bulk material

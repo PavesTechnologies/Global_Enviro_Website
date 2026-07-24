@@ -1,12 +1,36 @@
 import HeroSection from "@/components/HeroSection/HeroSection";
 import Link from "next/link";
 import Image from "next/image";
+import { Calendar, MapPin, Cog, Factory, Check } from "lucide-react";
 
 const highlights = [
-  { label: "Founded",        value: "1999" },
-  { label: "Headquarters",   value: "Hyderabad, Telangana" },
-  { label: "Specialization", value: "Air Pollution Control & HVAC" },
-  { label: "Industries",     value: "Cement, Power, Steel, Pharma, Paper" },
+  { label: "Founded",      value: "1999",                 icon: Calendar },
+  { label: "Headquarters", value: "Hyderabad, Telangana", icon: MapPin },
+  {
+    label: "Specialization",
+    icon: Cog,
+    value: [
+      "Air Pollution Control Systems",
+      "HVAC Clean Room Systems",
+      "Material Handling Systems",
+      "EPC Power Projects",
+      "Metallurgicals & Briquettes",
+    ],
+  },
+  {
+    label: "Industries We Serve",
+    icon: Factory,
+    value: [
+      "Cement",
+      "Power",
+      "Steel",
+      "Pharmaceuticals",
+      "Paper",
+      "Distilleries",
+      "Food Processing",
+      "Scientific Research",
+    ],
+  },
 ];
 
 const divisions = [
@@ -71,10 +95,10 @@ export default function GlobalEnviroAirSystemsPage() {
             manufacturing environments. We also specialize in bulk material handling
             for cement and fly ash, with proven unloading systems for silos and racks.
           </p>
-          <p className="text-gray-600 leading-relaxed">
+          {/* <p className="text-gray-600 leading-relaxed">
             <span className="font-semibold text-[#0b1e3d]">Industries We Serve:</span> Cement | Power |
             Steel | Pharmaceuticals | Paper | Distilleries | Food Processing | Scientific Research
-          </p>
+          </p> */}
           <Link
             href="/service"
             className="inline-flex items-center gap-2 bg-[#3877d4] text-white px-5 py-2.5 rounded-lg hover:bg-[#2f5fb8] transition-all font-medium mt-2"
@@ -84,105 +108,50 @@ export default function GlobalEnviroAirSystemsPage() {
         </div>
 
         {/* Highlights */}
-        <div className="grid grid-cols-2 gap-4">
-          {highlights.map((h) => (
-            <div
-              key={h.label}
-              className="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-center"
-            >
-              <p className="text-xs text-gray-400 uppercase tracking-widest mb-1">
-                {h.label}
-              </p>
-              <p className="text-base font-bold text-[#0b1e3d]">{h.value}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+        <div className="grid grid-cols-2 gap-4 items-stretch">
+          {highlights.map((h) => {
+            const isList = Array.isArray(h.value);
+            const Icon = h.icon;
 
-      {/* Divisions */}
-      <section className="bg-white py-14 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#0b1e3d] text-center mb-10">
-            Our Core Divisions
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {divisions.map((div) => (
+            return (
               <div
-                key={div.title}
-                className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+                key={h.label}
+                className="group flex flex-col h-full bg-white rounded-2xl p-5 shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-lg hover:border-blue-200 hover:-translate-y-0.5"
               >
-                <div className="relative h-48">
-                  <Image
-                    src={div.img}
-                    alt={div.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="p-5 space-y-2">
-                  <h3 className="font-bold text-[#0b1e3d] text-base">
-                    {div.title}
-                  </h3>
-                  <p className="text-sm text-gray-500 leading-relaxed">
-                    {div.desc}
+                {/* Header */}
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  <span className="flex items-center justify-center w-7 h-7 rounded-full bg-blue-50 text-[#3877d4] group-hover:bg-[#3877d4] group-hover:text-white transition-colors">
+                    {Icon && <Icon size={15} />}
+                  </span>
+                  <p className="text-xs text-gray-400 uppercase tracking-widest">
+                    {h.label}
                   </p>
                 </div>
+
+                {isList ? (
+                  <ul className="flex-1 flex flex-col justify-center gap-2 w-fit mx-auto">
+                    {h.value.map((v) => (
+                      <li
+                        key={v}
+                        className="flex items-center gap-2 text-sm font-semibold text-[#0b1e3d]"
+                      >
+                        <Check size={15} className="text-[#3877d4] shrink-0" />
+                        <span>{v}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="flex-1 flex items-center justify-center text-lg font-bold text-[#0b1e3d]">
+                    {h.value}
+                  </p>
+                )}
               </div>
-            ))}
-          </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="py-14 px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-2xl font-bold text-[#0b1e3d] text-center mb-10">
-            Key Products &amp; Systems
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-6">
-            {products.map((p) => (
-              <div
-                key={p.name}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-lg transition-all group"
-              >
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src={p.img}
-                    alt={p.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-                <div className="text-center py-3 bg-[#0b1e3d] text-white text-sm font-semibold">
-                  {p.name}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-[#0b1e3d] py-14 px-6 text-center text-white">
-        <h2 className="text-2xl font-bold mb-3">Get in Touch</h2>
-        <p className="text-gray-300 mb-6 max-w-xl mx-auto">
-          For enquiries about our products and systems, reach out to our team.
-        </p>
-        <div className="flex justify-center gap-4 flex-wrap">
-          <Link
-            href="/contactUs"
-            className="bg-[#3877d4] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#2f5fb8] transition-all"
-          >
-            Contact Us
-          </Link>
-          <Link
-            href="/RequestQuote"
-            className="border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#0b1e3d] transition-all"
-          >
-            Request a Quote
-          </Link>
-        </div>
-      </section>
+      
 
     </main>
   );
