@@ -16,11 +16,11 @@ const keyPersons = [
 
 export default function KeyPersons() {
   return (
-    <section className="py-20 px-6 md:px-16 bg-gradient-to-br from-white via-[#f2f8ff] to-[#e6f0ff]">
+    <section className="py-8 px-6 md:px-16 bg-gradient-to-br from-white via-[#f2f8ff] to-[#e6f0ff]">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-5">
           <MotionWrapper
             as="h2"
             initial={{ opacity: 0, y: -20 }}
@@ -38,7 +38,7 @@ export default function KeyPersons() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
           {keyPersons.map((person, index) => (
             <MotionWrapper
               as="div"
@@ -47,7 +47,7 @@ export default function KeyPersons() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.07 }}
-              className="flex flex-col items-center text-center bg-white rounded-2xl shadow-sm p-6 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
+              className="flex flex-col items-center text-center bg-white rounded-2xl shadow-sm p-4 border border-gray-100 hover:shadow-md hover:-translate-y-1 transition-all duration-300"
             >
               {/* Avatar — initial letter, replace with <Image> when photos available */}
               <div className="w-16 h-16 rounded-full bg-[#3877d4] flex items-center justify-center text-white text-2xl font-bold mb-4 shadow-md">

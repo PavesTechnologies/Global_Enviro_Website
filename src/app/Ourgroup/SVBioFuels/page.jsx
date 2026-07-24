@@ -68,8 +68,8 @@ export default function SVBioFuelsPage() {
       />
 
       {/* About + Image */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-5">
+      <section className="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-2 gap-6 items-center">
+        <div className="space-y-4">
           <p className="text-green-600 uppercase tracking-widest text-sm font-semibold">
             About SV Bio Fuels
           </p>
@@ -91,7 +91,7 @@ export default function SVBioFuelsPage() {
             supply, consistent calorific value, and a direct path to your sustainability goals.
           </p>
           <Link
-            href="/contactUs"
+            href="/RequestQuote"
             className="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-lg hover:bg-green-700 transition-all font-medium mt-2"
           >
             Enquire Now →

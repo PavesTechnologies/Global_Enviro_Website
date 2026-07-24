@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function CleanroomEquipment() {
   return (
-    <div className="bg-blue-50 min-h-screen py-12 px-6 md:px-20">
+    <div className="bg-blue-50 min-h-screen py-8 px-6 md:px-20">
       {/* Header Section */}
-      <div className="text-center mb-12">
+      <div className="text-center mb-5">
         <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4">
           CLEANROOM EQUIPMENT’S
         </h1>
@@ -22,7 +22,7 @@ export default function CleanroomEquipment() {
       </div>
 
       {/* Equipment Grid */}
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-4">
         {/* PASS BOX */}
         <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden">
           <div className="md:w-1/2">

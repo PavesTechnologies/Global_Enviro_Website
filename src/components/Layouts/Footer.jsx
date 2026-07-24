@@ -13,7 +13,7 @@ const Footer = () => {
     <footer className="font-sans text-gray-700">
 
       {/* MAIN FOOTER (light, slightly off-white from the page background) */}
-      <div className="bg-gray-100 border-t border-gray-200 px-6 md:px-12 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div className="bg-gray-100 border-t border-gray-200 px-6 md:px-12 py-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
         {/* --- COMPANY INFO --- */}
         <div>
@@ -21,7 +21,7 @@ const Footer = () => {
             <Image src="/assets/images/group-logo.png" alt="GLOBAL Technologies Logo" width={220} height={88} className="h-20 object-contain" />
           </div>
 
-          <p className="text-sm leading-relaxed mb-5 text-gray-600">
+          <p className="text-sm leading-relaxed mb-3 text-gray-600">
             <span className="font-semibold text-gray-900">
               GLOBAL ENVIRO AIR SYSTEMS (P) Ltd
             </span>
@@ -35,7 +35,7 @@ const Footer = () => {
             Hyderabad, Telangana
           </p>
 
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-3 text-gray-700">
               <FaPhone className="text-blue-600" />
               +91 98480 31866
@@ -49,11 +49,11 @@ const Footer = () => {
 
         {/* --- QUICK NAVIGATION --- */}
         <div>
-          <h4 className="text-blue-700 text-lg font-semibold mb-5">
+          <h4 className="text-blue-700 text-lg font-semibold mb-2">
             Quick Navigation
           </h4>
 
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-2 text-sm">
             <li><a href="/about" className="text-gray-700 hover:text-blue-700 hover:underline">About Company</a></li>
             <li><a href="/about/management" className="text-gray-700 hover:text-blue-700 hover:underline">Leadership Team</a></li>
             <li><a href="/service" className="text-gray-700 hover:text-blue-700 hover:underline">Projects & Products</a></li>
@@ -63,11 +63,11 @@ const Footer = () => {
 
         {/* --- OUR SERVICES --- */}
         <div>
-          <h4 className="text-blue-700 text-lg font-semibold mb-5">
+          <h4 className="text-blue-700 text-lg font-semibold mb-2">
             Our Services
           </h4>
 
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-2 text-sm">
             <li><a href="/service/AirPollutionControl" className="text-gray-700 hover:text-blue-700 hover:underline">Air Pollution Control Systems</a></li>
             <li><a href="/service/HVAC" className="text-gray-700 hover:text-blue-700 hover:underline">HVAC Clean Room Projects</a></li>
             <li><a href="/service/MaterialHandling" className="text-gray-700 hover:text-blue-700 hover:underline">Material Handling Systems</a></li>
@@ -76,8 +76,8 @@ const Footer = () => {
           </ul>
 
           {/* CONTACT CTA */}
-          <div className="mt-6">
-            <p className="text-sm text-gray-600 mb-4">
+          <div className="mt-4">
+            <p className="text-sm text-gray-600 mb-3">
               Have a question or want to discuss a project?
             </p>
 

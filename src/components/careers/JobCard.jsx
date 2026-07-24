@@ -13,7 +13,7 @@ export default function JobCard({ job }) {
         .filter(Boolean);
 
   return (
-    <div className="border rounded-2xl p-6 mb-6 shadow-sm hover:shadow-md transition">
+    <div className="border rounded-2xl p-6 mb-5 shadow-sm hover:shadow-md transition">
       <div className="flex justify-between items-start">
         <div>
           <h2 className="text-xl font-semibold">{job.title}</h2>

@@ -35,10 +35,10 @@ export default function CleanroomEquipmentsPage() {
   };
 
   return (
-    <div className="bg-blue-50 min-h-screen py-12 px-6 md:px-20">
+    <div className="bg-blue-50 min-h-screen py-8 px-6 md:px-20">
       {/* Header Section */}
       <div
-        className="text-center mb-12"
+        className="text-center mb-5"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
@@ -58,7 +58,7 @@ export default function CleanroomEquipmentsPage() {
       </div>
 
       {/* Equipment Grid */}
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-4">
         {equipments.map((eq, index) => (
           <div
             key={index}

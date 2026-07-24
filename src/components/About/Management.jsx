@@ -40,7 +40,7 @@ export default function Management() {
   const [active, setActive] = useState(team[0]);
 
   return (
-    <section className="relative bg-[#081736] text-white py-24 px-6 md:px-16 overflow-hidden">
+    <section className="relative bg-[#081736] text-white py-8 px-6 md:px-16 overflow-hidden">
       {/* Background Wave */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <svg
@@ -62,9 +62,11 @@ export default function Management() {
       </div>
 
       {/* Main Content */}
-      <div className="container relative z-10 mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div className="container relative z-10 mx-auto grid md:grid-cols-2 gap-5 items-center">
 
         {/* Left: Active Member Description */}
+        <div className="space-y-3">
+          <h2 className="text-4xl font-bold text-blue-100">
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-100">
             Our Management Team
@@ -92,6 +94,8 @@ export default function Management() {
         </div>
 
         {/* Right: Team Cards */}
+        <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-5 justify-items-center">
+          <div className="absolute -top-16 right-0 w-80 h-80 bg-blue-400/20 blur-3xl rounded-full animate-pulse" />
         <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
           <div className="absolute -top-16 right-0 w-52 h-52 sm:w-80 sm:h-80 bg-blue-400/20 blur-3xl rounded-full animate-pulse" />
 
@@ -108,6 +112,7 @@ export default function Management() {
                 onClick={() => setActive(member)}
                 aria-pressed={isActive}
                 aria-label={`Show details for ${member.name}, ${member.title}`}
+                className={`bg-white text-center p-4 rounded-2xl shadow-lg cursor-pointer transition-all w-[230px] relative z-10 outline-none focus-visible:ring-4 focus-visible:ring-blue-400/60 ${
                 className={`bg-white text-center p-6 rounded-2xl shadow-lg cursor-pointer transition-all w-full max-w-57.5 relative z-10 outline-none focus-visible:ring-4 focus-visible:ring-blue-400/60 ${
                   isActive ? "ring-4 ring-blue-400 shadow-blue-500/30" : "ring-0"
                 } ${index === 2 ? "sm:col-span-2" : ""}`}

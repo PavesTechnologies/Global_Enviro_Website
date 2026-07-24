@@ -65,7 +65,7 @@ export default function HVSectionCard({ title, heading, description, points, gro
   return (
     <MotionWrapper
       as="section"
-      className="relative flex flex-col bg-[#e6f7ff] p-8 rounded-2xl shadow-md my-2 overflow-hidden border-l-4 border-[#3877d4] hover:shadow-lg transition-shadow duration-300"
+      className="relative flex flex-col bg-[#e6f7ff] p-6 rounded-2xl shadow-md my-2 overflow-hidden border-l-4 border-[#3877d4] hover:shadow-lg transition-shadow duration-300"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -137,7 +137,7 @@ export default function HVSectionCard({ title, heading, description, points, gro
 
       {/* Grouped lists (e.g. Advantages / Benefits) */}
       {groups && groups.length > 0 && (
-        <div className="w-full mt-6 pt-6 border-t border-white/60 grid sm:grid-cols-2 gap-x-10 gap-y-6">
+        <div className="w-full mt-6 pt-6 border-t border-white/60 grid sm:grid-cols-2 gap-x-10 gap-y-5">
           {groups.map((group) => (
             <div key={group.label}>
               <h5 className="text-sm font-bold uppercase tracking-wider text-[#3877d4] mb-3">

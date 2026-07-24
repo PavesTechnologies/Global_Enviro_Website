@@ -89,7 +89,7 @@ export default function OurClientsPage() {
     <div className="min-h-screen bg-[#f9fafb]">
 
       {/* Banner */}
-      <section className="relative bg-gradient-to-r from-blue-100 to-blue-50 pb-20">
+      <section className="relative bg-gradient-to-r from-blue-100 to-blue-50 pb-8">
         
         {/* CURVE (IMPORTANT) */}
         <svg
@@ -103,7 +103,7 @@ export default function OurClientsPage() {
           />
         </svg>
 
-        <div className="relative container mx-auto px-6 pt-16 text-center">
+        <div className="relative container mx-auto px-6 pt-8 text-center">
           <p className="text-[#3877d4] uppercase tracking-[5px] text-sm font-semibold mb-3">
             Trusted Worldwide
           </p>
@@ -130,6 +130,8 @@ export default function OurClientsPage() {
       </section> */}
 
       {/* Clients Grid */}
+      <section className="py-8 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4">
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
           {clients.map((client) => (

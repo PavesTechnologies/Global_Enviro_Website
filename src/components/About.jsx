@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section className="relative bg-gradient-to-br from-white via-[#f2f8ff] to-[#e6f0ff] overflow-hidden py-10 px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-stretch gap-10">
+    <section className="relative bg-gradient-to-br from-white via-[#f2f8ff] to-[#e6f0ff] overflow-hidden py-6 px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-stretch gap-5">
       {/* Decorative background blur */}
       <div className="absolute top-0 right-0 w-40 h-40 sm:w-72 sm:h-72 bg-blue-200/40 blur-3xl rounded-full" />
       <div className="absolute bottom-0 left-0 w-40 h-40 sm:w-72 sm:h-72 bg-[#003366]/10 blur-2xl rounded-full" />
@@ -12,7 +12,7 @@ export default function About() {
       {/* Left Side Content */}
       <MotionWrapper
         as="div"
-        className="relative z-10 lg:w-1/2 flex flex-col justify-center h-full space-y-6"
+        className="relative z-10 lg:w-1/2 flex flex-col justify-center h-full space-y-3"
         initial={{ x: -50, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
