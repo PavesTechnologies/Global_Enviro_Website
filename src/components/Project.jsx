@@ -38,7 +38,7 @@ const Project = () => {
   );
 
   return (
-    <div className="relative min-h-screen bg-gradient-to-b from-[#e8f1fc] to-[#f8fbff] py-16 px-6 overflow-hidden">
+    <div className="relative min-h-screen bg-gradient-to-b from-[#e8f1fc] to-[#f8fbff] py-8 px-6 overflow-hidden">
       {/* Animated background curves */}
       <svg
         className="absolute top-0 left-0 w-full opacity-30 animate-pulse"
@@ -50,7 +50,7 @@ const Project = () => {
         ></path>
       </svg>
 
-      <div className="relative z-10 max-w-7xl mx-auto text-center mb-12">
+      <div className="relative z-10 max-w-7xl mx-auto text-center mb-5">
         <h2 className="text-4xl font-bold text-[#204170] mb-2">
           Experience in Fuel & Ash Handling Systems
         </h2>
@@ -59,7 +59,7 @@ const Project = () => {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 relative z-10">
         {paginatedData.map((item, index) => (
           <MotionWrapper
             as="div"
@@ -81,7 +81,7 @@ const Project = () => {
       </div>
 
       {/* Pagination */}
-      <div className="flex justify-center mt-12 gap-3 relative z-10">
+      <div className="flex justify-center mt-6 gap-3 relative z-10">
         {Array.from({ length: totalPages }).map((_, i) => (
           <button
             key={i}

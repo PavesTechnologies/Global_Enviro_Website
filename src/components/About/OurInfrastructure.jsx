@@ -31,14 +31,14 @@ const OurInfrastructure = () => {
 
   return (
     <section
-      className="relative overflow-hidden text-gray-800 py-20"
+      className="relative overflow-hidden text-gray-800 py-8"
       style={{ backgroundColor: "#E6F0FF" }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* 🔵 Header */}
-        <div className="mb-14 max-w-3xl">
-          <h2 className="text-5xl font-extrabold mb-6 text-black">
+        <div className="mb-5 max-w-3xl">
+          <h2 className="text-4xl font-extrabold mb-3 text-black">
             Our Infrastructure
           </h2>
 
@@ -55,18 +55,18 @@ const OurInfrastructure = () => {
         </div>
 
         {/* 🔵 Units */}
-        <div className="space-y-14">
+        <div className="space-y-5">
 
           {infrastructureData.map((unit, idx) => (
             <div key={idx}>
 
               {/* Unit Title */}
-              <h3 className="text-2xl font-bold mb-6 text-[#1f3a70]">
+              <h3 className="text-xl font-bold mb-3 text-[#1f3a70]">
                 {unit.title}
               </h3>
 
               {/* Images Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
                 {unit.images.map((img, index) => (
                   <div
                     key={index}
@@ -77,7 +77,7 @@ const OurInfrastructure = () => {
                       alt={`${unit.title} ${index}`}
                       width={500}
                       height={350}
-                      className="object-cover w-full h-64"
+                      className="object-cover w-full h-40"
                     />
                   </div>
                 ))}

@@ -5,7 +5,7 @@ import { Building2, Leaf, Globe, Users } from "lucide-react";
 
 export default function AboutUs() {
   return (
-    <section className="bg-white py-16 px-6 md:px-20">
+    <section className="bg-white py-8 px-6 md:px-20">
       <div className="max-w-6xl mx-auto text-center">
         <MotionWrapper
           as="h2"
@@ -19,7 +19,7 @@ export default function AboutUs() {
 
         <MotionWrapper
           as="p"
-          className="text-gray-600 max-w-3xl mx-auto mb-12"
+          className="text-gray-600 max-w-3xl mx-auto mb-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
@@ -33,7 +33,7 @@ export default function AboutUs() {
         </MotionWrapper>
       </div>
 
-      <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4 max-w-6xl mx-auto">
         {[
           {
             icon: <Building2 className="w-10 h-10 text-green-600" />,
@@ -71,7 +71,7 @@ export default function AboutUs() {
         ))}
       </div>
 
-      <div className="max-w-5xl mx-auto mt-16 text-center">
+      <div className="max-w-5xl mx-auto mt-6 text-center">
         <p className="text-gray-700 leading-relaxed">
           Our mission is to deliver high-quality, sustainable engineering solutions that meet
           international standards while ensuring client satisfaction and environmental protection.

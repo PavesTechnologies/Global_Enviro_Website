@@ -19,7 +19,7 @@ export default function AboutBanner() {
         };
 
   return (
-    <section className="relative bg-linear-to-r from-blue-100 to-blue-50 pb-28">
+    <section className="relative bg-linear-to-r from-blue-100 to-blue-50 pb-8">
       {/* SVG Curve (decorative) */}
       <svg
         aria-hidden="true"
@@ -36,7 +36,7 @@ export default function AboutBanner() {
       </svg>
 
       {/* Banner Text */}
-      <div className="relative mx-auto px-6 pt-16 text-center max-w-4xl">
+      <div className="relative mx-auto px-6 pt-6 text-center max-w-4xl">
         <MotionWrapper
           as="h1"
           {...rise(0)}

@@ -55,11 +55,11 @@ export default function GroupPage() {
     <div className="min-h-screen bg-[#f9fafb] text-gray-900">
 
       {/* Banner */}
-      <section className="relative bg-gradient-to-r from-blue-100 to-blue-50 pb-20">
+      <section className="relative bg-gradient-to-r from-blue-100 to-blue-50 pb-8">
         <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
           <path fill="#f9fafb" d="M0,32 C360,100 1080,0 1440,80 L1440,120 L0,120 Z" />
         </svg>
-        <div className="relative container mx-auto px-6 pt-16 text-center">
+        <div className="relative container mx-auto px-6 pt-8 text-center">
           <MotionWrapper
             as="h1"
             initial={{ opacity: 0, y: 30 }}
@@ -83,7 +83,7 @@ export default function GroupPage() {
       </section>
 
       {/* Company Sections */}
-      <div className="max-w-6xl mx-auto px-8 py-16 space-y-20">
+      <div className="max-w-6xl mx-auto px-8 py-8 space-y-8">
         {companies.map((company, index) => (
           <MotionWrapper
             as="div"
@@ -94,10 +94,10 @@ export default function GroupPage() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className={`flex flex-col md:flex-row ${
               index % 2 === 1 ? "md:flex-row-reverse" : ""
-            } items-center gap-10`}
+            } items-center gap-5`}
           >
             {/* Text */}
-            <div className="md:w-1/2 space-y-5">
+            <div className="md:w-1/2 space-y-4">
               <h2 className="text-3xl md:text-4xl font-semibold text-[#0f172a]">
                 {company.name}
               </h2>
@@ -126,12 +126,12 @@ export default function GroupPage() {
 
             {/* Image */}
             <div className="md:w-1/2 flex justify-center">
-              <div className={`overflow-hidden w-[360px] h-[360px] shadow-lg border border-gray-200 ${company.shape}`}>
+              <div className={`overflow-hidden w-[280px] h-[280px] shadow-lg border border-gray-200 ${company.shape}`}>
                 <Image
                   src={company.image}
                   alt={company.name}
-                  width={360}
-                  height={360}
+                  width={280}
+                  height={280}
                   className="w-full h-full object-cover"
                 />
               </div>

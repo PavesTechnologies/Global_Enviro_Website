@@ -24,7 +24,7 @@ export default function AirPollutionControlDetail() {
         return <HVAC />;
     default:
       return (
-        <div className="text-center py-20 text-gray-600">
+        <div className="text-center py-8 text-gray-600">
           <h1 className="text-2xl font-semibold">Page Not Found</h1>
         </div>
       );

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function MissionVision() {
   return (
-    <section className="relative w-full h-auto py-28 bg-gray-900 text-white overflow-hidden">
+    <section className="relative w-full h-auto py-10 bg-gray-900 text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -27,7 +27,7 @@ export default function MissionVision() {
           initial={{ opacity: 0, y: -30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl font-extrabold mb-6 tracking-wide"
+          className="text-4xl md:text-5xl font-extrabold mb-4 tracking-wide"
         >
           Our <span className="text-blue-400">Mission</span> &{" "}
           <span className="text-blue-400">Vision</span>
@@ -38,21 +38,21 @@ export default function MissionVision() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-2xl text-gray-300 mb-12"
+          className="max-w-2xl text-gray-300 mb-5"
         >
           Striving to create a sustainable future through engineering excellence,
           innovation, and commitment to our clients’ success.
         </MotionWrapper>
 
         {/* Cards Container */}
-        <div className="grid md:grid-cols-2 gap-10 w-full max-w-5xl">
+        <div className="grid md:grid-cols-2 gap-6 w-full max-w-5xl">
           {/* Mission Card */}
           <MotionWrapper
             as="div"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="p-8 bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl hover:bg-white/20 transition-all duration-500 shadow-xl"
+            className="p-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl hover:bg-white/20 transition-all duration-500 shadow-xl"
           >
             <h3 className="text-2xl font-bold text-blue-300 mb-4">Our Mission</h3>
             <p className="text-gray-200 leading-relaxed text-[15px]">
@@ -68,7 +68,7 @@ export default function MissionVision() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="p-8 bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl hover:bg-white/20 transition-all duration-500 shadow-xl"
+            className="p-6 bg-white/10 backdrop-blur-lg border border-white/20 rounded-3xl hover:bg-white/20 transition-all duration-500 shadow-xl"
           >
             <h3 className="text-2xl font-bold text-indigo-300 mb-4">Our Vision</h3>
             <p className="text-gray-200 leading-relaxed text-[15px]">

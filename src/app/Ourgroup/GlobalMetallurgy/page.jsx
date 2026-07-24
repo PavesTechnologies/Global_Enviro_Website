@@ -51,8 +51,8 @@ export default function GlobalMetallurgicalsPage() {
       />
 
       {/* About + Capabilities */}
-      <section className="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12 items-center">
-        <div className="space-y-5">
+      <section className="max-w-6xl mx-auto px-6 py-8 grid md:grid-cols-2 gap-6 items-center">
+        <div className="space-y-4">
           <p className="text-[#3877d4] uppercase tracking-widest text-sm font-semibold">
             About Global Metallurgicals
           </p>

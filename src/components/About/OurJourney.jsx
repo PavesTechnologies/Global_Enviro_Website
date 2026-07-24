@@ -35,14 +35,14 @@ export default function OurJourney() {
   ];
 
   return (
-    <div className="bg-[#1F3A70] py-20 px-6">
+    <div className="bg-[#1F3A70] py-8 px-6">
       {/* Title */}
       <MotionWrapper
         as="h1"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl md:text-5xl font-bold mb-16 text-white text-center"
+        className="text-4xl md:text-5xl font-bold mb-5 text-white text-center"
       >
         Our Journey
       </MotionWrapper>
@@ -61,7 +61,7 @@ export default function OurJourney() {
         />
 
         {/* Timeline Items */}
-        <div className="space-y-12">
+        <div className="space-y-4">
           {milestones.map((milestone, index) => (
             <div key={index} className="relative">
 
@@ -77,7 +77,7 @@ export default function OurJourney() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="ml-16 bg-white/15 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 text-white"
+                className="ml-16 bg-white/15 rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 text-white"
               >
                 <span className="text-xs font-semibold text-blue-200 uppercase tracking-wide">
                   {milestone.year}
@@ -102,7 +102,7 @@ export default function OurJourney() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="mt-16 text-center max-w-2xl mx-auto"
+        className="mt-5 text-center max-w-2xl mx-auto"
       >
         <p className="text-base italic text-blue-100">
           "Every milestone we cross strengthens our commitment to building a sustainable world for generations to come."

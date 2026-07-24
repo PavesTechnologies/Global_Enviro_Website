@@ -29,28 +29,28 @@ const categories = [
     link: "/service/MaterialHandling",
     color: "from-indigo-600 to-indigo-800",
   },
-  {
-    title: "EPC Power Projects",
-    description:
-      "Turnkey Engineering, Procurement & Construction for power plants. Click to visit our dedicated EPC subsidiary — Indophil Jettech Energy Pvt. Ltd.",
-    icon: <Zap className="w-12 h-12" strokeWidth={1.5} />,
-    link: "https://www.jettechenergy.com",
-    external: true,
-    color: "from-orange-500 to-orange-700",
-  },
-  {
-    title: "Metallurgicals & Briquettes",
-    description:
-      "Casting division offering liners, beaters, carbon steel, magna steel and cast iron. Also supplying biomass briquettes as boiler fuel.",
-    icon: <Gem className="w-12 h-12" strokeWidth={1.5} />,
-    link: "/service/Metallurgicals",
-    color: "from-slate-600 to-slate-800",
-  },
+  // {
+  //   title: "EPC Power Projects",
+  //   description:
+  //     "Turnkey Engineering, Procurement & Construction for power plants. Click to visit our dedicated EPC subsidiary — Indophil Jettech Energy Pvt. Ltd.",
+  //   icon: <Zap className="w-12 h-12" strokeWidth={1.5} />,
+  //   link: "https://www.jettechenergy.com",
+  //   external: true,
+  //   color: "from-orange-500 to-orange-700",
+  // },
+  // {
+  //   title: "Metallurgicals & Briquettes",
+  //   description:
+  //     "Casting division offering liners, beaters, carbon steel, magna steel and cast iron. Also supplying biomass briquettes as boiler fuel.",
+  //   icon: <Gem className="w-12 h-12" strokeWidth={1.5} />,
+  //   link: "/service/Metallurgicals",
+  //   color: "from-slate-600 to-slate-800",
+  // },
 ];
 
 export default function ServicePage() {
   return (
-    <section className="relative min-h-screen py-24 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="relative min-h-screen py-8 px-6 md:px-12 lg:px-20 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <Image src="/assets/images/hero-section.png" alt="bg" fill className="object-cover" sizes="100vw" priority={false} />
@@ -58,11 +58,11 @@ export default function ServicePage() {
       </div>
 
       {/* Header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-5">
         <MotionWrapper as="p" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-[#3877d4] uppercase tracking-[5px] text-sm font-semibold mb-3">
           What We Offer
         </MotionWrapper>
-        <MotionWrapper as="h1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-4xl md:text-5xl font-extrabold text-[#0b1e3d] mb-6">
+        <MotionWrapper as="h1" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="text-4xl md:text-5xl font-extrabold text-[#0b1e3d] mb-4">
           Projects &amp; Products
         </MotionWrapper>
         <MotionWrapper as="p" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.2 }} className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
@@ -73,7 +73,7 @@ export default function ServicePage() {
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 max-w-7xl mx-auto">
         {categories.map((cat, index) => (
           <MotionWrapper
             key={cat.title}
@@ -89,7 +89,7 @@ export default function ServicePage() {
             {/* Gradient top bar */}
             <div className={`h-2 w-full bg-gradient-to-r ${cat.color}`} />
 
-            <div className="bg-white p-8 h-full flex flex-col">
+            <div className="bg-white p-6 h-full flex flex-col">
               {/* Icon */}
               <div className={`inline-flex p-3 rounded-xl bg-gradient-to-br ${cat.color} text-white mb-5 w-fit`}>
                 {cat.icon}

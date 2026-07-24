@@ -37,7 +37,7 @@ export default function ContactUS() {
     <div className="min-h-screen flex flex-col bg-[#f9fafb] text-gray-800">
 
       {/* ── Banner ── */}
-      <section className="relative bg-gradient-to-r from-blue-100 to-blue-50 pb-20">
+      <section className="relative bg-gradient-to-r from-blue-100 to-blue-50 pb-8">
         <svg
           className="absolute bottom-0 left-0 w-full"
           viewBox="0 0 1440 120"
@@ -45,7 +45,7 @@ export default function ContactUS() {
         >
           <path fill="#f9fafb" d="M0,32 C360,100 1080,0 1440,80 L1440,120 L0,120 Z" />
         </svg>
-        <div className="relative container mx-auto px-6 pt-20 text-center">
+        <div className="relative container mx-auto px-6 pt-8 text-center">
           <MotionWrapper
             as="h1"
             initial={{ opacity: 0, y: 30 }}
@@ -69,7 +69,7 @@ export default function ContactUS() {
       </section>
 
       {/* ── Contact Info Bar ── */}
-      <section className="relative z-10 -mt-10 bg-white shadow-lg rounded-2xl w-[92%] max-w-6xl mx-auto grid sm:grid-cols-3 gap-6 p-6 md:p-8">
+      <section className="relative z-10 -mt-10 bg-white shadow-lg rounded-2xl w-[92%] max-w-6xl mx-auto grid sm:grid-cols-3 gap-5 p-6">
         <div className="flex flex-col items-center text-center">
           <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-3">
             <Phone className="w-5 h-5 text-[#3877d4]" />
@@ -111,15 +111,15 @@ export default function ContactUS() {
       </section>
 
       {/* ── Branch Locations with Maps ── */}
-      <section className="py-16 px-6">
+      <section className="py-8 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-5">
             <h2 className="text-3xl font-bold text-[#0b1e3d] mb-3">Our Locations</h2>
             <p className="text-gray-500 text-base">Find us across India and internationally</p>
             <div className="mt-4 mx-auto w-20 h-1 bg-[#3877d4] rounded-full" />
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-5 md:grid-cols-2">
             {branches.map((branch, index) => (
               <MotionWrapper
                 as="div"
@@ -131,7 +131,7 @@ export default function ContactUS() {
                 className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow duration-300"
               >
                 {/* Map */}
-                <div className="w-full h-48">
+                <div className="w-full h-40">
                   <iframe
                     title={branch.name}
                     src={branch.mapSrc}
@@ -181,13 +181,13 @@ export default function ContactUS() {
       </section>
 
       {/* ── Contact Form + Head Office Map ── */}
-      <section className="bg-white py-14 px-6">
-        <div className="max-w-6xl mx-auto grid gap-10 md:grid-cols-2 items-start">
+      <section className="bg-white py-7 px-6">
+        <div className="max-w-6xl mx-auto grid gap-5 md:grid-cols-2 items-start">
 
           {/* Form */}
           <div>
             <h2 className="text-2xl font-bold text-[#0b1e3d] mb-2">Send Us a Message</h2>
-            <p className="text-gray-500 text-sm mb-6">
+            <p className="text-gray-500 text-sm mb-5">
               We'll get back to you at{" "}
               <a href="mailto:info@globalenviro.in" className="text-[#3877d4] font-medium hover:underline">
                 info@globalenviro.in

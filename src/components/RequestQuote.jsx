@@ -4,6 +4,7 @@ import React, { useState } from "react";
 const RequestQuote = () => {
   const [formData, setFormData] = useState({
     product: "",
+    otherProduct: "",
     name: "",
     companyName: "",
     phone: "",
@@ -23,12 +24,12 @@ const RequestQuote = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center items-center p-6">
-      <div className="bg-white shadow-xl rounded-lg p-8 w-full max-w-3xl border border-gray-200">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+      <div className="bg-white shadow-xl rounded-lg p-6 w-full max-w-3xl border border-gray-200">
+        <h2 className="text-2xl font-semibold text-gray-800 mb-5 text-center">
           Request a Quote
         </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-5">
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Product Selection */}
           <div>
             <label className="block text-gray-600 mb-2">
@@ -45,11 +46,31 @@ const RequestQuote = () => {
               <option value="Material Handling">Material Handling</option>
               <option value="HVAC System">HVAC System</option>
               <option value="Clean Room">Clean Room</option>
+              <option value="Other">Other (please specify)</option>
             </select>
+
+            {formData.product === "Other" && (
+              <div className="mt-3">
+                <textarea
+                  name="otherProduct"
+                  value={formData.otherProduct}
+                  onChange={handleChange}
+                  className="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
+                  rows="3"
+                  minLength={180}
+                  maxLength={380}
+                  required
+                  placeholder="Please describe the product/system you're interested in (180-380 characters)"
+                ></textarea>
+                <p className="text-xs text-gray-400 text-right mt-1">
+                  {formData.otherProduct.length}/380 (min 180)
+                </p>
+              </div>
+            )}
           </div>
 
           {/* Name + Company */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
               <label className="block text-gray-600 mb-2">
                 Name <span className="text-red-500">*</span>
@@ -79,7 +100,7 @@ const RequestQuote = () => {
           </div>
 
           {/* Phone + Email */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <div>
               <label className="block text-gray-600 mb-2">
                 Phone <span className="text-red-500">*</span>
@@ -117,7 +138,11 @@ const RequestQuote = () => {
               onChange={handleChange}
               className="w-full border-b border-gray-300 focus:outline-none focus:border-blue-500 p-2"
               rows="2"
+              maxLength={400}
             ></textarea>
+            <p className="text-xs text-gray-400 text-right mt-1">
+              {formData.address.length}/400
+            </p>
           </div>
 
           {/* Submit */}

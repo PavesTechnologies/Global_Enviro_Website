@@ -44,7 +44,7 @@ export default function Certifications() {
   }, []);
 
   return (
-    <section className="relative bg-[#081736] text-white py-24 px-6 md:px-16 overflow-hidden">
+    <section className="relative bg-[#081736] text-white py-8 px-6 md:px-16 overflow-hidden">
       {/* ===== Background Glow ===== */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute -top-20 left-0 w-96 h-96 bg-blue-500/10 blur-3xl rounded-full animate-pulse"></div>
@@ -52,7 +52,7 @@ export default function Certifications() {
       </div>
 
       {/* ===== Title ===== */}
-      <div className="text-center mb-16 relative z-10">
+      <div className="text-center mb-5 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-blue-100">
           Our Certifications & Recognitions
         </h2>
@@ -63,7 +63,7 @@ export default function Certifications() {
       </div>
 
       {/* ===== Main Content ===== */}
-      <div className="container relative z-10 mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div className="container relative z-10 mx-auto grid md:grid-cols-2 gap-5 items-center">
         {/* ===== Left: Certificate Image ===== */}
           <div className="flex justify-center">
           <LazyAnimatePresence mode="wait">
@@ -87,7 +87,7 @@ export default function Certifications() {
         </div>
 
         {/* ===== Right: Certificate Description ===== */}
-        <div className="space-y-6">
+        <div className="space-y-3">
           <LazyAnimatePresence mode="wait">
             <MotionWrapper
               key={active.img}
@@ -108,7 +108,7 @@ export default function Certifications() {
       </div>
 
       {/* ===== Certificates Thumbnails Row ===== */}
-      <div className="mt-20 flex flex-wrap justify-center gap-6 relative z-10">
+      <div className="mt-6 flex flex-wrap justify-center gap-4 relative z-10">
         {certificates.map((c) => (
           <MotionWrapper
             as="div"
