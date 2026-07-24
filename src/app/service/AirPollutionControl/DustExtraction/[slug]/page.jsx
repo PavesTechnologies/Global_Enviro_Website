@@ -2,6 +2,7 @@
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import PulseJetBagFilter from '@/app/service/AirPollutionControl/DustExtraction/[slug]/PulseJetBagFilter';
+import PulseJetBagFilterForBoiler from '@/app/service/AirPollutionControl/DustExtraction/[slug]/PulseJetBagFilterForBoiler';
 import SingleCycloneSeparator from '@/app/service/AirPollutionControl/DustExtraction/[slug]/SingleCycloneSeparator';
 import TreemaCycloneSeparator from '@/app/service/AirPollutionControl/DustExtraction/[slug]/TreemaCycloneSeparator';
 import MultiCycloneSeparator from '@/app/service/AirPollutionControl/DustExtraction/[slug]/MultiCycloneSeparator';
@@ -11,6 +12,7 @@ import AxialFlowFans from '@/app/service/AirPollutionControl/DustExtraction/[slu
 
 const componentMap = {
   'pulse-jet-bag-filter': PulseJetBagFilter,
+  'pulse-jet-bag-filter-for-boiler': PulseJetBagFilterForBoiler,
   'single-cyclone-separator': SingleCycloneSeparator,
   'treema-cyclone-separator': TreemaCycloneSeparator,
   'multi-cyclone-separator': MultiCycloneSeparator,
@@ -21,6 +23,7 @@ const componentMap = {
 
 const items = [
   { name: 'Pulse Jet Bag Filter', slug: 'pulse-jet-bag-filter' },
+  { name: 'Pulse Jet Bag Filter for Boiler', slug: 'pulse-jet-bag-filter-for-boiler' },
   { name: 'Single Cyclone Separator', slug: 'single-cyclone-separator' },
   { name: 'Treema Cyclone Separator', slug: 'treema-cyclone-separator' },
   { name: 'Multi Cyclone Separator', slug: 'multi-cyclone-separator' },
