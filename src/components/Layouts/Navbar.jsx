@@ -76,6 +76,7 @@ const navItems = [
           { title: "Biomass Briquettes Division", url: "/service/Metallurgicals#briquettes" },
         ],
       },
+      { title: "SV Bio Fuels", url: "/Ourgroup/SVBioFuels" },
     ],
   },
 

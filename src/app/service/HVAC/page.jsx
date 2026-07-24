@@ -205,7 +205,7 @@ const sections = [
   },
   {
     id: "paneling",
-    title: "2. Paneling",
+    title: "2. Modular Clean Room Paneling Systems",
     color: "bg-teal-700",
     basePath: "Paneling",
     intro:
@@ -337,7 +337,7 @@ const sections = [
 // One representative image per section (shown in the accordion body)
 const imageMap = {
   hvac: "/assets/images/hvac-projects/ahu.jpg",
-  paneling: "/assets/images/hvac-projects/panel-1.jpg",
+  paneling: "/assets/images/hvac-projects/panel-4.jpg",
 };
 
 function AccordionItem({ section, isOpen, onToggle }) {

@@ -64,9 +64,6 @@ export default function FiltersPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">
-              Pre-Filter
-            </p>
           </div>
           <div className="text-center">
             <div className="relative w-full h-[220px]">
@@ -77,9 +74,6 @@ export default function FiltersPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">
-              Fine Filter
-            </p>
           </div>
         </div>
       </section>

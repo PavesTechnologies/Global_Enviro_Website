@@ -33,7 +33,6 @@ export default function CleanroomEquipment() {
               height={500}
               className="object-cover w-full h-full"
             />
-            <p className="text-center font-semibold py-2 text-sm text-gray-600">PASS BOX</p>
           </div>
           <div className="md:w-1/2 p-6">
             <h2 className="text-xl font-bold text-blue-800 mb-2">PASS BOX</h2>
@@ -57,7 +56,6 @@ export default function CleanroomEquipment() {
               height={500}
               className="object-cover w-full h-full"
             />
-            <p className="text-center font-semibold py-2 text-sm text-gray-600">DUST COLLECTOR</p>
           </div>
           <div className="md:w-1/2 p-6">
             <h2 className="text-xl font-bold text-blue-800 mb-2">DUST COLLECTOR</h2>
@@ -81,7 +79,6 @@ export default function CleanroomEquipment() {
               height={500}
               className="object-cover w-full h-full"
             />
-            <p className="text-center font-semibold py-2 text-sm text-gray-600">AIR SHOWER</p>
           </div>
           <div className="md:w-1/2 p-6">
             <h2 className="text-xl font-bold text-blue-800 mb-2">AIR SHOWER</h2>
@@ -105,7 +102,6 @@ export default function CleanroomEquipment() {
               height={500}
               className="object-cover w-full h-full"
             />
-            <p className="text-center font-semibold py-2 text-sm text-gray-600">LAMINAR FLOW UNIT</p>
           </div>
           <div className="md:w-1/2 p-6">
             <h2 className="text-xl font-bold text-blue-800 mb-2">LAMINAR FLOW UNIT</h2>

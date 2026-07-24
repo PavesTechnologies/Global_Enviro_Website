@@ -47,7 +47,7 @@ export default function PanelForWallsPage() {
 
         <div className="relative w-full h-[320px]">
           <Image
-            src="/assets/images/hvac-projects/panel-1.jpg"
+            src="/assets/images/hvac-projects/panel-4.jpg"
             alt="Panel for Walls, Partitions & Ceiling"
             fill
             className="object-contain rounded-lg shadow-md"
@@ -61,7 +61,7 @@ export default function PanelForWallsPage() {
           Built for Every Application
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
-          {[2, 3, 4, 5, 6, 7, 8].map((n) => (
+          {[2, 3, 5, 6, 7, 8].map((n) => (
             <div className="text-center" key={n}>
               <div className="relative w-full h-[220px]">
                 <Image
@@ -71,9 +71,6 @@ export default function PanelForWallsPage() {
                   className="object-contain rounded-lg shadow-md"
                 />
               </div>
-              <p className="mt-2 text-sm font-medium text-gray-600">
-                Clean Room Panel Installation
-              </p>
             </div>
           ))}
         </div>

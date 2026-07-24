@@ -78,9 +78,6 @@ export default function CleanroomEquipmentsPage() {
                 height={500}
                 className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
               />
-              <p className="text-center font-semibold py-2 text-sm text-gray-600 bg-gray-50">
-                {eq.title}
-              </p>
             </div>
 
             {/* Text Section */}

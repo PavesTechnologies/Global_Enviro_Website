@@ -64,9 +64,6 @@ export default function BucketElevatorPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">
-              Bucket Elevator Installation
-            </p>
           </div>
         </div>
       </section>

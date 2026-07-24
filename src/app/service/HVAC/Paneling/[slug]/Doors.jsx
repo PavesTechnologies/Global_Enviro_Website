@@ -70,9 +70,6 @@ export default function DoorsPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">
-              Door Installation
-            </p>
           </div>
           <div className="text-center">
             <div className="relative w-full h-[220px]">
@@ -83,9 +80,6 @@ export default function DoorsPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">
-              Door Specification
-            </p>
           </div>
           <div className="text-center">
             <div className="relative w-full h-[220px]">
@@ -96,9 +90,6 @@ export default function DoorsPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">
-              Door Product View
-            </p>
           </div>
         </div>
       </section>

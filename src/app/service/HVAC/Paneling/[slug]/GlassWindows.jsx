@@ -66,9 +66,6 @@ export default function GlassWindowsPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">
-              Glass Windows Installation
-            </p>
           </div>
         </div>
       </section>

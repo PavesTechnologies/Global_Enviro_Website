@@ -65,9 +65,6 @@ export default function ModulesGrillsDiffusersPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">
-              Latch Type Grill
-            </p>
           </div>
           <div className="text-center">
             <div className="relative w-full h-[220px]">
@@ -78,7 +75,6 @@ export default function ModulesGrillsDiffusersPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">Diffuser</p>
           </div>
           <div className="text-center">
             <div className="relative w-full h-[220px]">
@@ -89,9 +85,6 @@ export default function ModulesGrillsDiffusersPage() {
                 className="object-contain rounded-lg shadow-md"
               />
             </div>
-            <p className="mt-2 text-sm font-medium text-gray-600">
-              Linear Bar Grill
-            </p>
           </div>
         </div>
       </section>
