@@ -127,6 +127,7 @@ export default function GroupPage() {
             {/* Image */}
             <div className="md:w-1/2 flex justify-center">
               <div className={`overflow-hidden w-[280px] h-[280px] shadow-lg border border-gray-200 ${company.shape}`}>
+              <div className={`overflow-hidden w-60 h-60 sm:w-75 sm:h-75 md:w-90 md:h-90 shadow-lg border border-gray-200 ${company.shape}`}>
                 <Image
                   src={company.image}
                   alt={company.name}

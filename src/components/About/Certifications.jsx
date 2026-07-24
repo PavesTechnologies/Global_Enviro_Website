@@ -73,7 +73,7 @@ export default function Certifications() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 80 }}
               transition={{ duration: 0.8 }}
-              className="relative w-[350px] h-auto rounded-2xl shadow-2xl overflow-hidden"
+              className="relative w-full max-w-87.5 h-auto rounded-2xl shadow-2xl overflow-hidden"
             >
               <Image
                 src={active.img}

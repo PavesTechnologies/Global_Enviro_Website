@@ -26,13 +26,14 @@ export default function CleanroomEquipment() {
         {/* PASS BOX */}
         <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden">
           <div className="md:w-1/2">
-            <Image
-              src="/assets/images/pass box.png"
-              alt="Pass Box"
-              width={500}
-              height={500}
-              className="object-cover w-full h-full"
-            />
+            <div className="relative w-full aspect-4/3">
+              <Image
+                src="/assets/images/pass box.png"
+                alt="Pass Box"
+                fill
+                className="object-cover"
+              />
+            </div>
             <p className="text-center font-semibold py-2 text-sm text-gray-600">PASS BOX</p>
           </div>
           <div className="md:w-1/2 p-6">
@@ -50,13 +51,14 @@ export default function CleanroomEquipment() {
         {/* DUST COLLECTOR */}
         <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden">
           <div className="md:w-1/2">
-            <Image
-              src="/assets/images/dust collector.png"
-              alt="Dust Collector"
-              width={500}
-              height={500}
-              className="object-cover w-full h-full"
-            />
+            <div className="relative w-full aspect-4/3">
+              <Image
+                src="/assets/images/dust collector.png"
+                alt="Dust Collector"
+                fill
+                className="object-cover"
+              />
+            </div>
             <p className="text-center font-semibold py-2 text-sm text-gray-600">DUST COLLECTOR</p>
           </div>
           <div className="md:w-1/2 p-6">
@@ -74,13 +76,14 @@ export default function CleanroomEquipment() {
         {/* AIR SHOWER */}
         <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden">
           <div className="md:w-1/2">
-            <Image
-              src="/assets/images/air shower.png"
-              alt="Air Shower"
-              width={500}
-              height={500}
-              className="object-cover w-full h-full"
-            />
+            <div className="relative w-full aspect-4/3">
+              <Image
+                src="/assets/images/air shower.png"
+                alt="Air Shower"
+                fill
+                className="object-cover"
+              />
+            </div>
             <p className="text-center font-semibold py-2 text-sm text-gray-600">AIR SHOWER</p>
           </div>
           <div className="md:w-1/2 p-6">
@@ -98,13 +101,14 @@ export default function CleanroomEquipment() {
         {/* LAMINAR FLOW UNIT */}
         <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden">
           <div className="md:w-1/2">
-            <Image
-              src="/assets/images/laminar flow unit.png"
-              alt="Laminar Flow Unit"
-              width={500}
-              height={500}
-              className="object-cover w-full h-full"
-            />
+            <div className="relative w-full aspect-4/3">
+              <Image
+                src="/assets/images/laminar flow unit.png"
+                alt="Laminar Flow Unit"
+                fill
+                className="object-cover"
+              />
+            </div>
             <p className="text-center font-semibold py-2 text-sm text-gray-600">LAMINAR FLOW UNIT</p>
           </div>
           <div className="md:w-1/2 p-6">

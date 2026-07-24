@@ -174,7 +174,7 @@ export default function MaterialHandlingPage() {
         subtitle="Complete bulk material handling — fuel, ash, and warehouse systems — engineered for power, pharma, and process industries."
         align="left"
         overlay="bg-black/60"
-        height="h-[380px]"
+        height="h-[240px] sm:h-[300px] md:h-[380px]"
       />
 
       <section className="py-8 px-6 md:px-16 max-w-5xl mx-auto">

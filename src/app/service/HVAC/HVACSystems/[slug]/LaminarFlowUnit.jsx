@@ -44,7 +44,7 @@ export default function LaminarFlowUnitPage() {
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full h-[220px] sm:h-[260px] md:h-[320px]">
           <Image
             src="/assets/images/hvac-projects/laminar-flow-unit.jpg"
             alt="Laminar Flow Unit"

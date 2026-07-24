@@ -14,7 +14,7 @@ export default function HeaderSection({ title, description, imgSrc, description1
         transition={{ duration: 0.9, ease: "easeOut" }}
         className="md:w-1/2 z-10 space-y-4"
       >
-        <h1 className="text-4xl md:text-4xl font-extrabold text-accent leading-tight drop-shadow-sm">
+        <h1 className="text-3xl md:text-4xl font-extrabold text-accent leading-tight drop-shadow-sm">
           {title}
         </h1>
         <p className="text-gray-700 leading-relaxed text-lg">{description}</p>
@@ -32,10 +32,8 @@ export default function HeaderSection({ title, description, imgSrc, description1
           alt={title}
           width={450}
           height={400}
-          className="rounded-[2rem] shadow-2xl object-cover border-4 border-white"
+          className="w-full h-auto max-w-112.5 rounded-4xl shadow-2xl object-cover border-4 border-white"
         />
-        
-
       </div>
     </section>
   );

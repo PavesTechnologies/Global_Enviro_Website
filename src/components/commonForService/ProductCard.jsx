@@ -20,7 +20,7 @@ export default function ProductCard({ id, title, image, specs = {} }) {
         alt={title}
         width={330}
         height={250}
-        className="rounded-br-3xl object-cover shadow-[0_8px_20px_rgba(128,128,128,0.4)] hover:scale-105 transition-transform duration-500"
+        className="w-full h-auto max-w-82.5 rounded-br-3xl object-cover shadow-[0_8px_20px_rgba(128,128,128,0.4)] hover:scale-105 transition-transform duration-500"
         />
       </div>
 
@@ -32,16 +32,18 @@ export default function ProductCard({ id, title, image, specs = {} }) {
           </h1>
         </Link>
 
-        <table className="w-full text-sm text-gray-700">
-          <tbody>
-            {Object.entries(specs).map(([key, value]) => (
-              <tr key={key}>
-                <td className="pr-3 py-1 text-gray-800 font-medium">{key}</td>
-                <td className="py-1 text-gray-600">: {value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-gray-700">
+            <tbody>
+              {Object.entries(specs).map(([key, value]) => (
+                <tr key={key}>
+                  <td className="pr-3 py-1 text-gray-800 font-medium">{key}</td>
+                  <td className="py-1 text-gray-600">: {value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </MotionWrapper>
   );

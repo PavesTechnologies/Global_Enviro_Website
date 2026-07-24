@@ -12,7 +12,7 @@ export default function HeroSection({
   secondaryAction,
   align = 'left',
   overlay = 'bg-black/50',
-  height = 'h-[600px]',
+  height = 'h-[320px] sm:h-[420px] md:h-[600px]',
   className,
 }) {
   const alignments = {

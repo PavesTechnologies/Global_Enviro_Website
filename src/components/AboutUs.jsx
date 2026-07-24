@@ -34,6 +34,7 @@ export default function AboutUs() {
       </div>
 
       <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-4 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         {[
           {
             icon: <Building2 className="w-10 h-10 text-green-600" />,

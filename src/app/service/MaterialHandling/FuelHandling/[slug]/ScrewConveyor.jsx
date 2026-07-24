@@ -39,7 +39,7 @@ export default function ScrewConveyorPage() {
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full h-[220px] sm:h-[260px] md:h-[320px]">
           <Image
             src="/assets/images/material-handling-projects/screw-conveyor.jpg"
             alt="Screw Conveyor"

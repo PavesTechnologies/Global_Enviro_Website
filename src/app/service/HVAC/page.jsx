@@ -436,7 +436,7 @@ export default function HVACPage() {
         subtitle="Precision-controlled environments for pharma, biotech, and critical industries — from air handling units to full clean room paneling."
         align="left"
         overlay="bg-black/55"
-        height="h-[380px]"
+        height="h-[240px] sm:h-[300px] md:h-[380px]"
       />
 
       <section className="py-8 px-6 md:px-16 max-w-5xl mx-auto">

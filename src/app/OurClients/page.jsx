@@ -108,7 +108,7 @@ export default function OurClientsPage() {
             Trusted Worldwide
           </p>
 
-          <h1 className="text-5xl font-bold text-blue-900">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900">
             Our Clients
           </h1>
 
@@ -132,6 +132,8 @@ export default function OurClientsPage() {
       {/* Clients Grid */}
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-4">
+      <section className="py-16 px-6">
+        <div className="max-w-7xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-6">
           {clients.map((client) => (
             <MotionWrapper
               key={client.name}

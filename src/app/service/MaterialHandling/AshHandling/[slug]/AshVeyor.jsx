@@ -37,7 +37,7 @@ export default function AshVeyorPage() {
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full h-[220px] sm:h-[260px] md:h-[320px]">
           <Image
             src="/assets/images/material-handling-projects/ash-veyor.jpg"
             alt="Ash Veyor"

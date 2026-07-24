@@ -82,6 +82,7 @@ const Project = () => {
 
       {/* Pagination */}
       <div className="flex justify-center mt-6 gap-3 relative z-10">
+      <div className="flex flex-wrap justify-center mt-12 gap-3 relative z-10">
         {Array.from({ length: totalPages }).map((_, i) => (
           <button
             key={i}

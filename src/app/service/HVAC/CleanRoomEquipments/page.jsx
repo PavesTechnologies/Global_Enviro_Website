@@ -43,7 +43,7 @@ export default function CleanroomEquipmentsPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
       >
-        <h1 className="text-4xl md:text-4xl font-bold text-blue-900 mb-4 tracking-wide">
+        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4 tracking-wide">
           CLEANROOM EQUIPMENT’S
         </h1>
         <p className="text-gray-700 max-w-4xl mx-auto leading-relaxed">
@@ -71,13 +71,14 @@ export default function CleanroomEquipmentsPage() {
               className="md:w-1/2 relative group"
               transition={{ duration: 0.3 }}
             >
-              <Image
-                src={eq.img}
-                alt={eq.title}
-                width={500}
-                height={500}
-                className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-              />
+              <div className="relative w-full aspect-4/3">
+                <Image
+                  src={eq.img}
+                  alt={eq.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
               <p className="text-center font-semibold py-2 text-sm text-gray-600 bg-gray-50">
                 {eq.title}
               </p>

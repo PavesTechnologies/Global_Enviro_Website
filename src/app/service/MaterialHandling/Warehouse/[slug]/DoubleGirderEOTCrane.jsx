@@ -38,7 +38,7 @@ export default function DoubleGirderEOTCranePage() {
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full h-[220px] sm:h-[260px] md:h-[320px]">
           <Image
             src="/assets/images/EOT and HOT cranes.png"
             alt="Double Girder EOT Crane"

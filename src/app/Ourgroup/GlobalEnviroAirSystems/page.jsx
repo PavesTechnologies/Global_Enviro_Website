@@ -71,7 +71,7 @@ export default function GlobalEnviroAirSystemsPage() {
         subtitle="Engineering Clean Air, Enabling Clean Industry."
         align="left"
         overlay="bg-black/55"
-        height="h-[400px]"
+        height="h-[260px] sm:h-[320px] md:h-[400px]"
       />
 
       {/* About + Highlights */}
@@ -108,7 +108,7 @@ export default function GlobalEnviroAirSystemsPage() {
         </div>
 
         {/* Highlights */}
-        <div className="grid grid-cols-2 gap-4 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-stretch">
           {highlights.map((h) => {
             const isList = Array.isArray(h.value);
             const Icon = h.icon;

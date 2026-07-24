@@ -6,8 +6,8 @@ export default function About() {
   return (
     <section className="relative bg-gradient-to-br from-white via-[#f2f8ff] to-[#e6f0ff] overflow-hidden py-6 px-6 md:px-12 lg:px-20 flex flex-col lg:flex-row items-stretch gap-5">
       {/* Decorative background blur */}
-      <div className="absolute top-0 right-0 w-72 h-72 bg-blue-200/40 blur-3xl rounded-full" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#003366]/10 blur-2xl rounded-full" />
+      <div className="absolute top-0 right-0 w-40 h-40 sm:w-72 sm:h-72 bg-blue-200/40 blur-3xl rounded-full" />
+      <div className="absolute bottom-0 left-0 w-40 h-40 sm:w-72 sm:h-72 bg-[#003366]/10 blur-2xl rounded-full" />
 
       {/* Left Side Content */}
       <MotionWrapper
@@ -18,8 +18,8 @@ export default function About() {
         transition={{ duration: 0.8, ease: 'easeOut' }}
         viewport={{ once: true }}
       >
-        <h2 className="text-blue-700 font-extrabold text-2xl uppercase tracking-[6px]">About Us</h2>
-        <h1 className="text-2xl md:text-2xl font-bold text-[#003366] leading-tight">Two and a Half Decades of Engineering Excellence</h1>
+        <h2 className="text-blue-700 font-extrabold text-2xl uppercase tracking-[3px] sm:tracking-[6px]">About Us</h2>
+        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#003366] leading-tight">Two and a Half Decades of Engineering Excellence</h1>
 
         {/* Simple Description */}
          <p className="text-gray-700 text-lg justify-start">We lead the industry in air pollution control, HVAC systems,

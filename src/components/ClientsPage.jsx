@@ -75,6 +75,8 @@ const ClientsPage = () => {
   return (
     <div className="bg-gradient-to-b from-blue-50 to-white py-8">
       <h2 className="text-4xl font-bold text-center text-blue-900 mb-2">
+    <div className="bg-gradient-to-b from-blue-50 to-white py-16">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-blue-900 mb-2">
         Our Clients
       </h2>
       <p className="text-center text-blue-800 text-lg mb-5 tracking-wide">
@@ -98,7 +100,6 @@ const ClientsPage = () => {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 200 }}
             className="px-8 py-3 bg-gradient-to-tr from-primary to-accent text-white font-semibold rounded-full shadow-md bg-[length:200%_200%] transition-all duration-500"
-            onClick={() => router.push("/OurClients")}
           >
             View All Clients
           </MotionWrapper>

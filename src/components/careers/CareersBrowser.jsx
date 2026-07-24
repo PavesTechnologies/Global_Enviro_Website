@@ -57,6 +57,8 @@ export default function CareersBrowser({ jobs }) {
   return (
     <div className="space-y-6">
       <section className="grid gap-4 rounded-3xl bg-slate-50 p-5 md:grid-cols-4">
+    <div className="space-y-8">
+      <section className="grid gap-4 rounded-3xl bg-slate-50 p-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
         <input
           value={search}
           onChange={(event) => {

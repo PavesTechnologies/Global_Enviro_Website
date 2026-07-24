@@ -23,7 +23,7 @@ export default function BiomassBriquettesPage() {
 
       {/* ---------- Product Overview ---------- */}
       <section className="max-w-6xl mx-auto px-6 py-6 flex justify-center">
-        <div className="relative w-full max-w-xl h-[320px]">
+        <div className="relative w-full max-w-xl h-[220px] sm:h-[260px] md:h-[320px]">
           <Image
             src="/assets/images/metallurgicals-projects/biomass-briquettes.jpg"
             alt="Biomass Briquettes"

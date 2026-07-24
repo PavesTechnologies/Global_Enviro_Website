@@ -33,6 +33,7 @@ export default function ServicePage() {
 
   return (
     <section className="relative px-62 py-8 overflow-hidden">
+    <section className="relative px-4 sm:px-6 lg:px-12 py-12 md:py-18 overflow-hidden">
       {/* Background Image with Soft Overlay */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -73,7 +74,7 @@ export default function ServicePage() {
             <MotionWrapper
               key={index}
               as="div"
-              className="flex items-start p-6 w-auto max-w-auto  h-auto bg-white/90 shadow-md rounded-2xl border border-gray-200"
+              className="flex items-start p-6 w-full bg-white/90 shadow-md rounded-2xl border border-gray-200"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 + index * 0.2, duration: 0.6 }}

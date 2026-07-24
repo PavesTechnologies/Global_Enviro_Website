@@ -40,7 +40,7 @@ export default function AirShowerPage() {
           </ul>
         </div>
 
-        <div className="relative w-full h-[320px]">
+        <div className="relative w-full h-[220px] sm:h-[260px] md:h-[320px]">
           <Image
             src="/assets/images/hvac-projects/air-shower.jpg"
             alt="Air Shower"

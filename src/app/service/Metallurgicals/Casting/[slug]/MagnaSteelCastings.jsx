@@ -45,9 +45,9 @@ export default function MagnaSteelCastingsPage() {
             <h2 className="text-2xl font-semibold text-blue-800 mb-4">
               Casting Division
             </h2>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="text-center">
-                <div className="relative w-full h-40">
+                <div className="relative w-full aspect-4/3">
                   <Image
                     src="/assets/images/metallurgicals-projects/casting-1.jpg"
                     alt="Casting Division View 1"
@@ -57,7 +57,7 @@ export default function MagnaSteelCastingsPage() {
                 </div>
               </div>
               <div className="text-center">
-                <div className="relative w-full h-40">
+                <div className="relative w-full aspect-4/3">
                   <Image
                     src="/assets/images/metallurgicals-projects/casting-2.jpg"
                     alt="Casting Division View 2"

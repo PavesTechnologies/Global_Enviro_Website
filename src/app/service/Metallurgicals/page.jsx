@@ -128,7 +128,7 @@ export default function MetallurgicalsPage() {
         subtitle="High-quality metal castings for industrial wear applications and biomass briquettes as sustainable boiler fuel."
         align="left"
         overlay="bg-black/55"
-        height="h-[380px]"
+        height="h-[240px] sm:h-[300px] md:h-[380px]"
       />
 
       <section className="py-8 px-6 md:px-16 max-w-5xl mx-auto">

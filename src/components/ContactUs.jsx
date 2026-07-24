@@ -51,7 +51,7 @@ export default function ContactUS() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-5xl font-bold text-blue-900 tracking-wide"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue-900 tracking-wide"
           >
             Get In Touch
           </MotionWrapper>
@@ -70,6 +70,7 @@ export default function ContactUS() {
 
       {/* ── Contact Info Bar ── */}
       <section className="relative z-10 -mt-10 bg-white shadow-lg rounded-2xl w-[92%] max-w-6xl mx-auto grid sm:grid-cols-3 gap-5 p-6">
+      <section className="relative z-10 -mt-10 bg-white shadow-lg rounded-2xl w-[92%] max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 p-6 md:p-8">
         <div className="flex flex-col items-center text-center">
           <div className="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center mb-3">
             <Phone className="w-5 h-5 text-[#3877d4]" />
@@ -115,6 +116,8 @@ export default function ContactUS() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-5">
             <h2 className="text-3xl font-bold text-[#0b1e3d] mb-3">Our Locations</h2>
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-[#0b1e3d] mb-3">Our Locations</h2>
             <p className="text-gray-500 text-base">Find us across India and internationally</p>
             <div className="mt-4 mx-auto w-20 h-1 bg-[#3877d4] rounded-full" />
           </div>
@@ -232,12 +235,12 @@ export default function ContactUS() {
               Survey No. 163/A (Part), Gagillapur (Vill.),
               Quthbullapur (Mdl), Hyderabad – 500043, Telangana.
             </p>
-            <div className="rounded-xl overflow-hidden shadow-md border border-gray-100">
+            <div className="rounded-xl overflow-hidden shadow-md border border-gray-100 h-64 sm:h-80 md:h-100">
               <iframe
                 title="Global Enviro Air Systems - Head Office"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3804.7368658972755!2d78.39407517512182!3d17.59745768345095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8eb0081aaaab%3A0x82bf120ade91c860!2sGlobal%20Enviro%20Air%20Systems%20pvt%20limited!5e0!3m2!1sen!2sin!4v1730649852000!5m2!1sen!2sin"
                 width="100%"
-                height="400"
+                height="100%"
                 style={{ border: 0 }}
                 allowFullScreen=""
                 loading="lazy"

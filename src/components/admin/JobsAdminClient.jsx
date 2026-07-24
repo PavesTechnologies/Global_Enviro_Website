@@ -195,7 +195,7 @@ export default function JobsAdminClient({ initialJobs }) {
   return (
     <div className="space-y-8">
       <section className="rounded-3xl bg-white p-6 shadow-sm">
-        <div className="mb-6 flex items-center justify-between gap-4">
+        <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-primary">
               Jobs Manager

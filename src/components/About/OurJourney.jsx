@@ -78,6 +78,7 @@ export default function OurJourney() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="ml-16 bg-white/15 rounded-xl p-4 shadow-md hover:shadow-lg transition-all duration-300 text-white"
+                className="ml-12 sm:ml-16 bg-white/15 rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 text-white"
               >
                 <span className="text-xs font-semibold text-blue-200 uppercase tracking-wide">
                   {milestone.year}

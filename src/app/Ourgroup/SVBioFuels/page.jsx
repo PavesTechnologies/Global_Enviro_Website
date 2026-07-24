@@ -64,7 +64,7 @@ export default function SVBioFuelsPage() {
         subtitle="Green Fuel, Real Impact — Powering Industry, Sustainably."
         align="left"
         overlay="bg-black/60"
-        height="h-[400px]"
+        height="h-[260px] sm:h-[320px] md:h-[400px]"
       />
 
       {/* About + Image */}
@@ -99,7 +99,7 @@ export default function SVBioFuelsPage() {
         </div>
 
         {/* Image */}
-        <div className="relative h-80 rounded-2xl overflow-hidden shadow-lg">
+        <div className="relative h-64 sm:h-72 md:h-80 lg:h-96 rounded-2xl overflow-hidden shadow-lg">
           <Image
             src="/assets/images/metallurgicals-projects/biomass-briquettes.jpg"
             alt="SV Bio Fuels"

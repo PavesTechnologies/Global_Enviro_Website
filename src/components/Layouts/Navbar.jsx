@@ -90,6 +90,8 @@ const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [activeSubDropdown, setActiveSubDropdown] = useState(null);
+  const [mobileActiveDropdown, setMobileActiveDropdown] = useState(null);
+  const [mobileActiveSubDropdown, setMobileActiveSubDropdown] = useState(null);
   const pathname = usePathname();
 
   const isActive = (url) => {
@@ -98,15 +100,21 @@ const Navbar = () => {
     return pathname.startsWith(url);
   };
 
+  const closeMobileMenu = () => {
+    setMobileOpen(false);
+    setMobileActiveDropdown(null);
+    setMobileActiveSubDropdown(null);
+  };
+
   return (
     <>
       <header className="sticky top-0 z-50 w-full bg-white shadow">
 
         {/* TOP BAR */}
-        <div className="flex justify-between items-center px-6 py-2 border-b">
-          <Image src="/assets/images/group-logo.png" width={220} height={66} alt="Group logo" className="h-16 object-contain" />
+        <div className="flex flex-wrap justify-between items-center gap-2 px-4 sm:px-6 py-2 border-b">
+          <Image src="/assets/images/group-logo.png" width={220} height={66} alt="Group logo" className="h-12 sm:h-16 w-auto object-contain" />
 
-          <div className="hidden md:flex items-center gap-6 text-sm">
+          <div className="hidden md:flex items-center gap-4 lg:gap-6 text-sm">
             <div className="flex items-center gap-2">
               <FaPhone className="text-blue-600" />
               <span>+91 98480 31866</span>
@@ -117,7 +125,7 @@ const Navbar = () => {
             </div>
             <Link
               href="/RequestQuote"
-              className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700"
+              className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 whitespace-nowrap"
             >
               REQUEST A QUOTE
             </Link>
@@ -208,10 +216,151 @@ const Navbar = () => {
           </ul>
 
           {/* MOBILE BUTTON */}
-          <button className="lg:hidden text-white p-3" onClick={() => setMobileOpen(!mobileOpen)}>
+          <button
+            className="lg:hidden text-white p-3 ml-auto flex"
+            onClick={() => (mobileOpen ? closeMobileMenu() : setMobileOpen(true))}
+            aria-label="Toggle navigation menu"
+          >
             {mobileOpen ? <FaTimes /> : <FaBars />}
           </button>
         </nav>
+
+        {/* MOBILE MENU */}
+        {mobileOpen && (
+          <div className="lg:hidden bg-white border-t max-h-[80vh] overflow-y-auto">
+            <ul className="flex flex-col divide-y">
+              {navItems.map((item) => (
+                <li key={item.title} className="flex flex-col">
+                  <div className="flex items-center justify-between">
+                    {item.external ? (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 px-4 py-3 font-semibold text-sm"
+                        onClick={closeMobileMenu}
+                      >
+                        {item.title}
+                      </a>
+                    ) : (
+                      <Link
+                        href={item.url}
+                        className={`flex-1 px-4 py-3 font-semibold text-sm ${
+                          isActive(item.url) ? "text-blue-600" : ""
+                        }`}
+                        onClick={closeMobileMenu}
+                      >
+                        {item.title}
+                      </Link>
+                    )}
+                    {item.dropdown && (
+                      <button
+                        className="px-4 py-3"
+                        aria-label={`Toggle ${item.title} submenu`}
+                        onClick={() =>
+                          setMobileActiveDropdown(
+                            mobileActiveDropdown === item.title ? null : item.title
+                          )
+                        }
+                      >
+                        <ChevronDown
+                          size={16}
+                          className={`transition-transform ${
+                            mobileActiveDropdown === item.title ? "rotate-180" : ""
+                          }`}
+                        />
+                      </button>
+                    )}
+                  </div>
+
+                  {item.dropdown && mobileActiveDropdown === item.title && (
+                    <ul className="bg-gray-50 pl-4">
+                      {item.dropdown.map((sub) => (
+                        <li key={sub.title} className="flex flex-col">
+                          <div className="flex items-center justify-between">
+                            {sub.external ? (
+                              <a
+                                href={sub.url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex-1 px-4 py-2 text-sm"
+                                onClick={closeMobileMenu}
+                              >
+                                {sub.title}
+                              </a>
+                            ) : (
+                              <Link
+                                href={sub.url}
+                                className="flex-1 px-4 py-2 text-sm"
+                                onClick={closeMobileMenu}
+                              >
+                                {sub.title}
+                              </Link>
+                            )}
+                            {sub.subDropdown && (
+                              <button
+                                className="px-4 py-2"
+                                aria-label={`Toggle ${sub.title} submenu`}
+                                onClick={() =>
+                                  setMobileActiveSubDropdown(
+                                    mobileActiveSubDropdown === sub.title ? null : sub.title
+                                  )
+                                }
+                              >
+                                <ChevronRight
+                                  size={14}
+                                  className={`transition-transform ${
+                                    mobileActiveSubDropdown === sub.title ? "rotate-90" : ""
+                                  }`}
+                                />
+                              </button>
+                            )}
+                          </div>
+
+                          {sub.subDropdown && mobileActiveSubDropdown === sub.title && (
+                            <ul className="bg-gray-100 pl-4">
+                              {sub.subDropdown.map((child) => (
+                                <li key={child.title}>
+                                  <Link
+                                    href={child.url}
+                                    scroll={false}
+                                    className="block px-4 py-2 text-sm"
+                                    onClick={closeMobileMenu}
+                                  >
+                                    {child.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </li>
+              ))}
+            </ul>
+
+            {/* Contact info + CTA for mobile (hidden in top bar below md) */}
+            <div className="md:hidden flex flex-col gap-3 px-4 py-4 border-t text-sm">
+              <div className="flex items-center gap-2">
+                <FaPhone className="text-blue-600" />
+                <span>+91 98480 31866</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <FaEnvelope className="text-blue-600" />
+                <span>ksr@globalenviro.in</span>
+              </div>
+              <Link
+                href="/RequestQuote"
+                className="bg-blue-600 text-white text-center px-4 py-2 rounded-md hover:bg-blue-700"
+                onClick={closeMobileMenu}
+              >
+                REQUEST A QUOTE
+              </Link>
+            </div>
+          </div>
+        )}
       </header>
     </>
   );

@@ -311,7 +311,7 @@ export default function ApplyJobPage() {
           {steps.map((label, index) => (
             <div
               key={label}
-              className={`flex-1 border-b-4 pb-2 text-center hover:cursor-default ${
+              className={`flex-1 border-b-4 pb-2 px-1 text-center text-[11px] sm:text-sm hover:cursor-default ${
                 index <= currentStep
                   ? "border-primary text-primary"
                   : "border-gray-300 text-gray-500"

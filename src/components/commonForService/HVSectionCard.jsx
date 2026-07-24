@@ -121,7 +121,7 @@ export default function HVSectionCard({ title, heading, description, points, gro
             <button
               type="button"
               onClick={() => setPreviewSrc(image)}
-              className="relative w-[320px] h-[280px] overflow-hidden rounded-2xl border-4 border-white shadow-xl cursor-zoom-in"
+              className="relative w-full max-w-[320px] h-55 sm:h-62.5 lg:h-70 overflow-hidden rounded-2xl border-4 border-white shadow-xl cursor-zoom-in"
             >
               <Image
                 src={image}
