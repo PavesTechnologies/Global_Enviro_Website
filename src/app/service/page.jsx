@@ -50,7 +50,7 @@ const categories = [
 
 export default function ServicePage() {
   return (
-    <section className="relative min-h-screen py-24 px-6 md:px-12 lg:px-20 overflow-hidden">
+    <section className="relative min-h-screen py-12 px-6 md:px-12 lg:px-20 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 -z-10">
         <Image src="/assets/images/hero-section.png" alt="bg" fill className="object-cover" sizes="100vw" priority={false} />
@@ -58,7 +58,7 @@ export default function ServicePage() {
       </div>
 
       {/* Header */}
-      <div className="text-center mb-16">
+      <div className="text-center mb-8">
         <MotionWrapper as="p" initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-[#3877d4] uppercase tracking-[5px] text-sm font-semibold mb-3">
           What We Offer
         </MotionWrapper>

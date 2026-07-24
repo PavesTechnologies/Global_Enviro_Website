@@ -31,13 +31,13 @@ const OurInfrastructure = () => {
 
   return (
     <section
-      className="relative overflow-hidden text-gray-800 py-20"
+      className="relative overflow-hidden text-gray-800 py-10"
       style={{ backgroundColor: "#E6F0FF" }}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
 
         {/* 🔵 Header */}
-        <div className="mb-14 max-w-3xl">
+        <div className="mb-7 max-w-3xl">
           <h2 className="text-5xl font-extrabold mb-6 text-black">
             Our Infrastructure
           </h2>
@@ -55,7 +55,7 @@ const OurInfrastructure = () => {
         </div>
 
         {/* 🔵 Units */}
-        <div className="space-y-14">
+        <div className="space-y-7">
 
           {infrastructureData.map((unit, idx) => (
             <div key={idx}>

@@ -26,7 +26,7 @@ export default function PanelingDetail() {
 
   if (!Component) {
     return (
-      <div className="text-center py-20 text-gray-600">
+      <div className="text-center py-10 text-gray-600">
         <h1 className="text-2xl font-semibold">Page Not Found</h1>
         <Link
           href="/service/HVAC#paneling"
@@ -64,7 +64,7 @@ export default function PanelingDetail() {
         </div>
       )}
 
-      <div className="max-w-6xl mx-auto px-6 pb-12">
+      <div className="max-w-6xl mx-auto px-6 pb-6">
         <Link
           href="/service/HVAC#paneling"
           scroll={false}

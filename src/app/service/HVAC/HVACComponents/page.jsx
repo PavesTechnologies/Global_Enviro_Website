@@ -68,7 +68,7 @@ export default function HVACContent() {
   ];
 
 //   return (
-//     <div className="py-12 px-6 md:px-16 bg-[#f4faff]">
+//     <div className="py-6 px-6 md:px-16 bg-[#f4faff]">
 //       {sections.map((section, index) => (
 //         <SectionCard key={index} {...section} />
 //       ))}
@@ -76,14 +76,14 @@ export default function HVACContent() {
 //   );
 return (
     <div
-      className="py-12 px-6 md:px-16 bg-[#f4faff]"
+      className="py-6 px-6 md:px-16 bg-[#f4faff]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
       {/* --- Heading Section --- */}
       <div
-        className="text-center mb-14"
+        className="text-center mb-7"
       >
         <h2 className="text-3xl md:text-4xl font-bold text-[#1a3c7b] mb-4 uppercase tracking-wide">
           HVAC CLEANROOM SOLUTIONS

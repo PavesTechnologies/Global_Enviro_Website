@@ -32,7 +32,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(56,119,212,0.18),_transparent_45%),linear-gradient(180deg,_#eff6ff,_#f8fafc)] px-6 py-12">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(56,119,212,0.18),_transparent_45%),linear-gradient(180deg,_#eff6ff,_#f8fafc)] px-6 py-6">
       <div className="mx-auto max-w-md rounded-3xl bg-white p-8 shadow-xl shadow-slate-200/80">
         <p className="text-sm font-semibold uppercase tracking-[0.35em] text-primary">
           Admin Login

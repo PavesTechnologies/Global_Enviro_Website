@@ -6,7 +6,7 @@ export default function DoorsPage() {
   return (
     <div className="bg-white text-gray-800 leading-relaxed">
       {/* ---------- Intro Section ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-10">
+      <section className="max-w-6xl mx-auto px-6 py-5">
         <h1 className="text-4xl font-bold mb-4 text-blue-800">Doors</h1>
         <p>
           Metal Doors are durable, hygienic, and secure doors commonly used

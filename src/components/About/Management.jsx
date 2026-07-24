@@ -40,7 +40,7 @@ export default function Management() {
   const [active, setActive] = useState(team[0]);
 
   return (
-    <section className="relative bg-[#081736] text-white py-24 px-6 md:px-16 overflow-hidden">
+    <section className="relative bg-[#081736] text-white py-12 px-6 md:px-16 overflow-hidden">
       {/* Background Wave */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <svg

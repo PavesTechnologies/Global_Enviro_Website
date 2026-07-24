@@ -73,20 +73,20 @@ const ClientsPage = () => {
   const row3 = clientLogos.slice(third * 2);
 
   return (
-    <div className="bg-gradient-to-b from-blue-50 to-white py-16">
+    <div className="bg-gradient-to-b from-blue-50 to-white py-8">
       <h2 className="text-4xl font-bold text-center text-blue-900 mb-2">
         Our Clients
       </h2>
       <p className="text-center text-blue-800 text-lg mb-8 tracking-wide">
     Empowering Sustainable Growth Through Innovation and Trust
   </p>
-      <div className="space-y-10">
+      <div className="space-y-5">
         <ClientsRow logos={row2} reverse={true} />
         <br></br>
         <ClientsRow logos={row3} reverse={false} />
       </div>
       {/* Animated Button */}
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-5">
         <a href="/OurClients">
           <MotionWrapper
             as="button"

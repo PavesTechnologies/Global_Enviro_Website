@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function MissionVision() {
   return (
-    <section className="relative w-full h-auto py-28 bg-gray-900 text-white overflow-hidden">
+    <section className="relative w-full h-auto py-14 bg-gray-900 text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -38,7 +38,7 @@ export default function MissionVision() {
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-2xl text-gray-300 mb-12"
+          className="max-w-2xl text-gray-300 mb-6"
         >
           Striving to create a sustainable future through engineering excellence,
           innovation, and commitment to our clients’ success.

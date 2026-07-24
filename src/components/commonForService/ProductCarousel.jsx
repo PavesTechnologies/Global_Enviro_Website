@@ -9,7 +9,7 @@ export default function ProductCarousel({ products }) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="w-full py-16 flex flex-col items-center gap-12"
+      className="w-full py-8 flex flex-col items-center gap-12"
     >
       {products.map((item) => (
         <MotionWrapper

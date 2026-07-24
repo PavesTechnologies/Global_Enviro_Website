@@ -290,16 +290,16 @@ export default function ApplyJobPage() {
   };
 
   if (isLoading) {
-    return <p className="mt-10 text-center">Loading job details...</p>;
+    return <p className="mt-5 text-center">Loading job details...</p>;
   }
 
   if (!job) {
-    return <p className="mt-10 text-center">Job not found</p>;
+    return <p className="mt-5 text-center">Job not found</p>;
   }
 
   return (
     <>
-      <main className="mx-auto my-5 max-w-2xl rounded-md bg-white px-6 py-10 shadow-lg">
+      <main className="mx-auto my-5 max-w-2xl rounded-md bg-white px-6 py-5 shadow-lg">
         <div className="mb-8 border-b pb-4">
           <h1 className="mb-2 text-3xl font-bold">{job.title}</h1>
           <p className="text-gray-600">

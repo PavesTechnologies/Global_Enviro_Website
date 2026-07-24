@@ -55,11 +55,11 @@ export default function GroupPage() {
     <div className="min-h-screen bg-[#f9fafb] text-gray-900">
 
       {/* Banner */}
-      <section className="relative bg-gradient-to-r from-blue-100 to-blue-50 pb-20">
+      <section className="relative bg-gradient-to-r from-blue-100 to-blue-50 pb-10">
         <svg className="absolute bottom-0 left-0 w-full" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
           <path fill="#f9fafb" d="M0,32 C360,100 1080,0 1440,80 L1440,120 L0,120 Z" />
         </svg>
-        <div className="relative container mx-auto px-6 pt-16 text-center">
+        <div className="relative container mx-auto px-6 pt-8 text-center">
           <MotionWrapper
             as="h1"
             initial={{ opacity: 0, y: 30 }}
@@ -83,7 +83,7 @@ export default function GroupPage() {
       </section>
 
       {/* Company Sections */}
-      <div className="max-w-6xl mx-auto px-8 py-16 space-y-20">
+      <div className="max-w-6xl mx-auto px-8 py-8 space-y-10">
         {companies.map((company, index) => (
           <MotionWrapper
             as="div"

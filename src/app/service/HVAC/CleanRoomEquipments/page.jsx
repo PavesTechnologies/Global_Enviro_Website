@@ -35,10 +35,10 @@ export default function CleanroomEquipmentsPage() {
   };
 
   return (
-    <div className="bg-blue-50 min-h-screen py-12 px-6 md:px-20">
+    <div className="bg-blue-50 min-h-screen py-6 px-6 md:px-20">
       {/* Header Section */}
       <div
-        className="text-center mb-12"
+        className="text-center mb-6"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}

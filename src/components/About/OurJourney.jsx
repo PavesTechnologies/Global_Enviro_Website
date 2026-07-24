@@ -35,14 +35,14 @@ export default function OurJourney() {
   ];
 
   return (
-    <div className="bg-[#1F3A70] py-20 px-6">
+    <div className="bg-[#1F3A70] py-10 px-6">
       {/* Title */}
       <MotionWrapper
         as="h1"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-4xl md:text-5xl font-bold mb-16 text-white text-center"
+        className="text-4xl md:text-5xl font-bold mb-8 text-white text-center"
       >
         Our Journey
       </MotionWrapper>
@@ -61,7 +61,7 @@ export default function OurJourney() {
         />
 
         {/* Timeline Items */}
-        <div className="space-y-12">
+        <div className="space-y-6">
           {milestones.map((milestone, index) => (
             <div key={index} className="relative">
 
@@ -102,7 +102,7 @@ export default function OurJourney() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.3, duration: 0.8 }}
-        className="mt-16 text-center max-w-2xl mx-auto"
+        className="mt-8 text-center max-w-2xl mx-auto"
       >
         <p className="text-base italic text-blue-100">
           "Every milestone we cross strengthens our commitment to building a sustainable world for generations to come."

@@ -6,7 +6,7 @@ export default function AirShowerPage() {
   return (
     <div className="bg-white text-gray-800 leading-relaxed">
       {/* ---------- Intro Section ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-10">
+      <section className="max-w-6xl mx-auto px-6 py-5">
         <h1 className="text-4xl font-bold mb-4 text-blue-800">Air Shower</h1>
         <p>
           Air Shower is a self-contained chamber installed at the entrance

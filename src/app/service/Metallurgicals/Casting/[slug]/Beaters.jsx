@@ -6,7 +6,7 @@ export default function BeatersPage() {
   return (
     <div className="bg-white text-gray-800 leading-relaxed">
       {/* ---------- Intro Section ---------- */}
-      <section className="max-w-6xl mx-auto px-6 py-10">
+      <section className="max-w-6xl mx-auto px-6 py-5">
         <h1 className="text-4xl font-bold mb-2 text-blue-800">Beaters</h1>
         <p className="text-lg font-medium text-gray-600 mb-4">
           High-Impact Components for Efficient Crushing &amp; Material

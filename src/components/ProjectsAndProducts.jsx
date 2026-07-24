@@ -32,7 +32,7 @@ export default function ServicePage() {
   ];
 
   return (
-    <section className="relative px-62 py-18 overflow-hidden">
+    <section className="relative px-62 py-9 overflow-hidden">
       {/* Background Image with Soft Overlay */}
       <div className="absolute inset-0 -z-10">
         <Image
@@ -60,7 +60,7 @@ export default function ServicePage() {
         </MotionWrapper>
 
         <p
-          className="text-lg text-accent mb-14 max-w-3xl mx-auto"
+          className="text-lg text-accent mb-7 max-w-3xl mx-auto"
         >
           Innovating sustainable industrial solutions for cleaner, safer operations.
           From air pollution control to efficient material handling and HVAC systems.
